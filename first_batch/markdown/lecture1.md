@@ -43,7 +43,7 @@ Verilog HDL（Hardware Description Language）是一种硬件描述语言，用�
 
 Verilog HDL 数字设计与综合（**群文件中有电子版**）
 
-![](static/GuuNbVwILowkLyx2JGAc4UvHnFf.png)
+![](./img/lect1p1.png)
 
 本周学习章节：**第一章到第六章完成（概论学到数据流建模为止）**
 
@@ -100,7 +100,7 @@ html 文档学习：[Verilog 实践部分文档学习](https://vlab.ustc.edu.cn/
 > 注意！该课程是使用教材为 **MIPS 指令集版本**，我们之后设计芯片，使用的是 **RISCV 指令集版本**，但是考虑到该课程体系完善，效果好，指令集思想是相通的，因此我们仍然选择了该视频课程，配套书籍为黑皮书：计算机组成与设计：硬件软件接口，图示如下（**群内有电子版资料**），想搭配书籍的同学可以参考——不推荐纯看书，黑皮书阅读难度大，知识点深而且广，很难理清知识点。
 > 因此，**也可以选择你觉得好的计组课程或者硬啃黑皮书**，学到知识就好！
 
-![](static/A8ekb7rjqorV9Cxi6G8cM9zzncc.png)
+![](./img/lect1p2.png)
 
 > [!TIP]
 > **学完机组我能干什么？**
@@ -120,7 +120,7 @@ html 文档学习：[Verilog 实践部分文档学习](https://vlab.ustc.edu.cn/
 
 - [Verilog 在线学习网站](https://hdlbits.01xz.net/wiki/Main_Page)——veilog 学习实践，全英文（在这里推荐一个浏览器插件：**沉浸式翻译**，如果看不懂的话，就用这个插件配合学习吧！）
 
-![](static/RdJhbAWJaoMz1qx7nIMcVoNZnIf.png)
+![](./img/lect1p3.png)
 
 > [!TIP]
 > **那我机组部分的实践内容嘞？**
@@ -132,7 +132,7 @@ LCTHW：[https://wizardforcel.gitbooks.io/lcthw/content/preface.html](https://wi
 
 **其中有关“一生一芯”的必须完成部分如下**：
 
-![](static/LeE5bHQwJo1dlpxZYlRc3xBkn1e.png)
+![](./img/lect1p4.png)
 
 ## 一生一芯课程 PA
 
