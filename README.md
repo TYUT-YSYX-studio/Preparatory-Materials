@@ -14,6 +14,6 @@
 
 
 > [!CAUTION]
-> 本文档遵循 CC BY-SA 4.0 开源协议：https://creativecommons.org/licenses/by-sa/4.0/deed.en
-> 转载或使用须标注所有者：许鹏远，太原理工大学“一生一芯”工作室；并标注该文档的 github 链接：https://github.com/TYUT-YSYX-studio/Preparatory-Materials
+> 本文档遵循 CC BY-SA 4.0 开源协议：https://creativecommons.org/licenses/by-sa/4.0/deed.en  
+> 转载或使用须标注所有者：许鹏远，太原理工大学“一生一芯”工作室；并标注该文档的 github 链接：https://github.com/TYUT-YSYX-studio/Preparatory-Materials  
 > 如有对本文档进行二次创作，请以相同许可协议开源
