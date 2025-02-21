@@ -13,8 +13,7 @@
 目前讲义已编纂完成寒假研学部分，即将开展预学习答辩前置学习部分讲义编写。
 
 
+> [!CAUTION]
 > 本文档遵循 CC BY-SA 4.0 开源协议：https://creativecommons.org/licenses/by-sa/4.0/deed.en
-<br>
-> 转载或使用须标注所有者：许鹏远，太原理工大学“一生一芯”工作室，并标注该文档的 github 链接：https://github.com/TYUT-YSYX-studio/Preparatory-Materials
-<br>
+> 转载或使用须标注所有者：许鹏远，太原理工大学“一生一芯”工作室；并标注该文档的 github 链接：https://github.com/TYUT-YSYX-studio/Preparatory-Materials
 > 如有对本文档进行二次创作，请以相同许可协议开源
