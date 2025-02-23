@@ -10,8 +10,6 @@
 
 Markdown 版讲义仅传入第一批同学讲义，有需要可以联系该邮箱：xpy1346789@163.com
 
-目前讲义已编纂完成寒假研学部分，即将开展预学习答辩前置学习部分讲义编写。
-
 
 > [!CAUTION]
 > 本文档遵循 CC BY-SA 4.0 开源协议：https://creativecommons.org/licenses/by-sa/4.0/deed.en  
