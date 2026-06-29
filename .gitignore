@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.vitepress/cache/
+.vitepress/dist/
+*.log
+.DS_Store
+.playwright-mcp/
