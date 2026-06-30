@@ -51,21 +51,21 @@ head:
     </li>
     <li class="toc-item">
       <a href="/2409_Version/序">
-        <span class="toc-num">03</span>
-        <div class="toc-content">
-          <h3>寒假研学</h3>
-          <p>集中攻关数字设计、计算机组成原理、数据结构等核心内容。</p>
-          <span class="toc-count">4 篇讲义</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="/2409_Version/序">
         <span class="toc-num">04</span>
         <div class="toc-content">
           <h3>正式学员</h3>
           <p>深入学习 Makefile、Verilog，打通 CS 与 EE。</p>
           <span class="toc-count">5 篇讲义</span>
+        </div>
+      </a>
+    </li>
+    <li class="toc-item">
+      <a href="/2409_Version/序">
+        <span class="toc-num">03</span>
+        <div class="toc-content">
+          <h3>寒假研学</h3>
+          <p>集中攻关数字设计、计算机组成原理、数据结构等核心内容。</p>
+          <span class="toc-count">4 篇讲义</span>
         </div>
       </a>
     </li>

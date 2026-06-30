@@ -43,16 +43,6 @@ export default defineConfig({
           ]
         },
         {
-          text: '寒假研学',
-          collapsed: false,
-          items: [
-            { text: '第一次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture1' },
-            { text: '第二次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture2' },
-            { text: '第三次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture3' },
-            { text: '第四次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture4' },
-          ]
-        },
-        {
           text: '正式学员',
           collapsed: false,
           items: [
@@ -61,6 +51,16 @@ export default defineConfig({
             { text: '正式学员第三次学习路线', link: '/2409_Version/first_batch/markdown/formal_trainees/lecture3' },
             { text: '正式学员第四次学习路线', link: '/2409_Version/first_batch/markdown/formal_trainees/lecture4' },
             { text: '正式学员第五次学习路线', link: '/2409_Version/first_batch/markdown/formal_trainees/lecture5' },
+          ]
+        },
+        {
+          text: '寒假研学',
+          collapsed: false,
+          items: [
+            { text: '第一次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture1' },
+            { text: '第二次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture2' },
+            { text: '第三次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture3' },
+            { text: '第四次学习路线', link: '/2409_Version/first_batch/markdown/winter_vacation/lecture4' },
           ]
         },
         {
@@ -82,17 +82,17 @@ export default defineConfig({
           ]
         },
         {
-          text: '寒假研学',
-          collapsed: false,
-          items: [
-            { text: '第一周', link: '/2509_Version/final_trans/适应期结业大作业' },
-          ]
-        },
-        {
           text: '正式学员',
           collapsed: false,
           items: [
             { text: '第一周', link: '/2509_Version/formal_trainees/正式学员第一周' },
+          ]
+        },
+        {
+          text: '寒假研学',
+          collapsed: false,
+          items: [
+            { text: '第一周', link: '/2509_Version/final_trans/适应期结业大作业' },
           ]
         },
         {
