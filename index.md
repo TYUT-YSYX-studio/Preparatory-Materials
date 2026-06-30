@@ -122,7 +122,7 @@ head:
   <div class="license-inner">
     <p>
       本文档遵循 <strong>CC BY-SA 4.0</strong> 开源协议。
-      转载或使用须标注所有者&ensp;太原理工大学"一生一芯"工作室；
+      转载或使用须标注所有者&ensp;太原理工大学"一生一芯"工作室，并标注该文档的 github 链接；
 	  二次创作请以相同许可协议开源。
     </p>
     <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">阅读完整协议 &rarr;</a>
