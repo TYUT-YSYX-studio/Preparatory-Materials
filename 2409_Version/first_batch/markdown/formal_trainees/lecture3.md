@@ -44,9 +44,3 @@ b 站链接：[https://www.bilibili.com/video/BV1A3411z7Mf?spm_id_from=333.788.v
 > [!TIP]
 > **再次强调：**
 > 一定不要放下 Linux，C，makefile 相关的实践，之前两个月写的代码自己都可以在 Linux 上重新完善，用 makefile 串联，或者搞成 lib 库形式链接，大家要学的还有很多，不能把之前学了的知识忘掉。
-
-本作品《"太理工一生一芯工作室前置讲义正式学员培养篇"》由 许鹏远 创作，并采用 CC BY-SA 4.0 协议进行授权。
-
-遵循 CC BY-SA 4.0 开源协议：[https://creativecommons.org/licenses/by-sa/4.0/deed.en](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
-
-转载或使用请标注所有者：许鹏远，太理“一生一芯”工作室

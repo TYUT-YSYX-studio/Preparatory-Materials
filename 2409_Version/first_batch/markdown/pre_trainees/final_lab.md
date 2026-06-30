@@ -1,22 +1,22 @@
 # “一生一芯”太理工作室见习学员结业大作业
 
-**曾有鲤鱼池中抬望眼**
+**<center>曾有鲤鱼池中抬望眼</center>**
 
-** 奋勇跃起腾飞万丈险**
+**<center>奋勇跃起腾飞万丈险</center>**
 
-** 终是龙行四海立浪尖**
+**<center>终是龙行四海立浪尖</center>**
 
-** 光耀门楣凭此慰苍天**
+**<center>光耀门楣凭此慰苍天</center>**
 
-** 吾等凿壁偷光萤囊雪**
+**<center>吾等凿壁偷光萤囊雪</center>**
 
-** 亦可闻鸡起舞祈亮剑**
+**<center>亦可闻鸡起舞祈亮剑</center>**
 
-** 如那三尺微命逆浪跃**
+**<center>如那三尺微命逆浪跃</center>**
 
-** 此乃大梦⼀场黄粱间**
+**<center>此乃大梦⼀场黄粱间</center>**
 
-** ⸺《鲤鱼跃寒门》**
+**<center>⸺《鲤鱼跃寒门》</center>**
 
 # 预防针
 
@@ -310,9 +310,3 @@ Which umbrella do you want to borrow? enter the id.(these um_id still remain):
 最后将二者放入**你的姓名-专业班级文件夹的文件夹内，**压缩为⼀个压缩文件（右键压缩/Commpress 即可）。
 
 **请****严格按照上述要求****发送到邮箱：****yunding_ysyx@163.commailto:yunding_ysyx@163.com**
-
-本作品《"太理工一生一芯工作室前置讲义见习学员培养篇"》由 许鹏远 创作，并采用 CC BY-SA 4.0 协议进行授权。
-
-遵循 CC BY-SA 4.0 开源协议：[https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
-
-转载或使用请标注所有者：许鹏远，太理“一生一芯”工作室

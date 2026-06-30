@@ -52,13 +52,3 @@ PA0 获取包部分讲义：[https://ysyx.oscc.cc/docs/ics-pa/0.6.html#getting-s
 ## 一生一芯课程 PA
 
 PA 是我们后续学习中非常重要的一部分内容，目前我们已经把 PA0 相关的基础知识进行了补全，至此，我们可以开始 PA1 的学习了，在完成 PA1 的学习后，我们就可以报名预学习答辩了。
-
-## 考察方式
-
-不断更新学习记录，我们会不定期检查学习记录；学习效果不好的同学会线下约谈。
-
-本作品《"太理工一生一芯工作室前置讲义寒假研学篇"》由 许鹏远 创作，并采用 CC BY-SA 4.0 协议进行授权。
-
-遵循 CC BY-SA 4.0 开源协议：[https://creativecommons.org/licenses/by-sa/4.0/deed.en](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
-
-转载或使用请标注所有者：许鹏远，太理“一生一芯”工作室
