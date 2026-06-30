@@ -6,7 +6,7 @@
 
 # 学习任务
 
-以下视频的**第三章 41-51 学习，随后迁移至百度网盘**（b 站充电付费）** 学习第四章 01-07**
+以下视频的**第三章 41-51 学习，随后迁移至百度网盘 学习第四章 01-07**
 
 b 站链接：[https://www.bilibili.com/video/BV1A3411z7Mf?spm_id_from=333.788.videopod.episodes&vd_source=4ec31615294fd2510d5fd40f0183648f](https://www.bilibili.com/video/BV1A3411z7Mf?spm_id_from=333.788.videopod.episodes&vd_source=4ec31615294fd2510d5fd40f0183648f)
 
@@ -21,14 +21,18 @@ b 站链接：[https://www.bilibili.com/video/BV1A3411z7Mf?spm_id_from=333.788.v
 
 > [!TIP]
 > multisim 软件不需要大家安装和使用（与我们关系不大），大家**只需要跟着课程学习电路搭建即可**，学习小规模电路设计与仿真跑通，因此课程中的仿真环节看懂电路之后就可以跳过，仿真演示不需要全部看，我们的重心不在这里
+>
 > 如下视频中截图的示例：
+>
 > 只需要搞懂这个电路有什么效果即可，各器件名称比如“74LS00D”等**不需要学习**
 
 ![](static/Mf6NbYt1KogAn9xQ6dwcaXVKn2b.png)
 
 > [!TIP]
 > 学习任务就这么点，是不是觉得任务量有点少呢？
+>
 > 其实不少，这一个月请**自觉使用 linux 学习 C 语言，makefile 等相关内容**，我们在这里不强制性安排相关任务作业
+>
 > **不要在未来再返回去学习 C 语言和 makefile，甚至连 Linux 操作都忘的一干二净！！！**
 
 # 学习作业
@@ -37,10 +41,11 @@ b 站链接：[https://www.bilibili.com/video/BV1A3411z7Mf?spm_id_from=333.788.v
 
 2.数电学习内容量大，纸质笔记极其不方便且效率低，所以我们要求大家用自己配置好图床的 md 语法记笔记，而配置图床就是确保你的笔记在别的电脑上也可以查看的必要操作
 
-最后将自己的 md 笔记放入一个文件夹里，文件夹命名为 **你的姓名-专业班级，****然后压缩为⼀个压缩文件即可。**
+最后将自己的 md 笔记放入一个文件夹里，文件夹命名为 **你的姓名-专业班级，**然后压缩为⼀个压缩文件即可。
 
-**请****严格按照上述要求****发送到邮箱：****YunDing_YSYX@163.commailto:YunDing_YSYX@163.com**
+**请严格按照上述要求发送到邮箱：YunDing_YSYX@163.commailto:YunDing_YSYX@163.com**
 
 > [!TIP]
 > **再次强调：**
+>
 > 一定不要放下 Linux，C，makefile 相关的实践，之前两个月写的代码自己都可以在 Linux 上重新完善，用 makefile 串联，或者搞成 lib 库形式链接，大家要学的还有很多，不能把之前学了的知识忘掉。
