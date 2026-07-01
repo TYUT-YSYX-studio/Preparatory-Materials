@@ -33,7 +33,7 @@ head:
 
   <ol class="toc-list">
     <li class="toc-item">
-      <a href="Preparatory-Materials/2409_Version/first_batch/markdown/pre_trainees/lecture1.html">
+      <a href="/Preparatory-Materials/2409_Version/first_batch/markdown/pre_trainees/lecture1.html">
         <span class="toc-num">01</span>
         <div class="toc-content">
           <h3>适应期</h3>
@@ -54,7 +54,7 @@ head:
     </li>
     <li class="toc-item">
       <a href="/Preparatory-Materials/2409_Version/first_batch/markdown/formal_trainees/lecture1.html">
-        <span class="toc-num">04</span>
+        <span class="toc-num">03</span>
         <div class="toc-content">
           <h3>正式学员</h3>
           <p>深入学习 Makefile、Verilog，打通 CS 与 EE。</p>
@@ -64,7 +64,7 @@ head:
     </li>
     <li class="toc-item">
       <a href="/Preparatory-Materials/2409_Version/first_batch/markdown/winter_vacation/lecture1.html">
-        <span class="toc-num">03</span>
+        <span class="toc-num">04</span>
         <div class="toc-content">
           <h3>寒假研学</h3>
           <p>集中攻关数字设计、计算机组成原理、数据结构等核心内容。</p>
@@ -103,8 +103,7 @@ head:
       <h2 class="about-heading">关于本项目</h2>
       <p>
         本作品《太原理工大学"一生一芯"工作室前置讲义》由
-        <strong>许鹏远及之后的接任核心负责人</strong> 主持创作，并采用
-        <strong>CC BY-SA 4.0</strong> 协议进行授权。
+        <strong>许鹏远及之后的接任核心负责人</strong> 主持创作，旨在为先进计算机系统研究实验室的教学工作提供系统支持，并采用<strong>CC BY-SA 4.0</strong> 协议进行授权。
       </p>
       <p>
         本前置讲义在"一生一芯"计划现有教学内容的基础上，结合太原理工大学的课程培养方案，设计了具有针对性的前置学习路径。讲义内容面向低年级、零基础学生，讲义难度循序渐进，以基础学习为主，降低学习门槛。
