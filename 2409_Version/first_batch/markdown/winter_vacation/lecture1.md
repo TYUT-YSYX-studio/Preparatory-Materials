@@ -77,7 +77,7 @@ html 文档学习：[Verilog 实践部分文档学习](https://vlab.ustc.edu.cn/
 
 最后将以上内容放入一个文件夹里，文件夹命名为 **你的姓名-专业班级，**然后压缩为一个压缩文件即可。
 
-**请严格按照上述要求发送到邮箱：YunDing_YSYX@163.commailto:YunDing_YSYX@163.com**
+**请严格按照上述要求发送到邮箱：yunding_ysyx@163.com**
 
 # 拔高
 

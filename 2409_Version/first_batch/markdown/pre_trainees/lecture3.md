@@ -35,10 +35,10 @@
 
 > [!TIP]
 > **在做作业之前，请注意：**
-
-- **全部使用终端完成，不要使用图形界面**
-- **明确**：什么是文件，什么是目录
-- **遇到问题**：STFW，RTFM（man-page 永远是你的朋友）
+>
+> - **全部使用终端完成，不要使用图形界面**
+> - **明确**：什么是文件，什么是目录
+> - **遇到问题**：STFW，RTFM（man-page 永远是你的朋友）
 
 1. 在家目录下创建目录 `file_operation`
 2. 切换到该目录，使用 `pwd` 命令输出当前目录路径
@@ -49,25 +49,30 @@
    3. vim 编辑器
 4. `a.fasta` 内容如下：
 
-> MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
-> ADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
-> FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
-> DIDGDGQVNYEEFVQMMTAK*
+```MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
+ADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
+FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
+DIDGDGQVNYEEFVQMMTAK*
+```
 
+​	a. 使用`file`命令查看文件信息，使用`cat`命令、`less`命令查看文件内容
+
+​	b. 分别使用相对路径和绝对路径的方式列出`file_operation`目录下的文件以及大小
+
+​	c. 用vim编辑器重复`a.fasta`文本内容：
+
+​	d. `a.fasta`事后结果应为：
+
+```MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
+ADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
+FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
+DIDGDGQVNYEEFVQMMTAK*
+MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
+ADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
+FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
+DIDGDGQVNYEEFVQMMTAK*
 ```
-	1. 使用`file`命令查看文件信息，使用`cat`命令、`less`命令查看文件内容
-	2. 分别使用相对路径和绝对路径的方式列出`file_operation`目录下的文件以及大小
-	3. 用vim编辑器重复`a.fasta`文本内容：
-	4. `a.fasta`事后结果应为：
-```
->MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
->ADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
->FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
->DIDGDGQVNYEEFVQMMTAK*
->MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
->ADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
->FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
->DIDGDGQVNYEEFVQMMTAK*
+
 1. 将`a.fasta`拷贝为`b.fasta`
 2. 使用`vim`编辑器寻找`b.fasta`中第一次出现的`GQNPTEA`字符，并将其后内容删除并保存
 3. 将`a.fasta`移动到`/tmp`目录
@@ -77,9 +82,13 @@
 7. 使用`history`命令查看自己完成该练习的过程
 8. 利用`man`命令阅读练习中使用过命令的详细说明，比如`man ls`，`man vim`，`man cat`等。
 
-**作业提交要求**：
+> [!TIP]
+>
+> **作业提交要求**：
+>
+> 提交你的 `.bash_history/.zsh_history`
 
-提交你的 `.bash_history/.zsh_history`
+
 
 ## Linux 环境配置
 
