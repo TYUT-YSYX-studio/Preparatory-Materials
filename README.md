@@ -1,5 +1,13 @@
 # 太原理工大学"一生一芯"工作室前置讲义
 
+<p align="center">
+  <a href="https://tyut-ysyx-studio.github.io/Pre-docs/"><img src="https://img.shields.io/badge/站点-在线访问-5C73E7?logo=vitepress&logoColor=white" alt="在线访问"></a>
+  <a href="https://github.com/TYUT-YSYX-studio/Pre-docs/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?logo=creativecommons&logoColor=white" alt="License"></a>
+  <img src="https://img.shields.io/badge/VitePress-1.6.3-5C73E7?logo=vitepress&logoColor=white" alt="VitePress">
+  <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?logo=githubpages&logoColor=white" alt="GitHub Pages">
+  <a href="./CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?logo=git&logoColor=white" alt="PRs Welcome"></a>
+</p>
+
 本作品由 ***许鹏远及后续核心负责人*** 共同创作，采用 CC BY-SA 4.0 协议授权。
 
 ## 在线地址
