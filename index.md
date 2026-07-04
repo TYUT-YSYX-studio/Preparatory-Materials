@@ -17,9 +17,9 @@ head:
       在"一生一芯"计划现有教学内容的基础上，结合太原理工大学课程培养方案，<br>为低年级、零基础学生设计循序渐进的前置学习路径。
     </p>
     <div class="hero-links">
-      <a class="link-arrow" href="2409_Version/序">2409 版本<span class="arr">&rarr;</span></a>
+      <a class="link-arrow" href="v2409/序">2409 版本<span class="arr">&rarr;</span></a>
       <span class="link-sep">/</span>
-      <a class="link-arrow" href="2509_Version/序">2509 版本<span class="arr">&rarr;</span></a>
+      <a class="link-arrow" href="v2509/序">2509 版本<span class="arr">&rarr;</span></a>
     </div>
   </div>
   <div class="hero-mark">
@@ -33,7 +33,7 @@ head:
 
   <ol class="toc-list">
     <li class="toc-item">
-      <a href="2409_Version/first_batch/markdown/pre_trainees/lecture1.html">
+      <a href="v2409/first_batch/markdown/pre_trainees/lecture1.html">
         <span class="toc-num">01</span>
         <div class="toc-content">
           <h3>适应期</h3>
@@ -43,7 +43,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="2409_Version/first_batch/markdown/special/special_lab.html">
+      <a href="v2409/first_batch/markdown/special/special_lab.html">
         <span class="toc-num">02</span>
         <div class="toc-content">
           <h3>特殊内容</h3>
@@ -53,7 +53,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="2409_Version/first_batch/markdown/formal_trainees/lecture1.html">
+      <a href="v2409/first_batch/markdown/formal_trainees/lecture1.html">
         <span class="toc-num">03</span>
         <div class="toc-content">
           <h3>正式学员</h3>
@@ -63,7 +63,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="2409_Version/first_batch/markdown/winter_vacation/lecture1.html">
+      <a href="v2409/first_batch/markdown/winter_vacation/lecture1.html">
         <span class="toc-num">04</span>
         <div class="toc-content">
           <h3>寒假研学</h3>
@@ -73,7 +73,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="2409_Version/first_batch/markdown/final_trans/final_lecture.html">
+      <a href="v2409/first_batch/markdown/final_trans/final_lecture.html">
         <span class="toc-num">05</span>
         <div class="toc-content">
           <h3>项目实践</h3>
@@ -83,7 +83,7 @@ head:
       </a>
     </li>
     <li class="toc-item toc-item-secondary">
-      <a href="2409_Version/资料下载.html">
+      <a href="v2409/资料下载.html">
         <span class="toc-num">附</span>
         <div class="toc-content">
           <h3>资料下载</h3>
@@ -115,7 +115,7 @@ head:
         <li><a href="https://mp.weixin.qq.com/s/n5LLUQzq49h1lqLF4oNsig" target="_blank">"一生一芯"工作室成立详情</a></li>
         <li><a href="https://mp.weixin.qq.com/s/1XWkrVCyRk0QoKKaCmXNxQ" target="_blank">第二期招新相关信息</a></li>
         <li><a href="https://ysyx.oscc.cc/" target="_blank">"一生一芯"计划官网</a></li>
-        <li><a href="https://github.com/TYUT-YSYX-studio/Preparatory-Materials" target="_blank">GitHub 项目仓库</a></li>
+        <li><a href="https://github.com/TYUT-YSYX-studio/Pre-docs" target="_blank">GitHub 项目仓库</a></li>
       </ul>
     </div>
   </div>
