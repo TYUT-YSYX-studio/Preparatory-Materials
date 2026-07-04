@@ -1,1 +1,25 @@
 /* Global style overrides can go here */
+
+/* h1: 桌面端不换行，移动端用 pretty 防孤字 */
+.vp-doc h1 {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .vp-doc h1 {
+    white-space: normal;
+    text-wrap: pretty;
+  }
+}
+
+/* h2/h3 较短，用 balance：多行时均衡分布更美观 */
+.vp-doc h2,
+.vp-doc h3 {
+  text-wrap: balance;
+}
+
+/* ── 侧边栏标题同样防止孤字 ── */
+.VPSidebarItem .text {
+  text-wrap: pretty;
+}
+
