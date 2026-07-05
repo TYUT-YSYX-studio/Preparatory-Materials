@@ -30,10 +30,9 @@ head:
   <header class="toc-header">
     <span class="toc-label" style="font-size: 1.5rem; font-weight: bold;">2409目录</span>
   </header>
-
   <ol class="toc-list">
     <li class="toc-item">
-      <a href="v2409/first_batch/markdown/pre_trainees/lecture1.html">
+      <a href="v2409/pre_trainees/lecture1.html">
         <span class="toc-num">01</span>
         <div class="toc-content">
           <h3>适应期</h3>
@@ -43,7 +42,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/first_batch/markdown/special/special_lab.html">
+      <a href="v2409/special/special_lab.html">
         <span class="toc-num">02</span>
         <div class="toc-content">
           <h3>特殊内容</h3>
@@ -53,7 +52,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/first_batch/markdown/formal_trainees/lecture1.html">
+      <a href="v2409/formal_trainees/lecture1.html">
         <span class="toc-num">03</span>
         <div class="toc-content">
           <h3>正式学员</h3>
@@ -63,7 +62,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/first_batch/markdown/winter_vacation/lecture1.html">
+      <a href="v2409/winter_vacation/lecture1.html">
         <span class="toc-num">04</span>
         <div class="toc-content">
           <h3>寒假研学</h3>
@@ -73,7 +72,7 @@ head:
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/first_batch/markdown/final_trans/final_lecture.html">
+      <a href="v2409/final_trans/final_lecture.html">
         <span class="toc-num">05</span>
         <div class="toc-content">
           <h3>项目实践</h3>
@@ -93,6 +92,7 @@ head:
       </a>
     </li>
   </ol>
+
 
 
 </section>
