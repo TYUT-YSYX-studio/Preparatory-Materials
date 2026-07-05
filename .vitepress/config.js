@@ -29,46 +29,46 @@ export default defineConfig({
           text: '适应期',
           collapsed: false,
           items: [
-            { text: '见习学员第一次学习路线', link: '/v2409/first_batch/markdown/pre_trainees/lecture1' },
-            { text: '见习学员第二次学习路线', link: '/v2409/first_batch/markdown/pre_trainees/lecture2' },
-            { text: '见习学员第三次学习路线', link: '/v2409/first_batch/markdown/pre_trainees/lecture3' },
-            { text: '见习学员第四次学习路线', link: '/v2409/first_batch/markdown/pre_trainees/lecture4' },
-            { text: '见习学员结业大作业', link: '/v2409/first_batch/markdown/pre_trainees/final_lab' },
+            { text: '见习学员第一次学习路线', link: '/v2409/pre_trainees/lecture1' },
+            { text: '见习学员第二次学习路线', link: '/v2409/pre_trainees/lecture2' },
+            { text: '见习学员第三次学习路线', link: '/v2409/pre_trainees/lecture3' },
+            { text: '见习学员第四次学习路线', link: '/v2409/pre_trainees/lecture4' },
+            { text: '见习学员结业大作业', link: '/v2409/pre_trainees/final_lab' },
           ]
         },
         {
           text: '特殊内容',
           collapsed: false,
           items: [
-            { text: '加强版学习任务', link: '/v2409/first_batch/markdown/special/special_lab' },
+            { text: '加强版学习任务', link: '/v2409/special/special_lab' },
           ]
         },
         {
           text: '正式学员',
           collapsed: false,
           items: [
-            { text: '正式学员第一次学习路线', link: '/v2409/first_batch/markdown/formal_trainees/lecture1' },
-            { text: '正式学员第二次学习路线', link: '/v2409/first_batch/markdown/formal_trainees/lecture2' },
-            { text: '正式学员第三次学习路线', link: '/v2409/first_batch/markdown/formal_trainees/lecture3' },
-            { text: '正式学员第四次学习路线', link: '/v2409/first_batch/markdown/formal_trainees/lecture4' },
-            { text: '正式学员第五次学习路线', link: '/v2409/first_batch/markdown/formal_trainees/lecture5' },
+            { text: '正式学员第一次学习路线', link: '/v2409/formal_trainees/lecture1' },
+            { text: '正式学员第二次学习路线', link: '/v2409/formal_trainees/lecture2' },
+            { text: '正式学员第三次学习路线', link: '/v2409/formal_trainees/lecture3' },
+            { text: '正式学员第四次学习路线', link: '/v2409/formal_trainees/lecture4' },
+            { text: '正式学员第五次学习路线', link: '/v2409/formal_trainees/lecture5' },
           ]
         },
         {
           text: '寒假研学',
           collapsed: false,
           items: [
-            { text: '第一次学习路线', link: '/v2409/first_batch/markdown/winter_vacation/lecture1' },
-            { text: '第二次学习路线', link: '/v2409/first_batch/markdown/winter_vacation/lecture2' },
-            { text: '第三次学习路线', link: '/v2409/first_batch/markdown/winter_vacation/lecture3' },
-            { text: '第四次学习路线', link: '/v2409/first_batch/markdown/winter_vacation/lecture4' },
+            { text: '第一次学习路线', link: '/v2409/winter_vacation/lecture1' },
+            { text: '第二次学习路线', link: '/v2409/winter_vacation/lecture2' },
+            { text: '第三次学习路线', link: '/v2409/winter_vacation/lecture3' },
+            { text: '第四次学习路线', link: '/v2409/winter_vacation/lecture4' },
           ]
         },
         {
           text: '项目实践',
           collapsed: false,
           items: [
-            { text: '预学习过渡阶段', link: '/v2409/first_batch/markdown/final_trans/final_lecture' },
+            { text: '预学习过渡阶段', link: '/v2409/final_trans/final_lecture' },
           ]
         },
         { text: '资料下载', link: '/v2409/资料下载' },

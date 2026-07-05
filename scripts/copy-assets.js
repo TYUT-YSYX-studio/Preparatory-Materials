@@ -8,7 +8,7 @@ const rootDir = resolve(__dirname, '..')
 const distDir = resolve(rootDir, '.vitepress', 'dist')
 
 const copyTasks = [
-  { src: 'v2409/first_batch/PDF', dest: 'v2409/first_batch/PDF' },
+  { src: 'v2409/resources', dest: 'v2409/resources' },
 ]
 
 for (const { src, dest } of copyTasks) {
