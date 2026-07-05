@@ -1,14 +1,22 @@
-# 太原理工大学“一生一芯”工作室前置讲义
+# 太原理工大学"一生一芯"工作室前置讲义
 
-本作品《太原理工大学“一生一芯”工作室前置讲义》由 ***许鹏远及之后的接任核心负责人*** 共同创作，并采用 CC BY-SA 4.0 协议进行授权。
+<p align="center">
+  <a href="https://tyut-ysyx-studio.github.io/Pre-docs/"><img src="https://img.shields.io/badge/站点-在线访问-5C73E7?logo=vitepress&logoColor=white" alt="在线访问"></a>
+  <a href="https://github.com/TYUT-YSYX-studio/Pre-docs/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?logo=creativecommons&logoColor=white" alt="License"></a>
+  <img src="https://img.shields.io/badge/VitePress-1.6.3-5C73E7?logo=vitepress&logoColor=white" alt="VitePress">
+  <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?logo=githubpages&logoColor=white" alt="GitHub Pages">
+  <a href="./CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?logo=git&logoColor=white" alt="PRs Welcome"></a>
+</p>
 
-## 在线访问网站
+本作品由 ***许鹏远及后续核心负责人*** 共同创作，采用 CC BY-SA 4.0 协议授权。
+
+## 在线地址
 
 [先研实验室前置学习讲义](https://tyut-ysyx-studio.github.io/Pre-docs/)
 
 ## 设计宗旨
 
-本前置讲义在“一生一芯”计划现有教学内容的基础上，结合太原理工大学的课程培养方案，专为大一零基础学生设计了一套**前置学习路径**，将预学习阶段进一步分为【适应期学员、见习学员、正式学员】三个阶段，通过明确的阶段目标与正反馈激励机制，帮助学员稳步建立学习信心。并融入部分扩展任务，进一步夯实计算机基础能力，讲义难度循序渐进，以基础学习为主，降低学习门槛。
+本讲义在"一生一芯"计划现有教学内容的基础上，结合太原理工大学课程培养方案，专为大一零基础学生设计。将预学习阶段细分为【适应期学员、见习学员、正式学员】三个阶段，通过明确的阶段目标与正反馈机制，帮助学员稳步建立学习信心。讲义难度循序渐进，以基础内容为主，降低入门门槛，同时融入扩展任务以进一步夯实计算机基础能力。
 
 <img src="public/img/学习内容.png" alt="学习路径图" width="67%" />
 
@@ -27,16 +35,18 @@ npm install
 npm run dev
 ```
 
-## 反馈与纠正
+## 参与贡献
 
-我们非常欢迎社区贡献！如果你发现任何文本、格式问题，欢迎在 [Issues ](https://github.com/TYUT-YSYX-studio/Pre-docs/issues)中留言。
+我们欢迎社区贡献！如果你发现了文本或格式问题，可以：
 
+- 在 [Issues](https://github.com/TYUT-YSYX-studio/Pre-docs/issues) 中留言反馈
+- 直接提交 Pull Request 修复
 
-
+详细的贡献流程、分支命名规范和 Commit 格式，请参阅 [CONTRIBUTING.md](./CONTRIBUTING.md)。
 
 > [!CAUTION]
-> 本文档遵循 CC BY-SA 4.0 开源协议：https://creativecommons.org/licenses/by-sa/4.0/deed.en  
-> 转载或使用须标注所有者：太原理工大学“一生一芯”工作室；并标注该文档的 github 链接：https://github.com/TYUT-YSYX-studio/Pre-docs  
-> 如有对本文档进行二次创作，请以相同许可协议（CC BY-SA 4.0）开源
+> 本文档采用 CC BY-SA 4.0 协议：https://creativecommons.org/licenses/by-sa/4.0/deed.en
+> 转载或使用时须注明所有者"太原理工大学一生一芯工作室"及 GitHub 仓库地址：https://github.com/TYUT-YSYX-studio/Pre-docs
+> 如需进行二次创作，请以相同许可协议（CC BY-SA 4.0）开源
 
-第二期前置讲义 —— To Be Continue...
+第二期前置讲义，敬请期待。
