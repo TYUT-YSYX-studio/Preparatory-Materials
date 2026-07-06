@@ -17,10 +17,7 @@
 
 ## 1.完成“一生一芯”报名
 
-[https://ysyx.oscc.cc/signup](https://ysyx.oscc.cc/signup)，相关后续提示加群，可以进入围观，预学习交流群为后续预学习答辩前夕需要，可进入，现阶段用处不大。问问题在太理的社区群即可，官群问问题必须要符合“[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)”和“[别像弱智一样提问](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)”。
-
-> [!TIP]
-> 完成报名后提交报名后的截图，26 日前报名过的同学可跳过，不要求截图，这部分同学我们有之前的报名记录。
+[https://ysyx.oscc.cc/signup](https://ysyx.oscc.cc/signup)，相关后续提示加群，可以进入围观，预学习交流群为后续预学习答辩前夕需要，可进入，现阶段用处不大。问问题在太理的社区群即可，官群问题必须要符合“[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)”和“[别像弱智一样提问](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)”。
 
 ## 2.准备学习记录表
 
@@ -37,9 +34,10 @@
 1. 随后将你的表格放入这里：[https://docs.qq.com/sheet/DV3BIell3RUdVYVJY?no_promotion=1&tab=BB08J2](https://docs.qq.com/sheet/DV3BIell3RUdVYVJY?no_promotion=1&tab=BB08J2)
 
 > [!TIP]
-> 学习记录表是大家接下来的好帮手，能很好地帮助大家复盘每一天遇到的问题，用处非常大，这里给大家提供一份学长的学习记录表：（可以看到的是随意发癫，问题不大，没必要非常严肃对待）
+> 学习记录表是大家接下来的好帮手，能很好地帮助大家复盘每一天遇到的问题，用处非常大，这里给大家提供一份学长的学习记录表：（可以在表内抽象，问题不大，不需要非常严肃对待）
 > [https://docs.qq.com/sheet/DWk9BdXVrRXdvcHJl?tab=ss_znqexa&_t=1717317532016&viewId=vnucy5&u=e4d0bfda3a4240a0862539da66b63ff7](https://docs.qq.com/sheet/DWk9BdXVrRXdvcHJl?tab=ss_znqexa&_t=1717317532016&viewId=vnucy5&u=e4d0bfda3a4240a0862539da66b63ff7)
-> 在大家进入“一生一芯”学习时，学习记录也是一份凭证，会跟着你走完整个“一生一芯”学习阶段；之后我们进入云顶书院正式学习和下一阶段的面试这也是参考内容；同时在之后大家写简历时，学习记录表是可以写到简历上的，含金量很高，用处很大。
+> 在大家进入“一生一芯”学习时，学习记录也是一份凭证，会跟着你走完整个“一生一芯”学习阶段；之后我们进入正式学习和下一阶段的面试时这也是参考内容；同时在之后大家写简历时，学习记录表是可以写到简历上的，用处很大。
+>
 > 要注意的是：每天晚上或早晨进行复盘，顺带就进行学习记录，养成良好的习惯，未来你会感谢你自己的
 
 ## 3.C 语言
@@ -106,7 +104,8 @@
 
 > [!TIP]
 > 要求：完成学习链接内容的学习，完成必做任务的题并截图
-> 大家可以将这一个月做的练习题合并到一个文件夹内，用 git init 创建仓库，日后可以推到 Github 上
+>
+> 大家可以将这一个月做的练习题合并到一个文件夹内，用 git init 创建仓库，日后可以推到 Github 上，
 > **尤其是做特殊作业的同学**，learn C the hard way 就要用 git 管理版本，非常方便。
 
 目前 git 学习就以上的基础内容，其他内容后续展开。
@@ -131,6 +130,6 @@
 
 ## 接下来计划：
 
-大家在完成本周作业提交后（11 月 2 日晚十点截止），就有足够的能力去迎接大作业（持续两周）—— 一份用 C 语言谱写的美妙程序，我考虑到大家进度、能力不同，我出了两个大作业，选择做提高作业的同学不用再做普通版本的大作业。做完普通大作业的同学也可以届时挑战提高版大作业。
+大家在完成本周作业提交后（11 月 2 日晚十点截止），就有足够的能力去迎接大作业（持续两周）—— 一份用 C 语言谱写的美妙程序，我考虑到大家进度、能力不同，我出了两个大作业，选择做提高作业的同学不用再做普通版本的大作业。做完普通大作业的同学届时也可以挑战提高版大作业。
 
 提高版本大作业基础要求——熟练运用文件操作函数、指针、结构体，并且会使用 Asan，valgrind 内存检测工具
