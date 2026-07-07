@@ -521,4 +521,145 @@ head:
   color: #cbd5e1;
   text-align: right;
 }
+
+/* ═══════════════════════════════════════════════════════
+   DARK MODE (VitePress 暗色模式)
+   ═══════════════════════════════════════════════════════ */
+
+/* Hero 区域 - 暗色模式 */
+.dark .hero {
+  background: #0f172a;
+  color: #f1f5f9;
+  border-bottom-color: #334155;
+}
+
+.dark .hero::after {
+  opacity: 0.02;
+}
+
+.dark .hero-overline {
+  color: #94a3b8;
+}
+
+.dark .hero-headline {
+  color: #f8fafc;
+}
+
+.dark .hero-body {
+  color: #cbd5e1;
+}
+
+.dark .link-arrow {
+  color: #f1f5f9;
+}
+
+.dark .link-arrow:hover {
+  color: #f87171;
+}
+
+.dark .link-sep {
+  color: #64748b;
+}
+
+.dark .hero-mark {
+  opacity: 0.6;
+}
+
+/* 目录区域 - 暗色模式 */
+.dark .toc-label {
+  color: #94a3b8;
+  border-bottom-color: #334155;
+}
+
+.dark .toc-item {
+  border-bottom-color: #334155;
+}
+
+.dark .toc-item:first-child {
+  border-top-color: #334155;
+}
+
+.dark .toc-item a:hover {
+  background: #1e293b;
+}
+
+.dark .toc-num {
+  color: #94a3b8;
+}
+
+/* 目录项颜色 - 暗色模式（降低饱和度） */
+.dark .toc-item:first-child .toc-num { color: #f87171; }
+.dark .toc-item:nth-child(2) .toc-num { color: #fbbf24; }
+.dark .toc-item:nth-child(3) .toc-num { color: #2dd4bf; }
+.dark .toc-item:nth-child(4) .toc-num { color: #60a5fa; }
+.dark .toc-item:nth-child(5) .toc-num { color: #a78bfa; }
+.dark .toc-item-secondary .toc-num {
+  color: #64748b;
+}
+
+.dark .toc-content h3 {
+  color: #f1f5f9;
+}
+
+.dark .toc-item a:hover .toc-content h3 {
+  color: #f87171;
+}
+
+.dark .toc-content p {
+  color: #94a3b8;
+}
+
+.dark .toc-count {
+  color: #64748b;
+}
+
+/* About 区域 - 暗色模式 */
+.dark .about-heading {
+  color: #f1f5f9;
+}
+
+.dark .about-main p {
+  color: #94a3b8;
+}
+
+.dark .about-links li {
+  border-bottom-color: #334155;
+}
+
+.dark .about-links li:first-child {
+  border-top-color: #334155;
+}
+
+.dark .about-links a {
+  color: #f1f5f9;
+}
+
+.dark .about-links a:hover {
+  color: #f87171;
+}
+
+/* License 区域 - 暗色模式 */
+.dark .license-inner {
+  border-top-color: #334155;
+}
+
+.dark .license-inner p {
+  color: #94a3b8;
+}
+
+.dark .license-inner a {
+  color: #94a3b8;
+  border-bottom-color: #334155;
+}
+
+.dark .license-inner a:hover {
+  color: #f87171;
+  border-color: #f87171;
+}
+
+/* Footer - 暗色模式 */
+.dark .pg-footer p {
+  color: #64748b;
+}
+
 </style>
