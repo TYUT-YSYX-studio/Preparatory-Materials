@@ -2,6 +2,7 @@
 
 # 太原理工大学先进计算机系统实验室（ACSL）过渡讲义
 
+>
 # 并轨
 
 </div>
@@ -18,45 +19,48 @@
 
 于是通过不完全归纳法，我们可以将手册大致分为两类：标准手册和使用手册，或者说规范实现类手册和规范使用类手册。
 
-# C语言标准规范
+> [!TIP]
+> # C语言标准规范
+>
+> 阅读一生一芯官方讲义——[手册行为和编码规范](https://ysyx.oscc.cc/docs/2407/e/4.html#%E6%89%8B%E5%86%8C%E8%A1%8C%E4%B8%BA%E5%92%8C%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83)，大致了解C语言标准手册是如何规范其实现（如何规范编译器实现）的，并完成其中的练习。
 
-阅读一生一芯官方讲义——[手册行为和编码规范](https://ysyx.oscc.cc/docs/2407/e/4.html#%E6%89%8B%E5%86%8C%E8%A1%8C%E4%B8%BA%E5%92%8C%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83)，大致了解C语言标准手册是如何规范其实现（如何规范编译器实现）的，并完成其中的练习。
+> [!TIP]
+> # RTFM or STFW
+>
+> 阅读C99标准中`6.3.2.1 Lvalues, arrays, and function designators`部分，并尝试自行`STFW`，然后尝试从C语言标准的角度解释为什么以下代码都是正确的。完成后你还可以思考为什么我们在此时`STFW`要远远优于`RTFM`。
+>
+> ```C
+> #include <stdio.h>
+>
+> void f(char* str){
+>     printf("%s\n", str);
+> }
+>
+> typedef void (F)(char*);
+> F *func = &f;
+>
+> int main(){
+>     (&f)("first");                // 
+>     func("second");
+>     (*func)("third");
+>     (*f)("fourth");
+>     (**********func)("fifth");
+>
+>     return 0;
+> }
+> ```
+>
+> ## 支持GUI输入输出的程序
+>
+> 在`支持GUI输入输出的程序`之前，请先完成PA0并获取一生一芯的框架代码，[PA0链接](https://ysyx.oscc.cc/docs/ics-pa/PA0.html)。
 
-# RTFM or STFW
-
-阅读C99标准中`6.3.2.1 Lvalues, arrays, and function designators`部分，并尝试自行`STFW`，然后尝试从C语言标准的角度解释为什么以下代码都是正确的。完成后你还可以思考为什么我们在此时`STFW`要远远优于`RTFM`。
-
-```C
-#include <stdio.h>
-
-void f(char* str){
-    printf("%s\n", str);
-}
-
-typedef void (F)(char*);
-F *func = &f;
-
-int main(){
-    (&f)("first");                // 
-    func("second");
-    (*func)("third");
-    (*f)("fourth");
-    (**********func)("fifth");
-
-    return 0;
-}
-```
-
-## 支持GUI输入输出的程序
-
-在`支持GUI输入输出的程序`之前，请先完成PA0并获取一生一芯的框架代码，[PA0链接](https://ysyx.oscc.cc/docs/ics-pa/PA0.html)。
-
-# minirvEMU运行EMU
-
-阅读[支持GUI输入输出的程序](https://ysyx.oscc.cc/docs/2407/e/4.html#%E6%94%AF%E6%8C%81gui%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%9A%84%E7%A8%8B%E5%BA%8F)，为minirvEMU添加图形显示功能
-
-至此，E4阶段结束
-
+> [!TIP]
+> # minirvEMU运行EMU
+>
+> 阅读[支持GUI输入输出的程序](https://ysyx.oscc.cc/docs/2407/e/4.html#%E6%94%AF%E6%8C%81gui%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%9A%84%E7%A8%8B%E5%BA%8F)，为minirvEMU添加图形显示功能
+>
+> 至此，E4阶段结束
+>
 # E5——STFW \+ RTFM搭建Verilator仿真环境
 
 ## RTL仿真
@@ -98,7 +102,6 @@ int main(){
 **报名之前请先联系你的负责人**。
 
 ![image\.png](static/image.png)
-
 
 
 
