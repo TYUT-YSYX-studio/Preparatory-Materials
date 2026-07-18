@@ -12,15 +12,17 @@
 
 本周你需要完成[HDLBits](https://hdlbits.01xz.net/wiki/Main_Page)中的如下任务，提交你的截图即可。（在这里推荐一个浏览器插件：**沉浸式翻译**，如果看不懂的话，就用这个插件配合学习吧！）
 
-# 新推荐
+> [!TIP]
+> # 新推荐
+> 如果你更喜欢更原汁原味地浏览英文网页，这里有个更好的选择：[tapword\-translator](https://github.com/hongyuan007/tapword-translator)\([www\.tapword\.cc](http://www.tapword.cc)\)。
+>
+> 如果你也有推荐的其他工具，欢迎在群内多多交流。
+>
+> ![image\.png](static/image%202.png)
 
-如果你更喜欢更原汁原味地浏览英文网页，这里有个更好的选择：[tapword\-translator](https://github.com/hongyuan007/tapword-translator)\([www\.tapword\.cc](http://www.tapword.cc)\)。
-
-如果你也有推荐的其他工具，欢迎在群内多多交流。
-
-![image\.png](static/image%202.png)
-
-我们培养的是硬件思维，需要头脑中先有电路再下手写代码，这也是为什么我们需要先学习使用Logisim搭建数字电路，再来学习数字设计，虽然我们后面不再使用Logisim进行处理器设计，但Logisim的使用经验应该已经帮助你建立了"电路思维"：数字电路设计只做两件事，"实例化"和"连线"。你接下来使用HDL来设计数字电路时，头脑中也需要将HDL代码和Logisim的使用经验建立关联：你只不过是换了一种方式来设计电路，但本质上还是在进行"实例化"和"连线"的工作，因此你应该能根据你编写的代码想象到电路的逻辑结构，**要记住Verilog的本质是硬件描述语言而不是传统的编程语言。**
+> [!WARNING]
+> # 注意事项
+> 我们培养的是硬件思维，需要头脑中先有电路再下手写代码，这也是为什么我们需要先学习使用Logisim搭建数字电路，再来学习数字设计，虽然我们后面不再使用Logisim进行处理器设计，但Logisim的使用经验应该已经帮助你建立了"电路思维"：数字电路设计只做两件事，"实例化"和"连线"。你接下来使用HDL来设计数字电路时，头脑中也需要将HDL代码和Logisim的使用经验建立关联：你只不过是换了一种方式来设计电路，但本质上还是在进行"实例化"和"连线"的工作，因此你应该能根据你编写的代码想象到电路的逻辑结构，**要记住Verilog的本质是硬件描述语言而不是传统的编程语言。**
 
 # Learn C the hard way
 
@@ -238,7 +240,7 @@ int main() {
 
 ## Learn C the hard way
 
-**这是“一生一芯”的****必须完成部分****如下**：
+**这是“一生一芯”的必须完成部分如下**：
 
 ![image\.png](static/image%201.png)
 
