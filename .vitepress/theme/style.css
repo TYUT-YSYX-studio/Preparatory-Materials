@@ -23,3 +23,21 @@
   text-wrap: pretty;
 }
 
+/* 修复 callout 块内标题过大问题 */
+.custom-block h1 {
+  font-size: 1.30em;
+  margin: 0 0 0.4em;
+  border: none;
+  padding-top: 0;
+  line-height: 1.4;
+}
+
+.custom-block h2,
+.custom-block h3,
+.custom-block h4 {
+  font-size: 1.17em;
+  margin: 0 0 0.3em;
+  border: none;
+  padding-top: 0;
+}
+

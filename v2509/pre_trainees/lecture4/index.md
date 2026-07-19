@@ -1,6 +1,6 @@
 <div align="center">
 
-# 太原理工大学先进计算机系统实验室（ACSL）适应期学员第四次学习路线
+# 太理先研实验室（ACSL）适应期学员第四次学习路线
 
 The mechine is always right
 
