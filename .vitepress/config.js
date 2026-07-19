@@ -104,13 +104,21 @@ export default defineConfig({
             { text: '前置学习内容——动态内存分配', link: '/v2509/pre_trainees/subdocument/前置学习内容——动态内存分配' },
           ]
         },
-        {
-          text: '正式学员',
+                {
+          text: '见习期',
           collapsed: false,
           items: [
-            { text: '正式学员第一次学习路线', link: '/v2509/formal_trainees/lecture1' },
-            { text: '正式学员第二次学习路线', link: '/v2509/formal_trainees/lecture2' },
-            { text: '正式学员第三次学习路线', link: '/v2509/formal_trainees/lecture3' },
+            { text: '见习期第一次学习路线', link: '/v2509/intern_trainees/lecture1' },
+            { text: '见习期第二次学习路线', link: '/v2509/intern_trainees/lecture2' },
+            { text: '见习期第三次学习路线', link: '/v2509/intern_trainees/lecture3' },
+            { text: '见习期第四次学习路线', link: '/v2509/intern_trainees/lecture4' },
+          ]
+        },
+        {
+          text: '见习期补充文档',
+          collapsed: true,
+          items: [
+            { text: '切换Java版本', link: '/v2509/intern_trainees/subdocument/切换Java版本' },
           ]
         },
         {
@@ -130,6 +138,16 @@ export default defineConfig({
             { text: '计算机组成原理与体系结构', link: '/v2509/winter_vacation/subdocument/计算机组成原理与体系结构' },
           ]
         },
+        {
+          text: '正式学员',
+          collapsed: false,
+          items: [
+            { text: '正式学员第一次学习路线', link: '/v2509/formal_trainees/lecture1' },
+            { text: '正式学员第二次学习路线', link: '/v2509/formal_trainees/lecture2' },
+            { text: '正式学员第三次学习路线', link: '/v2509/formal_trainees/lecture3' },
+          ]
+        },
+        
         {
           text: '项目实践',
           collapsed: false,
