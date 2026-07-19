@@ -9,6 +9,7 @@ const distDir = resolve(rootDir, '.vitepress', 'dist')
 
 const copyTasks = [
   { src: 'v2409/resources', dest: 'v2409/resources' },
+  { src: 'v2509/resourses', dest: 'v2509/resourses' },
 ]
 
 for (const { src, dest } of copyTasks) {
