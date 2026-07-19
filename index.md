@@ -27,7 +27,7 @@ head:
 </section>
 <section class="toc">
   <header class="toc-header">
-    <span class="toc-label" style="font-size: 1.5rem; font-weight: bold;">2509 目录</span>
+    <span class="toc-label" style="font-size: 1.5rem; font-weight: bold;">2509目录</span>
   </header>
   <ol class="toc-list">
     <li class="toc-item">
