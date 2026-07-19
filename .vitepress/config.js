@@ -79,63 +79,87 @@ export default defineConfig({
           text: '适应期',
           collapsed: false,
           items: [
-            { text: '适应期第一次学习路线', link: '/v2509/pre_trainees/lecture1' },
-            { text: '适应期第二次学习路线', link: '/v2509/pre_trainees/lecture2' },
-            { text: '适应期第三次学习路线', link: '/v2509/pre_trainees/lecture3' },
-            { text: '适应期第四次学习路线', link: '/v2509/pre_trainees/lecture4' },
-            { text: '适应期结业大作业', link: '/v2509/pre_trainees/final_lab' },
+            {
+              text: '适应期第一次学习路线',
+              collapsed: true,
+              items: [
+                { text: '主讲义', link: '/v2509/pre_trainees/lecture1/' },
+                { text: '虚拟机安装Ubuntu22.04指北', link: '/v2509/pre_trainees/lecture1/虚拟机安装Ubuntu22.04指北' },
+                { text: '实现简单终端作业', link: '/v2509/pre_trainees/lecture1/实现简单终端作业' },
+                { text: '更聪明的终端', link: '/v2509/pre_trainees/lecture1/更聪明的终端' },
+              ]
+            },
+            {
+              text: '适应期第二次学习路线',
+              collapsed: true,
+              items: [
+                { text: '主讲义', link: '/v2509/pre_trainees/lecture2/' },
+                { text: 'Ubuntu安装VScode指西', link: '/v2509/pre_trainees/lecture2/Ubuntu安装VScode指西' },
+                { text: '中文输入法安装教程', link: '/v2509/pre_trainees/lecture2/中文输入法安装教程' },
+                { text: '终端改进辅助说明', link: '/v2509/pre_trainees/lecture2/终端改进辅助说明' },
+                { text: 'Shell作业帮助文档', link: '/v2509/pre_trainees/lecture2/Shell作业帮助文档' },
+              ]
+            },
+            {
+              text: '适应期第三次学习路线',
+              collapsed: true,
+              items: [
+                { text: '主讲义', link: '/v2509/pre_trainees/lecture3/' },
+                { text: '指针_结构体教程', link: '/v2509/pre_trainees/lecture3/指针_结构体教程' },
+                { text: '指针_结构体练习', link: '/v2509/pre_trainees/lecture3/指针_结构体练习' },
+              ]
+            },
+            {
+              text: '适应期第四次学习路线',
+              collapsed: true,
+              items: [
+                { text: '主讲义', link: '/v2509/pre_trainees/lecture4/' },
+                { text: 'C语言文件操作——二进制操作教程', link: '/v2509/pre_trainees/lecture4/C语言文件操作——二进制操作教程' },
+                { text: '最后的终端改进', link: '/v2509/pre_trainees/lecture4/最后的终端改进' },
+              ]
+            },
+            {
+              text: '适应期结业考核',
+              collapsed: true,
+              items: [
+                { text: '主讲义', link: '/v2509/pre_trainees/final_lab/' },
+                { text: '前置学习内容——动态内存分配', link: '/v2509/pre_trainees/final_lab/前置学习内容——动态内存分配' },
+              ]
+            },
           ]
         },
         {
-          text: '适应期补充文档',
-          collapsed: true,
-          items: [
-            { text: '虚拟机安装Ubuntu22.04指北', link: '/v2509/pre_trainees/subdocument/虚拟机安装Ubuntu22.04指北' },
-            { text: 'Ubuntu安装VScode指西', link: '/v2509/pre_trainees/subdocument/Ubuntu安装VScode指西' },
-            { text: '中文输入法安装教程', link: '/v2509/pre_trainees/subdocument/中文输入法安装教程' },
-            { text: '实现简单终端作业', link: '/v2509/pre_trainees/subdocument/实现简单终端作业' },
-            { text: '更聪明的终端', link: '/v2509/pre_trainees/subdocument/更聪明的终端' },
-            { text: 'Shell作业帮助文档', link: '/v2509/pre_trainees/subdocument/Shell作业帮助文档' },
-            { text: '终端改进辅助说明', link: '/v2509/pre_trainees/subdocument/终端改进辅助说明' },
-            { text: '指针_结构体教程', link: '/v2509/pre_trainees/subdocument/指针_结构体教程' },
-            { text: '指针_结构体练习', link: '/v2509/pre_trainees/subdocument/指针_结构体练习' },
-            { text: '最后的终端改进', link: '/v2509/pre_trainees/subdocument/最后的终端改进' },
-            { text: 'C语言文件操作——二进制操作教程', link: '/v2509/pre_trainees/subdocument/C语言文件操作——二进制操作教程' },
-            { text: '前置学习内容——动态内存分配', link: '/v2509/pre_trainees/subdocument/前置学习内容——动态内存分配' },
-          ]
-        },
-                {
           text: '见习期',
           collapsed: false,
           items: [
-            { text: '见习期第一次学习路线', link: '/v2509/intern_trainees/lecture1' },
+            {
+              text: '见习期第一次学习路线',
+              collapsed: true,
+              items: [
+                { text: '主讲义', link: '/v2509/intern_trainees/lecture1/' },
+                { text: '切换Java版本', link: '/v2509/intern_trainees/lecture1/切换Java版本' },
+              ]
+            },
             { text: '见习期第二次学习路线', link: '/v2509/intern_trainees/lecture2' },
             { text: '见习期第三次学习路线', link: '/v2509/intern_trainees/lecture3' },
             { text: '见习期第四次学习路线', link: '/v2509/intern_trainees/lecture4' },
           ]
         },
         {
-          text: '见习期补充文档',
-          collapsed: true,
-          items: [
-            { text: '切换Java版本', link: '/v2509/intern_trainees/subdocument/切换Java版本' },
-          ]
-        },
-        {
           text: '寒假研学',
           collapsed: false,
           items: [
-            { text: '第一次学习路线', link: '/v2509/winter_vacation/lecture1' },
+            {
+              text: '第一次学习路线',
+              collapsed: true,
+              items: [
+                { text: '主讲义', link: '/v2509/winter_vacation/lecture1/' },
+                { text: '计算机组成原理与体系结构', link: '/v2509/winter_vacation/lecture1/计算机组成原理与体系结构' },
+              ]
+            },
             { text: '第二次学习路线', link: '/v2509/winter_vacation/lecture2' },
             { text: '第三次学习路线', link: '/v2509/winter_vacation/lecture3' },
             { text: '第四次学习路线', link: '/v2509/winter_vacation/lecture4' },
-          ]
-        },
-        {
-          text: '寒假研学补充文档',
-          collapsed: true,
-          items: [
-            { text: '计算机组成原理与体系结构', link: '/v2509/winter_vacation/subdocument/计算机组成原理与体系结构' },
           ]
         },
         {
@@ -147,7 +171,6 @@ export default defineConfig({
             { text: '正式学员第三次学习路线', link: '/v2509/formal_trainees/lecture3' },
           ]
         },
-        
         {
           text: '项目实践',
           collapsed: false,
