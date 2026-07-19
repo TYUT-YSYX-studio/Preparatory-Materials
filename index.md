@@ -8,7 +8,6 @@ head:
     - href: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap
       rel: stylesheet
 ---
-
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-overline">太原理工大学 · 先进计算机系统研究实验室</div>
@@ -28,66 +27,66 @@ head:
 </section>
 <section class="toc">
   <header class="toc-header">
-    <span class="toc-label" style="font-size: 1.5rem; font-weight: bold;">2409目录</span>
+    <span class="toc-label" style="font-size: 1.5rem; font-weight: bold;">2509 目录</span>
   </header>
   <ol class="toc-list">
     <li class="toc-item">
-      <a href="v2409/pre_trainees/lecture1.html">
+      <a href="v2509/pre_trainees/lecture1/">
         <span class="toc-num">01</span>
         <div class="toc-content">
           <h3>适应期</h3>
-          <p>零基础入门，涵盖 Linux 基础、C 语言、开发环境搭建以及提问的智慧。</p>
-          <span class="toc-count">5 篇讲义</span>
+          <p>零基础入门，涵盖 Linux 基础、C 语言、Shell 与开发环境搭建。</p>
+          <span class="toc-count">5 篇讲义 + 12 篇辅文档</span>
         </div>
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/special/special_lab.html">
+      <a href="v2509/intern_trainees/lecture1/">
         <span class="toc-num">02</span>
         <div class="toc-content">
-          <h3>特殊内容</h3>
-          <p>学有余力的同学专属，加强版学习任务。</p>
-          <span class="toc-count">1 篇讲义</span>
+          <h3>见习期</h3>
+          <p>数字电路入门、Markdown 规范、Java 环境配置。</p>
+          <span class="toc-count">4 篇讲义 + 1 篇辅文档</span>
         </div>
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/formal_trainees/lecture1.html">
+      <a href="v2509/winter_vacation/lecture1/">
         <span class="toc-num">03</span>
         <div class="toc-content">
-          <h3>正式学员</h3>
-          <p>深入学习 Makefile、Verilog，打通 CS 与 EE。</p>
-          <span class="toc-count">5 篇讲义</span>
+          <h3>寒假研学</h3>
+          <p>计算机组成原理、数据结构、Verilog 与单周期 CPU 设计。</p>
+          <span class="toc-count">4 篇讲义 + 1 篇辅文档</span>
         </div>
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/winter_vacation/lecture1.html">
+      <a href="v2509/formal_trainees/lecture1">
         <span class="toc-num">04</span>
         <div class="toc-content">
-          <h3>寒假研学</h3>
-          <p>集中攻关数字设计、计算机组成原理、数据结构等核心内容。</p>
-          <span class="toc-count">4 篇讲义</span>
+          <h3>正式学员</h3>
+          <p>Makefile 工程化、minirvEMU 框架、RTL 仿真与词法分析。</p>
+          <span class="toc-count">3 篇讲义</span>
         </div>
       </a>
     </li>
     <li class="toc-item">
-      <a href="v2409/final_trans/final_lecture.html">
+      <a href="v2509/final_trans/final_lecture">
         <span class="toc-num">05</span>
         <div class="toc-content">
           <h3>项目实践</h3>
-          <p>实践环节，预学习阶段答辩准备。</p>
+          <p>预学习过渡阶段，从讲义到实战的衔接。</p>
           <span class="toc-count">1 篇讲义</span>
         </div>
       </a>
     </li>
     <li class="toc-item toc-item-secondary">
-      <a href="v2409/资料下载.html">
+      <a href="v2509/资料下载">
         <span class="toc-num">附</span>
         <div class="toc-content">
           <h3>资料下载</h3>
-          <p>PDF 学习路线资料，分类下载。</p>
-          <span class="toc-count">17 份 PDF</span>
+          <p>PDF 讲义与辅助文档，分类下载。</p>
+          <span class="toc-count">构建中</span>
         </div>
       </a>
     </li>
