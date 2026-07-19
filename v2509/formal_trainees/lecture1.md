@@ -268,3 +268,4 @@ https://zhuanlan\.zhihu\.com/p/640735987
 >
 > 当你发现如下提醒时，阅读该讲义:https://ysyx\.oscc\.cc/docs/2407/e/3\.html获取属于一生一芯的代码框架
 >
+> ![static/image.png](static/image.png)

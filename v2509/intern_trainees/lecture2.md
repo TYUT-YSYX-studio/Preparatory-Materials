@@ -272,7 +272,7 @@ b站链接：https://www\.bilibili\.com/video/BV1A3411z7Mf?spm\_id\_from=333\.78
 
 在我们之前学习的二进制表示中\(如果你忘了，那么你之前的笔记就派上用场了\)
 
-![image\.png](图片和附件/image.png)
+![image\.png](static/image.png)
 
 在这种表示方式中，每一个二进制位都代表数值的大小，这种表示称为"无符号二进制整数"\(unsigned binary integer\)，简称"无符号数"。显然，在一个n位的无符号数中，最小数是0，最大数是$ 2^n - 1 $。而之前你实现的加法器，其实也是一个无符号数的加法器。
 
