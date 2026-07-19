@@ -186,8 +186,6 @@ https://www\.bilibili\.com/video/BV1A3411z7Mf?spm\_id\_from=333\.788\.videopod\.
 
 如果觉得熟悉的话，可以将这个作业的图片重命名为他的正确名字。
 
-# 作业提交
-
 # **作业提交**
 
 1. 提交你们用Logisim搭建的电路: 提交保存后的** ****`main.`****`circ`**文件即可，并将这个文件复制到`姓名-专业班级-Great-6`文件夹中。
@@ -196,7 +194,7 @@ https://www\.bilibili\.com/video/BV1A3411z7Mf?spm\_id\_from=333\.788\.videopod\.
 
 3. 如果你学有余力完成了下面的拔高内容，则把文件夹重命名，格式为`姓名-专业班级-NewStar-``6`。
 
-4. 将你的作业压缩为zip格式并提交到[**见习学员第一周**](https://fa45epzd9c7.feishu.cn/share/base/form/shrcnsFNTNQQ1BVddgbO8T4bQKd)[**提交表单**](https://fa45epzd9c7.feishu.cn/share/base/form/shrcnsFNTNQQ1BVddgbO8T4bQKd)中。
+4. ~~将你的作业压缩为zip格式并提交到**见习学员第一周提交表单**中。~~
 
 # 拔高内容
 

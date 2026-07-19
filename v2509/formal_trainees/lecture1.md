@@ -239,7 +239,7 @@ https://zhuanlan\.zhihu\.com/p/640735987
 >
 > 3. 如果你学有余力完成了下面的拔高内容，则把文件夹重命名，格式为`姓名-专业班级-NewStar-14`。
 >
-> 4. 将你的作业压缩为zip格式并提交到[作业提交表单](https://fa45epzd9c7.feishu.cn/share/base/form/shrcntFbj0eMbdOLboDbgm5Wbqg)。
+> 4. ~~将你的作业压缩为zip格式并提交到作业提交表单。~~
 >
 # 拔高内容
 

@@ -311,4 +311,4 @@ Which umbrella do you want to borrow? enter the id.(these um_id still remain):
 
 最后将二者放入**你的姓名-专业班级文件夹的文件夹内**，压缩为⼀个压缩文件（右键压缩/Commpress 即可）。
 
-**请严格按照上述要求发送到邮箱：yunding_ysyx@163.com**
+~~**请严格按照上述要求发送到邮箱**~~

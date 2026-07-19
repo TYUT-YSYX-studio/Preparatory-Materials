@@ -106,7 +106,7 @@ https://www\.hello\-algo\.com/chapter\_array\_and\_linkedlist/linked\_list/
 >
 > 4. 如果你学有余力完成了下面的拔高内容，则把文件夹重命名，格式为`姓名-专业班级-NewStar-13`。
 >
-> 5. 将你的作业压缩为zip格式并提交到[作业提交表单](https://fa45epzd9c7.feishu.cn/share/base/form/shrcnbl2wvOSExnPvGku9Emovse)。
+> 5. ~~将你的作业压缩为zip格式并提交到作业提交表单。~~
 >
 # 拔高内容
 
