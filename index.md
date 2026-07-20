@@ -8,6 +8,7 @@ head:
     - href: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap
       rel: stylesheet
 ---
+<div class="hero-wrap">
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-overline">太原理工大学 · 先进计算机系统研究实验室</div>
@@ -16,81 +17,14 @@ head:
       在"一生一芯"计划现有教学内容的基础上，结合太原理工大学课程培养方案，<br>为低年级、零基础学生设计循序渐进的前置学习路径。
     </p>
     <div class="hero-links">
-      <a class="link-arrow" href="v2409/序">2409 版本<span class="arr">&rarr;</span></a>
-      <span class="link-sep">/</span>
       <a class="link-arrow" href="v2509/序">2509 版本<span class="arr">&rarr;</span></a>
+      <span class="link-sep">/</span>
+      <a class="link-arrow" href="v2409/序">2409 版本<span class="arr">&rarr;</span></a>
     </div>
   </div>
   <div class="hero-mark">
     <img src="/img/ACSL_square.png" alt="" />
   </div>
-</section>
-<section class="toc">
-  <header class="toc-header">
-    <h2 class="toc-title">2509 目录</h2>
-  </header>
-  <ol class="toc-list">
-    <li class="toc-item">
-      <a href="v2509/pre_trainees/lecture1/">
-        <span class="toc-num">01</span>
-        <div class="toc-body">
-          <h3>适应期</h3>
-          <p>零基础入门，涵盖 Linux 基础、C 语言、Shell 与开发环境搭建。</p>
-          <span class="toc-meta">5 篇讲义 + 12 篇辅文档</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/intern_trainees/lecture1/">
-        <span class="toc-num">02</span>
-        <div class="toc-body">
-          <h3>见习期</h3>
-          <p>数字电路入门、Markdown 规范、Java 环境配置。</p>
-          <span class="toc-meta">4 篇讲义 + 1 篇辅文档</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/winter_vacation/lecture1/">
-        <span class="toc-num">03</span>
-        <div class="toc-body">
-          <h3>寒假研学</h3>
-          <p>计算机组成原理、数据结构、Verilog 与单周期 CPU 设计。</p>
-          <span class="toc-meta">4 篇讲义 + 1 篇辅文档</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/formal_trainees/lecture1">
-        <span class="toc-num">04</span>
-        <div class="toc-body">
-          <h3>正式学员</h3>
-          <p>Makefile 工程化、minirvEMU 框架、RTL 仿真与词法分析。</p>
-          <span class="toc-meta">3 篇讲义</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/final_trans/final_lecture">
-        <span class="toc-num">05</span>
-        <div class="toc-body">
-          <h3>项目实践</h3>
-          <p>预学习过渡阶段，从讲义到实战的衔接。</p>
-          <span class="toc-meta">1 篇讲义</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item toc-item-secondary">
-      <a href="v2509/资料下载">
-        <span class="toc-num">附</span>
-        <div class="toc-body">
-          <h3>资料下载</h3>
-          <p>PDF 讲义与辅助文档，分类下载。</p>
-          <span class="toc-meta">构建中</span>
-        </div>
-      </a>
-    </li>
-  </ol>
 </section>
 <section class="about">
   <div class="about-grid">
@@ -115,6 +49,7 @@ head:
     </div>
   </div>
 </section>
+</div>
 
 
 <section class="license">
@@ -129,9 +64,6 @@ head:
 </section>
 
 
-<footer class="pg-footer">
-  <p>第二期前置讲义 —— To Be Continue...</p>
-</footer>
 
 <style>
 /* ═══════════════════════════════════════════════════════
@@ -153,18 +85,13 @@ head:
    ═══════════════════════════════════════════════════════ */
 
 .hero {
-  margin: 0 calc(-50vw + 50%) 0;
-  width: 100vw;
-  background: #ffffff; 
   color: #0f172a; 
   position: relative;
-  overflow: hidden;
-  padding: 72px 24px 56px;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 64px 24px 40px;
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 96px 48px 80px; }
+  .hero { padding: 80px 48px 64px; }
 }
 
 .hero-inner {
@@ -422,9 +349,7 @@ head:
 
 /* Hero 区域 - 暗色模式 */
 .dark .hero {
-  background: #0f172a;
   color: #f1f5f9;
-  border-bottom-color: #334155;
 }
 
 .dark .hero::after {
@@ -456,7 +381,7 @@ head:
 }
 
 .dark .hero-mark {
-  opacity: 0.6;
+  opacity: 0.95;
 }
 
 /* About 区域 - 暗色模式 */

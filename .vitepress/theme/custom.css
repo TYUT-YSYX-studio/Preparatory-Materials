@@ -1380,12 +1380,37 @@ h1, h2, h3 {
    ═══════════════════════════════════════════════════════════ */
 
 /* ── Hero 背景：替换玻璃为扁平渐变 ── */
+/* ── 首页全局渐变背景 ── */
+html.is-homepage {
+  background: linear-gradient(160deg,
+    var(--color-primary-50, #F0FAFE) 0%,
+    var(--color-primary-100, #DCF3FE) 35%,
+    var(--color-primary-200, #B8E7FF) 70%,
+    var(--color-primary-300, #8FDAFF) 100%);
+}
+html.is-homepage.dark {
+  background: linear-gradient(160deg,
+    #06121a 0%,
+    #0a1c2a 35%,
+    #0c2438 70%,
+    #0e2d45 100%);
+}
+
+/* ── Hero + About 公共渐变画布 ── */
+html.is-homepage .page-main,
+html.is-homepage .page-content {
+  padding-top: 0 !important;
+  padding-block-start: 0 !important;
+  margin-top: 0 !important;
+}
+
+html.is-homepage .hero-wrap {
+  margin: 0 calc(-50vw + 50%) 0;
+  width: 100vw;
+}
+
 html.is-homepage .hero {
-  background:
-    linear-gradient(160deg,
-      var(--color-primary-50, #F0FAFE) 0%,
-      var(--color-primary-100, #DCF3FE) 45%,
-      var(--color-primary-200, #B8E7FF) 100%) !important;
+  background: transparent !important;
   background-size: auto !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -1420,9 +1445,7 @@ html.is-homepage .hero::after {
 
 /* 暗色 hero 画布 */
 html.is-homepage.dark .hero {
-  background:
-    linear-gradient(160deg,
-      var(--color-primary-950, #0C3245) 0%, #06121a 60%, #02080d 100%) !important;
+  background: transparent !important;
 }
 html.is-homepage.dark .hero::before {
   opacity: .45;
@@ -1452,12 +1475,17 @@ html.is-homepage .hero-overline {
   border: 1px solid rgba(255,255,255,.6) !important;
   box-shadow: 0 2px 8px rgba(19,82,114,.08) !important;
 }
+html.is-homepage.dark .hero-overline {
+  background: rgba(11,20,27,.65) !important;
+  border-color: rgba(255,255,255,.12) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2) !important;
+}
 html.is-homepage .hero-mark {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  background: rgba(255,255,255,.55) !important;
-  border: 1px solid rgba(255,255,255,.6) !important;
-  box-shadow: 0 4px 16px rgba(19,82,114,.10) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1540,12 +1568,28 @@ html.is-homepage.dark .hero-links .link-arrow:last-of-type {
    ═══════════════════════════════════════════════════════════ */
 
 html.is-homepage header {
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border-bottom-color: transparent !important;
-  box-shadow: none !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.35) 0%, rgba(255,255,255,.12) 30%, rgba(255,255,255,.08) 100%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(41,184,255,.08) 0%, transparent 100%),
+    rgba(255,255,255,.65) !important;
+  backdrop-filter: blur(20px) saturate(180%) brightness(1.05);
+  -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(1.05);
+  border-bottom: 1px solid rgba(255,255,255,.2) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.15) inset,
+    0 -1px 0 rgba(255,255,255,.05) inset,
+    0 4px 20px rgba(19,82,114,.06) !important;
   transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+html.is-homepage.dark header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 30%, transparent 100%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(41,184,255,.06) 0%, transparent 100%),
+    rgba(11,20,27,.82) !important;
+  border-bottom-color: rgba(255,255,255,.08) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.04) inset,
+    0 4px 20px rgba(0,0,0,.15) !important;
 }
 /* 首页导航文字深色（适配淡蓝 hero） */
 html.is-homepage header a,
@@ -1557,92 +1601,130 @@ html.is-homepage.dark header a {
   color: #e2e8f0 !important;
 }
 
-/* 滚动后：实白底 + 轻阴影 */
+/* 滚动后：实白底 + 轻阴影，保留微反射 */
 html.is-homepage.is-scrolled header {
-  background: #fff !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.25) 0%, rgba(255,255,255,.08) 30%, rgba(255,255,255,.02) 100%),
+    #fff !important;
   border-bottom: 1px solid var(--color-primary-100, #DCF3FE) !important;
-  box-shadow: 0 4px 20px rgba(19,82,114,.08) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.1) inset,
+    0 4px 20px rgba(19,82,114,.08) !important;
 }
 html.is-homepage.is-scrolled.dark header,
  html.is-homepage.dark.is-scrolled header {
-  background: #0b141b !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04) 0%, transparent 100%),
+    #0b141b !important;
   border-bottom-color: rgba(102,204,255,.14) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.03) inset,
+    0 4px 20px rgba(0,0,0,.2) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════
    批次 4 · section 色块节奏 + 目录区扁平化
    ═══════════════════════════════════════════════════════════ */
 
-/* ── 目录区：纯白底 + 弧形顶部分隔 ── */
+/* ── 目录区：白底 + 弧形顶部分隔 ── */
 html.is-homepage .toc {
   position: relative;
   background: #fff;
   max-width: none !important;
   margin: 0 !important;
-  padding: 64px 24px 72px !important;
+  padding: 48px 24px 56px !important;
 }
 /* 弧形承接 hero */
 html.is-homepage .toc::before {
   content: ""; position: absolute; left: 0; right: 0; top: -36px; height: 36px;
   background: inherit; border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
-html.is-homepage.dark .toc,
 html.is-homepage.dark .toc { background: #0b141b; }
 
-/* 目录标题 */
-html.is-homepage .toc-title {
-  font-family: var(--font-family-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--color-primary-700, #0A85C2);
-  margin: 0 0 28px;
-  padding-left: .75rem;
-  border-left: 3px solid var(--color-primary-400, #66CCFF);
-  max-width: 780px;
-  margin-left: auto; margin-right: auto;
+/* 目录标题 — 胶囊式 */
+html.is-homepage .toc-header {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
 }
-html.is-homepage.dark .toc-title,
-html.is-homepage.dark .toc-title { color: var(--color-primary-200, #B8E7FF); }
+html.is-homepage .toc-header h2 {
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-700, #0A85C2);
+  margin: 0 0 32px;
+}
+html.is-homepage.dark .toc-header h2 { color: var(--color-primary-200, #B8E7FF); }
 
-/* 目录列表 */
+@media (max-width: 1023px) {
+  html.is-homepage .toc-header { max-width: 720px; }
+}
+@media (max-width: 639px) {
+  html.is-homepage .toc-header { max-width: 480px; }
+}
+
+/* 目录列表 - 卡片网格 */
 html.is-homepage .toc-list {
   list-style: none; padding: 0; margin: 0;
-  max-width: 780px; margin: 0 auto;
+  max-width: 960px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Tablet: 2 列 */
+@media (max-width: 1023px) {
+  html.is-homepage .toc-list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+}
+
+/* Mobile: 1 列 */
+@media (max-width: 639px) {
+  html.is-homepage .toc-list {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
 }
 html.is-homepage .toc-item {
-  border-bottom: 1px solid #e8ecf0;
-}
-html.is-homepage.dark .toc-item,
-html.is-homepage.dark .toc-item { border-bottom-color: #1e293b; }
-html.is-homepage .toc-item:first-child {
-  border-top: 1px solid #e8ecf0;
-}
-html.is-homepage.dark .toc-item:first-child,
-html.is-homepage.dark .toc-item:first-child { border-top-color: #1e293b; }
-
-/* 目录链接行 */
-html.is-homepage .toc-item a {
-  display: flex; align-items: flex-start; gap: 20px;
-  padding: 20px 12px !important;
-  text-decoration: none; color: inherit;
-  transition: background .2s ease, transform .2s ease;
-  border-radius: 8px;
-  margin: 2px 0;
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
   border: none !important;
-  box-shadow: none !important;
+}
+html.is-homepage.dark .toc-item { border: none !important; }
+html.is-homepage .toc-item:first-child {
+  border: none !important;
+}
+html.is-homepage.dark .toc-item:first-child { border: none !important; }
+
+/* 目录链接行 — 卡片式 */
+html.is-homepage .toc-item a {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  padding: 24px 20px !important;
+  text-decoration: none; color: inherit;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  border-radius: 12px;
+  background: #fff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  border: 1px solid #e8ecf0 !important;
+  height: 100%; box-sizing: border-box;
 }
 html.is-homepage .toc-item a::after { display: none !important; }
+html.is-homepage.dark .toc-item a {
+  background: #111d27 !important;
+  border-color: #1e293b !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.15);
+}
 @media (hover:hover) and (pointer:fine) {
   html.is-homepage .toc-item a:hover {
-    background: var(--color-primary-50, #F0FAFE) !important;
-    transform: translateX(4px);
+    background: #fff !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
+    transform: translateY(-3px);
+    border-color: var(--color-primary-200, #B8E7FF) !important;
   }
-  html.is-homepage.dark .toc-item a:hover,
   html.is-homepage.dark .toc-item a:hover {
-    background: rgba(102,204,255,.06) !important;
+    background: #152637 !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.25);
+    border-color: var(--color-primary-700, #0A85C2) !important;
   }
 }
 
@@ -1665,10 +1747,6 @@ html.is-homepage .toc-item:nth-child(2) .toc-num { background: var(--color-prima
 html.is-homepage .toc-item:nth-child(3) .toc-num { background: var(--color-primary-600, #06A1EF) !important; }
 html.is-homepage .toc-item:nth-child(4) .toc-num { background: var(--color-primary-700, #0A85C2) !important; }
 html.is-homepage .toc-item:nth-child(5) .toc-num { background: var(--color-primary-800, #116B97) !important; }
-html.is-homepage .toc-item-secondary .toc-num {
-  background: var(--color-primary-500, #29B8FF) !important;
-  font-size: .75rem;
-}
 /* 暗色编号保持亮色 */
 html.is-homepage.dark .toc-num,
 html.is-homepage.dark .toc-num { color: #fff !important; }
@@ -1705,26 +1783,96 @@ html.is-homepage.dark .toc-meta {
   color: var(--color-primary-300, #8FDAFF);
 }
 
+/* ── 资料下载独立入口 ── */
+html.is-homepage .toc-extra {
+  max-width: 960px; margin: 32px auto 0; padding: 0;
+}
+html.is-homepage .toc-extra a {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px;
+  border-radius: 10px;
+  background: var(--color-primary-50, #F0FAFE);
+  color: var(--color-primary-700, #0A85C2);
+  text-decoration: none;
+  font-family: var(--font-family-display);
+  font-size: .95rem; font-weight: 600;
+  transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
+  border: 1px solid var(--color-primary-100, #D1F0FE);
+}
+html.is-homepage .toc-extra a:hover {
+  background: var(--color-primary-100, #D1F0FE);
+  box-shadow: 0 2px 8px rgba(6,161,239,.12);
+  transform: translateX(4px);
+}
+html.is-homepage .toc-extra-icon {
+  display: flex; align-items: center; color: var(--color-primary-500, #29B8FF);
+}
+html.is-homepage .toc-extra-arrow {
+  font-size: 1.1rem; opacity: .6; transition: transform .2s ease;
+}
+html.is-homepage .toc-extra a:hover .toc-extra-arrow {
+  transform: translateX(3px);
+}
+html.is-homepage.dark .toc-extra a {
+  background: rgba(102,204,255,.06);
+  color: var(--color-primary-300, #8FDAFF);
+  border-color: rgba(102,204,255,.12);
+}
+html.is-homepage.dark .toc-extra a:hover {
+  background: rgba(102,204,255,.10);
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+html.is-homepage.dark .toc-extra-icon {
+  color: var(--color-primary-400, #66CCFF);
+}
+
+@media (max-width: 1023px) {
+  html.is-homepage .toc-extra { max-width: 720px; }
+}
+@media (max-width: 639px) {
+  html.is-homepage .toc-extra { max-width: 480px; }
+}
+
 /* ── About 区：primary-50 淡蓝底 ── */
 html.is-homepage .about {
-  background: var(--color-primary-50, #F0FAFE);
+  position: relative;
+  background: transparent;
   max-width: none; margin: 0;
-  padding: 64px 24px 72px !important;
+  padding: 48px 24px 56px !important;
   border-top: none !important;
 }
-html.is-homepage.dark .about,
-html.is-homepage.dark .about { background: rgba(102,204,255,.04); }
+html.is-homepage.dark .about { background: transparent; }
 html.is-homepage .about-grid { max-width: 960px; margin: 0 auto; }
 
 /* ── License + Footer：白色底 ── */
 html.is-homepage .license {
-  background: #fff;
+  background: transparent;
   max-width: none; margin: 0;
-  padding: 32px 24px 48px !important;
+  padding: 24px 24px 36px !important;
 }
-html.is-homepage.dark .license,
-html.is-homepage.dark .license { background: #0b141b; }
-html.is-homepage .license-inner { max-width: 960px; margin: 0 auto; }
+html.is-homepage .license-inner {
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 24px !important;
+  border-top: none !important;
+  max-width: 960px; margin: 0 auto;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.2) inset,
+    0 0 40px rgba(41,184,255,.08),
+    0 0 80px rgba(41,184,255,.04);
+  border: 1px solid rgba(255,255,255,.3);
+}
+html.is-homepage.dark .license { background: transparent; }
+html.is-homepage.dark .license-inner {
+  background: rgba(11,20,27,.55);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.06) inset,
+    0 0 40px rgba(41,184,255,.06),
+    0 0 80px rgba(41,184,255,.03);
+  border-color: rgba(255,255,255,.08);
+}
 
 html.is-homepage .pg-footer {
   background: #fff;
@@ -1782,12 +1930,26 @@ html.is-homepage #ft-container { display: none !important; }
 
 /* ── Logo 放大 2.5×（仅首页）── */
 html.is-homepage .hero-mark img {
-  width: 350px !important;
-  height: 350px !important;
+  width: 420px !important;
+  height: 420px !important;
 }
-/* 暗色模式：取消反色，logo 保持原色 */
+html.is-homepage .hero-mark {
+  max-width: 460px !important;
+}
+/* 暗色模式：提亮 + 背光 + 强投影 */
+html.is-homepage.dark .hero-mark {
+  opacity: .95 !important;
+}
+html.is-homepage.dark .hero-mark::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(41,184,255,.12) 0%, transparent 70%);
+  z-index: -1;
+}
 html.is-homepage.dark .hero-mark img {
-  filter: drop-shadow(0 4px 12px rgba(255,255,255,.08)) !important;
+  filter: brightness(2.5) drop-shadow(0 0 20px rgba(41,184,255,.25)) drop-shadow(0 4px 12px rgba(255,255,255,.12)) !important;
 }
 html.is-homepage .hero-mark {
   max-width: 380px !important;
