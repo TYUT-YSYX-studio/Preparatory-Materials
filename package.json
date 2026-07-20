@@ -12,6 +12,7 @@
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "@duxweb/vitepress-theme": "^1.1.9"
+    "@duxweb/vitepress-theme": "^1.1.9",
+    "vitepress-plugin-tabs": "^0.9.1"
   }
 }

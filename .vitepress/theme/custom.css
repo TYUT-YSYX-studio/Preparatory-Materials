@@ -1,0 +1,551 @@
+/* ============================================================
+   .vitepress/theme/custom.css
+   必须在 @duxweb/vitepress-theme/dist/index.css 之后引入
+   ============================================================ */
+
+/* ============================================================
+   1. 主色令牌：#66CCFF 全色阶（锚定 400）
+   覆写 Tailwind v4 --color-primary-* 色阶
+   ============================================================ */
+:root {
+  --color-primary-50:  #F0FAFE;
+  --color-primary-100: #DCF3FE;
+  --color-primary-200: #B8E7FF;
+  --color-primary-300: #8FDAFF;
+  --color-primary-400: #66CCFF;   /* 视觉主色 */
+  --color-primary-500: #29B8FF;
+  --color-primary-600: #06A1EF;
+  --color-primary-700: #0A85C2;
+  --color-primary-800: #116B97;
+  --color-primary-900: #135272;
+  --color-primary-950: #0C3245;
+
+  /* VitePress 原生品牌色对齐 */
+  --vp-c-brand:       var(--color-primary-500);
+  --vp-c-brand-light: var(--color-primary-400);
+  --vp-c-brand-dark:  var(--color-primary-600);
+
+  /* ============================================================
+     2. Fluent 亚克力材质令牌（亮色模式）
+     ============================================================ */
+  --fluent-blur:         20px;
+  --fluent-saturate:     180%;
+  --fluent-surface:      rgba(255, 255, 255, 0.62);
+  --fluent-surface-soft: rgba(255, 255, 255, 0.45);
+  --fluent-border:       rgba(255, 255, 255, 0.55);
+  --fluent-edge:         rgba(255, 255, 255, 0.85);
+  --fluent-shadow:       0 8px 32px rgba(19, 82, 114, 0.12);
+  --fluent-shadow-hover: 0 14px 44px rgba(19, 82, 114, 0.20);
+  --fluent-radius:       14px;
+}
+
+/* 暗色模式：反转令牌 */
+.dark {
+  --vp-c-brand:       var(--color-primary-400);
+  --vp-c-brand-light: var(--color-primary-300);
+  --vp-c-brand-dark:  var(--color-primary-500);
+
+  --fluent-surface:      rgba(28, 30, 34, 0.58);
+  --fluent-surface-soft: rgba(28, 30, 34, 0.40);
+  --fluent-border:       rgba(255, 255, 255, 0.09);
+  --fluent-edge:         rgba(255, 255, 255, 0.14);
+  --fluent-shadow:       0 8px 32px rgba(0, 0, 0, 0.45);
+  --fluent-shadow-hover: 0 14px 44px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   3. 导航栏 Header：亚克力毛玻璃
+   选择器: header（主题源码 Layout 中唯一的 <header> 元素）
+   主题已内置 backdrop-blur + bg-white/95，这里强化为 Fluent 材质
+   ============================================================ */
+header {
+  background: var(--fluent-surface) !important;
+  backdrop-filter: blur(var(--fluent-blur)) saturate(var(--fluent-saturate));
+  -webkit-backdrop-filter: blur(var(--fluent-blur)) saturate(var(--fluent-saturate));
+  border-bottom-color: var(--fluent-border) !important;
+  box-shadow: var(--fluent-shadow);
+}
+
+/* ============================================================
+   4. 侧边栏 Sidebar：半透明材质
+   选择器: aside（Sidebar.vue.js 中的 <aside> 元素）
+   桌面端 md:bg-transparent → 改为玻璃；移动端已有 bg-white 底色
+   ============================================================ */
+aside {
+  background: var(--fluent-surface-soft) !important;
+  backdrop-filter: blur(calc(var(--fluent-blur) * 0.6)) saturate(150%);
+  -webkit-backdrop-filter: blur(calc(var(--fluent-blur) * 0.6)) saturate(150%);
+}
+/* 桌面端侧边栏右边线 */
+@media (min-width: 768px) {
+  aside {
+    border-right: 1px solid var(--fluent-border);
+  }
+}
+
+/* ============================================================
+   5. 首页特性卡片：玻璃表面 + Reveal 悬浮高光
+   选择器: .home .grid 容器下的直接卡片子元素
+   Features.vue.js 中卡片使用 rounded-3xl bg-white dark:bg-gray-800
+   ============================================================ */
+.home .grid > a,
+.home .grid > div {
+  background: var(--fluent-surface) !important;
+  backdrop-filter: blur(var(--fluent-blur)) saturate(var(--fluent-saturate));
+  -webkit-backdrop-filter: blur(var(--fluent-blur)) saturate(var(--fluent-saturate));
+  border-color: var(--fluent-border) !important;
+  border-radius: var(--fluent-radius) !important;
+  box-shadow: var(--fluent-shadow);
+  transition: transform 0.3s var(--ease-fluid, ease),
+              box-shadow 0.3s var(--ease-fluid, ease),
+              border-color 0.3s ease;
+}
+/* Fluent 顶部高光线 */
+.home .grid > a::before,
+.home .grid > div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border-top: 1px solid var(--fluent-edge);
+  pointer-events: none;
+  z-index: 1;
+}
+/* 悬浮效果 */
+.home .grid > a:hover,
+.home .grid > div:hover {
+  box-shadow: var(--fluent-shadow-hover) !important;
+  border-color: var(--color-primary-300) !important;
+}
+
+/* ============================================================
+   6. 正文链接与行内代码：保证对比度
+   选择器: .prose-content（Doc.vue.js 中内容容器）
+   亮色用 600 保证对比度，暗色用 400
+   ============================================================ */
+.prose-content a {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-200);
+  transition: color 0.2s ease;
+}
+.prose-content a:hover {
+  color: var(--color-primary-500);
+}
+.dark .prose-content a {
+  color: var(--color-primary-400);
+}
+.dark .prose-content a:hover {
+  color: var(--color-primary-300);
+}
+
+.prose-content :not(pre) > code {
+  color: var(--color-primary-700);
+  background: var(--color-primary-50);
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+}
+.dark .prose-content :not(pre) > code {
+  color: var(--color-primary-300);
+  background: rgba(102, 204, 255, 0.12);
+}
+
+/* ============================================================
+   7. 提示块 / Callout：轻玻璃
+   ============================================================ */
+.prose-content .custom-block {
+  border-radius: var(--fluent-radius);
+  border: 1px solid var(--fluent-border);
+  /* 不覆盖 background，保留主题各类型专属底色 (info=蓝 tip=绿 warning=黄 danger=红) */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 修复：引用块内 strong / bold — 同色系半透明底色高亮（仅上下 padding） */
+.prose-content .custom-block strong {
+  color: inherit;
+  background: color-mix(in oklab, currentColor 18%, transparent);
+  padding: 0.08em 0;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   8. 首页 Hero：分层光晕背景
+   选择器: .home section（Hero.vue.js 渲染的第一个 <section>）
+   ============================================================ */
+.home section {
+  position: relative;
+  overflow: hidden;
+}
+.home section::before,
+.home section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+.home section::before {
+  width: 520px;
+  height: 520px;
+  top: -160px;
+  right: -120px;
+  background: radial-gradient(circle, var(--color-primary-300), transparent 70%);
+}
+.home section::after {
+  width: 420px;
+  height: 420px;
+  bottom: -180px;
+  left: -100px;
+  background: radial-gradient(circle, var(--color-primary-200), transparent 70%);
+}
+.dark .home section::before { opacity: 0.35; }
+.dark .home section::after  { opacity: 0.30; }
+
+/* Hero 主按钮：Fluent 强调色
+   选择器: .btn-primary（duxweb 主题按钮组件类） */
+.btn-primary {
+  background: var(--color-primary-400) !important;
+  color: #06283d !important;
+  border: 1px solid var(--fluent-edge) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 16px rgba(102, 204, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn-primary:hover {
+  background: var(--color-primary-300) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 204, 255, 0.55);
+}
+
+/* ============================================================
+   9. DocFooter 上一篇/下一篇：轻玻璃按钮
+   ============================================================ */
+.doc-footer .nav-link a {
+  background: var(--fluent-surface-soft);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: var(--fluent-border) !important;
+  border-radius: var(--fluent-radius);
+}
+
+/* ============================================================
+   10. 搜索按钮：主题色
+   ============================================================ */
+.SearchButton {
+  /* 搜索按钮使用主题色强调 */
+}
+
+/* ============================================================
+   11. 滚动条细节
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-200);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-primary-800);
+  background-clip: content-box;
+}
+
+/* ============================================================
+   12. 滚动渐显 (ScrollReveal)
+   对 h2 / 表格 / custom-block 做淡入上移动画，仅触发一次
+   ============================================================ */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease,
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   13. 导航链接对比度增强
+   毛玻璃背景下 gray-600 偏淡，提升至 gray-800 / gray-200
+   ============================================================ */
+.nav-dropdown-button,
+.nav-dropdown-link {
+  color: var(--color-gray-800) !important;
+  font-weight: 600;
+}
+.dark .nav-dropdown-button,
+.dark .nav-dropdown-link {
+  color: var(--color-gray-200) !important;
+}
+/* hover / active 保持主题色 */
+.nav-dropdown-button:hover,
+.nav-dropdown-link:hover {
+  color: var(--color-gray-900) !important;
+}
+.dark .nav-dropdown-button:hover,
+.dark .nav-dropdown-link:hover {
+  color: var(--color-gray-100) !important;
+}
+.nav-dropdown-link.active,
+.nav-dropdown-button.active {
+  color: var(--color-primary-600) !important;
+  font-weight: 700;
+}
+.dark .nav-dropdown-link.active,
+.dark .nav-dropdown-button.active {
+  color: var(--color-primary-400) !important;
+}
+
+/* 导航章节分隔线 */
+.nav-dropdown-depth-0 {
+  position: relative;
+}
+.nav-dropdown-depth-0:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.25rem;
+  width: 1px;
+  background: var(--color-gray-300);
+  border-radius: 1px;
+}
+.dark .nav-dropdown-depth-0:not(:last-child)::after {
+  background: var(--color-gray-600);
+}
+
+/* ── 侧边栏现代化 ── */
+
+/* 侧边栏滚动条加宽 */
+aside .overflow-y-auto {
+  max-height: calc(100vh - 12rem) !important;
+}
+aside .overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+aside .overflow-y-auto::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: 4px;
+}
+aside .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+.dark aside .overflow-y-auto::-webkit-scrollbar-thumb {
+  background: var(--color-gray-600);
+}
+.dark aside .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
+/* 分组标题：左 accent 线 + 更大间距 */
+.sidebar-group-title {
+  position: relative;
+  padding-left: 0.85rem !important;
+  margin-top: 0.75rem;
+  margin-bottom: 0.6rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-gray-500) !important;
+}
+.dark .sidebar-group-title {
+  color: var(--color-gray-400) !important;
+}
+.sidebar-group-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 70%;
+  background: var(--color-primary-400);
+  border-radius: 2px;
+}
+
+/* 分组之间分隔线 */
+.sidebar-group + .sidebar-group {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 0.5rem;
+}
+.dark .sidebar-group + .sidebar-group {
+  border-top-color: var(--color-gray-700);
+}
+
+/* ── 二级分组折叠：默认收起，点击标题展开 ── */
+.sidebar-group-items .ml-2 h4 {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 18px !important;
+}
+/* 折叠箭头 */
+.sidebar-group-items .ml-2 h4::after {
+  content: '';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--color-gray-400);
+  transition: transform 0.25s ease;
+}
+.sidebar-group-items .sg-nested-open h4::after {
+  transform: translateY(-50%) rotate(0deg);
+}
+/* 默认隐藏子列表 */
+.sidebar-group-items .ml-2 ul {
+  display: none;
+}
+.sidebar-group-items .sg-nested-open ul {
+  display: block;
+}
+
+/* 统一嵌套标题与链接项间距，取消父级缩进 */
+.sidebar-group-items .ml-2 h4 {
+  padding: 0.45rem 0.75rem !important;
+  margin-bottom: 0 !important;
+  margin-left: -0.5rem !important;
+  font-size: 0.88rem !important;
+}
+
+/* 链接项：更大点击区域 + 平滑过渡 */
+.sidebar-group-items a,
+.sidebar-nav > div > a {
+  padding: 0.45rem 0.75rem !important;
+  margin: 1px 0;
+  border-radius: 8px !important;
+  font-size: 0.88rem;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* 激活态：更醒目的左侧色条 */
+.sidebar-group-items a[class*='bg-primary'],
+.sidebar-nav > div > a[class*='bg-primary'] {
+  border-left-width: 3px !important;
+  border-radius: 0 8px 8px 0 !important;
+  font-weight: 600;
+}
+
+/* 未激活态 hover */
+.sidebar-group-items a:hover,
+.sidebar-nav > div > a:hover {
+  background: var(--color-gray-100) !important;
+}
+.dark .sidebar-group-items a:hover,
+.dark .sidebar-nav > div > a:hover {
+  background: rgba(255,255,255,0.06) !important;
+}
+
+/* ============================================================
+   14. 专注模式
+   开启后导航/侧边栏/目录变模糊半透明，hover 恢复
+   ============================================================ */
+.focus-mode header,
+.focus-mode aside,
+.focus-mode .sticky.top-16 {
+  opacity: 0.06;
+  filter: blur(8px);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+.focus-mode header:hover,
+.focus-mode aside:hover,
+.focus-mode .sticky.top-16:hover {
+  opacity: 1;
+  filter: none;
+}
+/* 专注模式下主内容区轻微居中突出 */
+.focus-mode main {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ============================================================
+   15. 暗色切换：圆形展开过渡 (View Transition API)
+   主题已有 startViewTransition，这里叠加 clip-path 动画
+   ============================================================ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: vt-circle-open 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes vt-circle-open {
+  from {
+    clip-path: circle(0% at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+}
+
+/* ============================================================
+   16. 首页入场动画
+   主题已有 scale-in/fade-in，这里替换为淡入上移 + stagger
+   ============================================================ */
+@keyframes home-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hero 标题区 */
+.home section .fade-in {
+  animation: home-rise 0.7s var(--ease-fluid, cubic-bezier(0.22, 1, 0.36, 1)) both;
+}
+.home section .fade-in:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+/* Hero 按钮 */
+.home section .scale-in {
+  animation: home-rise 0.6s var(--ease-fluid, cubic-bezier(0.22, 1, 0.36, 1)) both;
+  animation-delay: 0.35s;
+}
+
+/* 特性卡片 stagger：复用组件内已有的 animation-delay inline style */
+.home .grid > a,
+.home .grid > div {
+  animation: home-rise 0.6s var(--ease-fluid, cubic-bezier(0.22, 1, 0.36, 1)) both;
+}
+
+/* ============================================================
+   18. 隐藏阅读时间（保留字数）
+   ============================================================ */
+.prose .not-prose > :first-child {
+  display: none;
+}
+
+/* ============================================================
+   19. 无障碍：尊重系统减少动效偏好
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

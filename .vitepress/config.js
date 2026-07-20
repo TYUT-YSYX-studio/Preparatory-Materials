@@ -1,7 +1,14 @@
 import { withDuxTheme } from '@duxweb/vitepress-theme/config'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
 export default withDuxTheme({
   base: '/Pre-docs/',
+
+  markdown: {
+    config(md) {
+      md.use(tabsMarkdownPlugin)
+    }
+  },
   title: '先研实验室前置学习讲义',
   description: '太原理工大学"一生一芯"工作室前置讲义',
   lang: 'zh-CN',
