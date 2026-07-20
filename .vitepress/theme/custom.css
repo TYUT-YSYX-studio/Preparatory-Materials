@@ -151,22 +151,248 @@ aside {
 }
 
 /* ============================================================
-   7. 提示块 / Callout：轻玻璃
+   7. Custom-block：Fluent 玻璃拟态 · 湿润反射 · 弹性悬浮（增强版）
    ============================================================ */
 .prose-content .custom-block {
-  border-radius: var(--fluent-radius);
-  border: 1px solid var(--fluent-border);
-  /* 不覆盖 background，保留主题各类型专属底色 (info=蓝 tip=绿 warning=黄 danger=红) */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--fluent-radius, 14px);
+  border: 1px solid var(--fluent-border, rgba(255,255,255,.5));
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  /* 双层静态反射：顶部镜面封层 + 对角光泽 */
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,0) 30%),
+    linear-gradient(135deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 45%);
+
+  /* 顶部镜面高光线 + 底部微反光 + 柔和投影 */
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.85),
+    inset 0 -1px 0 rgba(255,255,255,.12),
+    var(--fluent-shadow, 0 8px 32px rgba(19,82,114,.12));
+
+  /* 弹性曲线：过冲回弹 */
+  transition:
+    transform .38s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow .3s ease,
+    border-color .3s ease;
 }
 
-/* 修复：引用块内 strong / bold — 同色系半透明底色高亮（仅上下 padding） */
-.prose-content .custom-block strong {
-  color: inherit;
-  background: color-mix(in oklab, currentColor 18%, transparent);
-  padding: 0.08em 0;
-  border-radius: 3px;
+/* 动态扫光层（hover 时斜向掠过） */
+.prose-content .custom-block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(105deg,
+    transparent 35%,
+    rgba(255,255,255,.14) 45%,
+    rgba(255,255,255,.55) 50%,
+    rgba(255,255,255,.14) 55%,
+    transparent 65%);
+  transform: translateX(-130%) skewX(-8deg);
+  transition: transform .9s var(--ease-fluid, cubic-bezier(.22, 1, .36, 1));
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .prose-content .custom-block:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: rgba(255,255,255,.75);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.95),
+      inset 0 -1px 0 rgba(255,255,255,.16),
+      var(--fluent-shadow-hover, 0 14px 44px rgba(19,82,114,.20));
+  }
+  .prose-content .custom-block:hover::after {
+    transform: translateX(130%) skewX(-8deg);
+  }
+  .prose-content .custom-block:active {
+    transform: translateY(-1px) scale(.997);
+    transition-duration: .12s;
+  }
+}
+
+/* ---- 语义类型配色 ---- */
+/* tip */
+.prose-content .custom-block.tip {
+  background-color: rgba(16,185,129,.10);
+  color: #065F46;
+  border-color: rgba(16,185,129,.22);
+  border-left: 3px solid #10B981;
+}
+
+/* warning */
+.prose-content .custom-block.warning {
+  background-color: rgba(245,158,11,.10);
+  color: #92400E;
+  border-color: rgba(245,158,11,.25);
+  border-left: 3px solid #F59E0B;
+}
+
+/* danger / caution */
+.prose-content .custom-block.danger,
+.prose-content .custom-block.caution {
+  background-color: rgba(239,68,68,.10);
+  color: #991B1B;
+  border-color: rgba(239,68,68,.25);
+  border-left: 3px solid #EF4444;
+}
+
+/* info / note */
+.prose-content .custom-block.info,
+.prose-content .custom-block.note {
+  background-color: rgba(41,184,255,.10);
+  color: var(--color-primary-800, #116B97);
+  border-color: rgba(41,184,255,.25);
+  border-left: 3px solid var(--color-primary-500, #29B8FF);
+}
+
+/* important */
+.prose-content .custom-block.important {
+  background-color: rgba(139,92,246,.10);
+  color: #5B21B6;
+  border-color: rgba(139,92,246,.25);
+  border-left: 3px solid #8B5CF6;
+}
+
+/* details */
+.prose-content .custom-block.details {
+  background-color: rgba(107,114,128,.08);
+  color: #374151;
+  border-color: rgba(107,114,128,.20);
+  border-left: 3px solid #9CA3AF;
+}
+
+.prose-content .custom-block .custom-block-title { font-weight: 700; }
+
+/* ============================================================
+   8. 粗体修复：语义色马克笔横扫
+   ============================================================ */
+
+/* 剥掉灰色涂层 */
+.prose-content .custom-block strong,
+.prose-content .custom-block b {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 700;
+}
+
+/* 马克笔扫层（底部 40% 语义浅色） */
+.prose-content .custom-block.tip strong,
+.prose-content .custom-block.tip b {
+  color: #064E3B;
+  background-image: linear-gradient(transparent 60%, rgba(16,185,129,.32) 60%) !important;
+}
+.prose-content .custom-block.warning strong,
+.prose-content .custom-block.warning b {
+  color: #78350F;
+  background-image: linear-gradient(transparent 60%, rgba(245,158,11,.34) 60%) !important;
+}
+.prose-content .custom-block.danger strong,
+.prose-content .custom-block.danger b,
+.prose-content .custom-block.caution strong,
+.prose-content .custom-block.caution b {
+  color: #7F1D1D;
+  background-image: linear-gradient(transparent 60%, rgba(239,68,68,.30) 60%) !important;
+}
+.prose-content .custom-block.info strong,
+.prose-content .custom-block.info b,
+.prose-content .custom-block.note strong,
+.prose-content .custom-block.note b {
+  color: var(--color-primary-900, #135272);
+  background-image: linear-gradient(transparent 60%, rgba(41,184,255,.32) 60%) !important;
+}
+.prose-content .custom-block.important strong,
+.prose-content .custom-block.important b {
+  color: #4C1D95;
+  background-image: linear-gradient(transparent 60%, rgba(139,92,246,.30) 60%) !important;
+}
+
+/* ============================================================
+   暗色模式（反射强度降低）
+   ============================================================ */
+.dark .prose-content .custom-block {
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 30%),
+    linear-gradient(135deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,0) 45%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.14),
+    inset 0 -1px 0 rgba(255,255,255,.04),
+    var(--fluent-shadow, 0 8px 32px rgba(0,0,0,.45));
+}
+.dark .prose-content .custom-block::after {
+  background: linear-gradient(105deg,
+    transparent 35%,
+    rgba(255,255,255,.05) 45%,
+    rgba(255,255,255,.16) 50%,
+    rgba(255,255,255,.05) 55%,
+    transparent 65%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .dark .prose-content .custom-block:hover {
+    border-color: rgba(255,255,255,.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.20),
+      inset 0 -1px 0 rgba(255,255,255,.06),
+      var(--fluent-shadow-hover, 0 14px 44px rgba(0,0,0,.60));
+  }
+}
+
+.dark .prose-content .custom-block.tip {
+  background-color: rgba(16,185,129,.12); color: #A7F3D0;
+}
+.dark .prose-content .custom-block.warning {
+  background-color: rgba(245,158,11,.12); color: #FDE68A;
+}
+.dark .prose-content .custom-block.danger,
+.dark .prose-content .custom-block.caution {
+  background-color: rgba(239,68,68,.12); color: #FECACA;
+}
+.dark .prose-content .custom-block.info,
+.dark .prose-content .custom-block.note {
+  background-color: rgba(41,184,255,.12); color: var(--color-primary-100, #DCF3FE);
+}
+.dark .prose-content .custom-block.important {
+  background-color: rgba(139,92,246,.12); color: #DDD6FE;
+}
+.dark .prose-content .custom-block.details {
+  background-color: rgba(107,114,128,.12); color: #D1D5DB;
+}
+
+/* 暗色模式马克笔扫层（亮档色 + 低不透明度） */
+.dark .prose-content .custom-block.tip strong,
+.dark .prose-content .custom-block.tip b {
+  color: #D1FAE5;
+  background-image: linear-gradient(transparent 60%, rgba(52,211,153,.24) 60%) !important;
+}
+.dark .prose-content .custom-block.warning strong,
+.dark .prose-content .custom-block.warning b {
+  color: #FEF3C7;
+  background-image: linear-gradient(transparent 60%, rgba(251,191,36,.22) 60%) !important;
+}
+.dark .prose-content .custom-block.danger strong,
+.dark .prose-content .custom-block.danger b,
+.dark .prose-content .custom-block.caution strong,
+.dark .prose-content .custom-block.caution b {
+  color: #FEE2E2;
+  background-image: linear-gradient(transparent 60%, rgba(248,113,113,.22) 60%) !important;
+}
+.dark .prose-content .custom-block.info strong,
+.dark .prose-content .custom-block.info b,
+.dark .prose-content .custom-block.note strong,
+.dark .prose-content .custom-block.note b {
+  color: #FFFFFF;
+  background-image: linear-gradient(transparent 60%, rgba(102,204,255,.26) 60%) !important;
+}
+.dark .prose-content .custom-block.important strong,
+.dark .prose-content .custom-block.important b {
+  color: #EDE9FE;
+  background-image: linear-gradient(transparent 60%, rgba(167,139,250,.22) 60%) !important;
 }
 
 /* ============================================================
