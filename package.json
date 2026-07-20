@@ -5,9 +5,14 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build && node scripts/copy-assets.js",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "postinstall": "node scripts/patch-dux-footer.js"
   },
   "devDependencies": {
     "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "@duxweb/vitepress-theme": "^1.1.9",
+    "vitepress-plugin-tabs": "^0.9.1"
   }
 }
