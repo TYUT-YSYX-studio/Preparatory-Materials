@@ -8,94 +8,24 @@ head:
     - href: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap
       rel: stylesheet
 ---
+<div class="hero-wrap">
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-overline">太原理工大学 · 先进计算机系统研究实验室</div>
-    <h1 class="hero-headline">前置讲义</h1>
+    <h1 class="hero-headline"><span class="accent">前置</span>讲义</h1>
     <p class="hero-body">
       在"一生一芯"计划现有教学内容的基础上，结合太原理工大学课程培养方案，<br>为低年级、零基础学生设计循序渐进的前置学习路径。
     </p>
     <div class="hero-links">
-      <a class="link-arrow" href="v2409/序">2409 版本<span class="arr">&rarr;</span></a>
-      <span class="link-sep">/</span>
       <a class="link-arrow" href="v2509/序">2509 版本<span class="arr">&rarr;</span></a>
+      <span class="link-sep">/</span>
+      <a class="link-arrow" href="v2409/序">2409 版本<span class="arr">&rarr;</span></a>
     </div>
   </div>
   <div class="hero-mark">
     <img src="/img/ACSL_square.png" alt="" />
   </div>
 </section>
-<section class="toc">
-  <header class="toc-header">
-    <span class="toc-label" style="font-size: 1.5rem; font-weight: bold;">2509目录</span>
-  </header>
-  <ol class="toc-list">
-    <li class="toc-item">
-      <a href="v2509/pre_trainees/lecture1/">
-        <span class="toc-num">01</span>
-        <div class="toc-content">
-          <h3>适应期</h3>
-          <p>零基础入门，涵盖 Linux 基础、C 语言、Shell 与开发环境搭建。</p>
-          <span class="toc-count">5 篇讲义 + 12 篇辅文档</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/intern_trainees/lecture1/">
-        <span class="toc-num">02</span>
-        <div class="toc-content">
-          <h3>见习期</h3>
-          <p>数字电路入门、Markdown 规范、Java 环境配置。</p>
-          <span class="toc-count">4 篇讲义 + 1 篇辅文档</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/winter_vacation/lecture1/">
-        <span class="toc-num">03</span>
-        <div class="toc-content">
-          <h3>寒假研学</h3>
-          <p>计算机组成原理、数据结构、Verilog 与单周期 CPU 设计。</p>
-          <span class="toc-count">4 篇讲义 + 1 篇辅文档</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/formal_trainees/lecture1">
-        <span class="toc-num">04</span>
-        <div class="toc-content">
-          <h3>正式学员</h3>
-          <p>Makefile 工程化、minirvEMU 框架、RTL 仿真与词法分析。</p>
-          <span class="toc-count">3 篇讲义</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item">
-      <a href="v2509/final_trans/final_lecture">
-        <span class="toc-num">05</span>
-        <div class="toc-content">
-          <h3>项目实践</h3>
-          <p>预学习过渡阶段，从讲义到实战的衔接。</p>
-          <span class="toc-count">1 篇讲义</span>
-        </div>
-      </a>
-    </li>
-    <li class="toc-item toc-item-secondary">
-      <a href="v2509/资料下载">
-        <span class="toc-num">附</span>
-        <div class="toc-content">
-          <h3>资料下载</h3>
-          <p>PDF 讲义与辅助文档，分类下载。</p>
-          <span class="toc-count">构建中</span>
-        </div>
-      </a>
-    </li>
-  </ol>
-
-
-
-</section>
-
 <section class="about">
   <div class="about-grid">
     <div class="about-main">
@@ -119,6 +49,7 @@ head:
     </div>
   </div>
 </section>
+</div>
 
 
 <section class="license">
@@ -133,9 +64,6 @@ head:
 </section>
 
 
-<footer class="pg-footer">
-  <p>第二期前置讲义 —— To Be Continue...</p>
-</footer>
 
 <style>
 /* ═══════════════════════════════════════════════════════
@@ -157,18 +85,13 @@ head:
    ═══════════════════════════════════════════════════════ */
 
 .hero {
-  margin: 0 calc(-50vw + 50%) 0;
-  width: 100vw;
-  background: #ffffff; 
   color: #0f172a; 
   position: relative;
-  overflow: hidden;
-  padding: 72px 24px 56px;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 64px 24px 40px;
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 96px 48px 80px; }
+  .hero { padding: 80px 48px 64px; }
 }
 
 .hero-inner {
@@ -289,107 +212,6 @@ head:
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-/* ═══════════════════════════════════════════════════════
-   TABLE OF CONTENTS (numbered list, not card grid)
-   ═══════════════════════════════════════════════════════ */
-
-.toc {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 64px 24px;
-}
-
-.toc-header {
-  margin-bottom: 32px;
-}
-
-.toc-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--c-ink2);
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--c-border);
-}
-
-.toc-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  counter-reset: toc;
-}
-
-.toc-item {
-  counter-increment: toc;
-  border-bottom: 1px solid var(--c-border);
-}
-
-.toc-item:first-child {
-  border-top: 1px solid var(--c-border);
-}
-
-.toc-item a {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 24px 0;
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.2s;
-}
-
-.toc-item a:hover {
-  background: #faf9f5;
-}
-
-.toc-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--c-ink2);
-  min-width: 28px;
-  padding-top: 3px;
-}
-
-.toc-item:first-child .toc-num { color: var(--c-red); }
-.toc-item:nth-child(2) .toc-num { color: var(--c-gold); }
-.toc-item:nth-child(3) .toc-num { color: #0d9488; }
-.toc-item:nth-child(4) .toc-num { color: var(--c-blue); }
-.toc-item:nth-child(5) .toc-num { color: #7c3aed; }
-.toc-item-secondary .toc-num {
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-.toc-content { flex: 1; min-width: 0; }
-
-.toc-content h3 {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--c-ink);
-  margin: 0 0 4px;
-}
-
-.toc-item a:hover .toc-content h3 {
-  color: var(--c-red);
-}
-
-.toc-content p {
-  font-size: 14px;
-  color: var(--c-ink2);
-  line-height: 1.7;
-  margin: 0 0 4px;
-}
-
-.toc-count {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: #94a3b8;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -527,9 +349,7 @@ head:
 
 /* Hero 区域 - 暗色模式 */
 .dark .hero {
-  background: #0f172a;
   color: #f1f5f9;
-  border-bottom-color: #334155;
 }
 
 .dark .hero::after {
@@ -561,55 +381,7 @@ head:
 }
 
 .dark .hero-mark {
-  opacity: 0.6;
-}
-
-/* 目录区域 - 暗色模式 */
-.dark .toc-label {
-  color: #94a3b8;
-  border-bottom-color: #334155;
-}
-
-.dark .toc-item {
-  border-bottom-color: #334155;
-}
-
-.dark .toc-item:first-child {
-  border-top-color: #334155;
-}
-
-.dark .toc-item a:hover {
-  background: #1e293b;
-}
-
-.dark .toc-num {
-  color: #94a3b8;
-}
-
-/* 目录项颜色 - 暗色模式（降低饱和度） */
-.dark .toc-item:first-child .toc-num { color: #f87171; }
-.dark .toc-item:nth-child(2) .toc-num { color: #fbbf24; }
-.dark .toc-item:nth-child(3) .toc-num { color: #2dd4bf; }
-.dark .toc-item:nth-child(4) .toc-num { color: #60a5fa; }
-.dark .toc-item:nth-child(5) .toc-num { color: #a78bfa; }
-.dark .toc-item-secondary .toc-num {
-  color: #64748b;
-}
-
-.dark .toc-content h3 {
-  color: #f1f5f9;
-}
-
-.dark .toc-item a:hover .toc-content h3 {
-  color: #f87171;
-}
-
-.dark .toc-content p {
-  color: #94a3b8;
-}
-
-.dark .toc-count {
-  color: #64748b;
+  opacity: 0.95;
 }
 
 /* About 区域 - 暗色模式 */

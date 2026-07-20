@@ -775,3 +775,1182 @@ aside .overflow-y-auto::-webkit-scrollbar-thumb:hover {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================
+   20. 批次 1 · 全局字体现代化
+   告别 Noto Serif SC 宋体感，全线切无衬线
+   ============================================================ */
+:root {
+  --font-family-display:
+    "Space Grotesk", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Source Han Sans SC", "Noto Sans SC", system-ui, sans-serif;
+  --vp-font-family-base:
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Source Han Sans SC", "Noto Sans SC", system-ui, sans-serif;
+  --vp-font-family-mono:
+    "JetBrains Mono", "Fira Code", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* 文档标题（VitePress 内容区） */
+.vp-doc h1, .vp-doc h2, .vp-doc h3,
+h1, h2, h3 {
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ── 首页 Hero 标题：覆盖 index.md 内 Noto Serif SC ── */
+.hero-headline {
+  font-family: var(--font-family-display) !important;
+  font-weight: 800 !important;
+  font-size: clamp(52px, 10vw, 96px) !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 首页 Hero 副标题（已是 Noto Sans SC，统一令牌） */
+.hero-body {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* 首页 eyebrow 标签：保持等宽 + 收紧字距 */
+.hero-overline {
+  font-family: var(--vp-font-family-mono) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* ── TOC 目录标题：覆盖 Noto Serif SC ── */
+.toc-content h3 {
+  font-family: var(--font-family-display) !important;
+  font-weight: 700 !important;
+}
+
+/* ── About 标题：覆盖 Noto Serif SC ── */
+.about-heading {
+  font-family: var(--font-family-display) !important;
+  font-weight: 700 !important;
+}
+
+/* ── Footer 文字：覆盖 Noto Serif SC ── */
+.pg-footer p {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* ── 正文段落的字体一致性 ── */
+.about-main p,
+.license-inner p,
+.about-links a {
+  font-family: var(--vp-font-family-base);
+}
+
+/* 暗色模式保持字体继承不变 */
+
+/* ============================================================
+   21. 批次 2 · Hero 重构
+   光晕显现 + 网格底纹 + CTA 按钮化 + Logo 玻璃 + 入场动画
+   选择器基于侦察：页面自定义 HTML .hero section
+   ============================================================ */
+
+/* ── 2a. Hero 背景：替换不透明白底为玻璃材质 ── */
+.hero {
+  background:
+    /* 极淡网格底纹 */
+    linear-gradient(rgba(102,204,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(102,204,255,.03) 1px, transparent 1px),
+    var(--fluent-surface-soft, rgba(255,255,255,.45)) !important;
+  background-size: 40px 40px, 40px 40px, auto !important;
+}
+
+/* ── 2b. 光晕：对角双层，增强层次 ── */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 640px;
+  height: 640px;
+  top: -200px;
+  right: -160px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    var(--color-primary-300, #8FDAFF) 0%,
+    transparent 70%);
+  filter: blur(110px);
+  opacity: 0.58;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  bottom: -240px;
+  left: -160px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    var(--color-primary-200, #B8E7FF) 0%,
+    transparent 70%);
+  filter: blur(100px);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 暗色光晕降低强度 */
+.dark .hero::before { opacity: 0.35; }
+.dark .hero::after  { opacity: 0.30; }
+
+/* ── 2c. Eyebrow 标签：玻璃微章样式 ── */
+.hero-overline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px 4px 10px;
+  border-radius: 20px;
+  background: var(--fluent-surface, rgba(255,255,255,.6));
+  backdrop-filter: blur(8px) saturate(160%);
+  -webkit-backdrop-filter: blur(8px) saturate(160%);
+  border: 1px solid var(--fluent-border, rgba(255,255,255,.5));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
+  font-size: 14px !important;
+  color: var(--color-primary-700, #0A85C2) !important;
+  margin-bottom: 12px !important;
+}
+.hero-overline::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary-400, #66CCFF);
+  box-shadow: 0 0 6px rgba(102,204,255,.6);
+  flex-shrink: 0;
+}
+.dark .hero-overline {
+  color: var(--color-primary-200, #B8E7FF) !important;
+}
+
+/* ── 2d. 标题：渐变色文字（深档色阶，确保对比度≥3:1）── */
+.hero-headline {
+  background: linear-gradient(120deg,
+    var(--color-primary-600, #06A1EF),
+    var(--color-primary-800, #116B97)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+.dark .hero-headline {
+  background: linear-gradient(120deg,
+    var(--color-primary-300, #8FDAFF),
+    var(--color-primary-400, #66CCFF)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* ── 2e. CTA 按钮化 ── */
+/* 主按钮（第一个 link-arrow）：实心 primary */
+.hero-links .link-arrow:first-of-type {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  background: var(--color-primary-400, #66CCFF);
+  color: #06283d !important;
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 12px;
+  padding: .65em 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7),
+              0 6px 20px rgba(102,204,255,.4);
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .3s ease, background .2s ease;
+}
+.hero-links .link-arrow:first-of-type .arr {
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1);
+}
+
+/* 次按钮（第二个 link-arrow）：玻璃描边 */
+.hero-links .link-arrow:last-of-type {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  background: var(--fluent-surface, rgba(255,255,255,.6));
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  color: var(--color-primary-700, #0A85C2) !important;
+  border: 1px solid var(--fluent-border, rgba(255,255,255,.5));
+  border-radius: 12px;
+  padding: .65em 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6),
+              var(--fluent-shadow, 0 8px 24px rgba(19,82,114,.12));
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .3s ease, background .2s ease, color .2s ease;
+}
+.hero-links .link-arrow:last-of-type .arr {
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1);
+}
+
+/* 分隔符调整 */
+.hero-links .link-sep {
+  color: var(--color-primary-200, #B8E7FF);
+  font-weight: 400;
+  margin: 0 2px;
+  user-select: none;
+}
+
+/* hover 交互 */
+@media (hover: hover) and (pointer: fine) {
+  .hero-links .link-arrow:first-of-type:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: var(--color-primary-300, #8FDAFF);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.85),
+                0 12px 32px rgba(102,204,255,.55);
+    color: #06283d !important;
+  }
+  .hero-links .link-arrow:first-of-type:hover .arr {
+    transform: translateX(4px);
+  }
+  .hero-links .link-arrow:last-of-type:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: var(--color-primary-50, #F0FAFE);
+    color: var(--color-primary-800, #116B97) !important;
+    border-color: var(--color-primary-300, #8FDAFF);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.8),
+                var(--fluent-shadow-hover, 0 14px 44px rgba(19,82,114,.20));
+  }
+  .hero-links .link-arrow:last-of-type:hover .arr {
+    transform: translateX(4px);
+  }
+  .hero-links .link-arrow:active {
+    transform: translateY(-1px) scale(.99);
+    transition-duration: .12s;
+  }
+}
+
+/* 暗色次按钮 */
+.dark .hero-links .link-arrow:last-of-type {
+  color: var(--color-primary-200, #B8E7FF) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .dark .hero-links .link-arrow:last-of-type:hover {
+    background: rgba(102,204,255,.12);
+    color: var(--color-primary-100, #DCF3FE) !important;
+  }
+}
+
+/* ── 2f. 右侧玻璃信息卡：Logo + 实验室信息 ── */
+.hero-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: var(--fluent-surface, rgba(255,255,255,.55));
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--fluent-border, rgba(255,255,255,.5));
+  border-radius: var(--fluent-radius, 14px);
+  padding: 20px 24px 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7),
+              var(--fluent-shadow, 0 8px 32px rgba(19,82,114,.12));
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .3s ease;
+  width: auto !important;
+  height: auto !important;
+}
+.hero-mark img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 12px;
+  flex-shrink: 0;
+  /* 羽化遮罩 */
+  -webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, black 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, black 35%, transparent 100%);
+  filter: drop-shadow(0 4px 12px rgba(19,82,114,.12));
+}
+
+/* 信息正文 */
+.hero-mark-body {
+  text-align: center;
+  width: 100%;
+}
+.hero-mark-slogan {
+  margin: 0 0 10px;
+  font-family: var(--vp-font-family-base);
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--color-primary-700, #0A85C2);
+  line-height: 1.4;
+}
+
+/* 三列 stat 标签 */
+.hero-mark-stats {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.hero-mark-stats span {
+  display: inline-block;
+  padding: .25em .65em;
+  border-radius: 999px;
+  font-family: var(--vp-font-family-mono);
+  font-size: .72rem;
+  font-weight: 600;
+  background: var(--color-primary-50, #F0FAFE);
+  color: var(--color-primary-600, #06A1EF);
+  border: 1px solid var(--color-primary-100, #DCF3FE);
+}
+
+/* hover */
+@media (hover: hover) and (pointer: fine) {
+  .hero-mark:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.85),
+                var(--fluent-shadow-hover, 0 14px 44px rgba(19,82,114,.20));
+  }
+}
+
+/* 暗色模式 */
+.dark .hero-mark {
+  background: var(--fluent-surface, rgba(28,30,34,.58));
+}
+.dark .hero-mark img {
+  filter: brightness(0) saturate(100%) invert(1)
+          drop-shadow(0 4px 12px rgba(255,255,255,.08));
+}
+.dark .hero-mark-slogan {
+  color: var(--color-primary-200, #B8E7FF);
+}
+.dark .hero-mark-stats span {
+  background: rgba(102,204,255,.10);
+  color: var(--color-primary-300, #8FDAFF);
+  border-color: rgba(102,204,255,.18);
+}
+
+/* 桌面端 Hero 网格平衡：左右分栏 */
+@media (min-width: 768px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    align-items: start;
+    gap: 32px;
+    padding: 80px 48px 80px !important;
+  }
+  .hero-inner {
+    max-width: none;
+    margin: 0;
+    padding-top: 8px;
+  }
+  .hero-mark {
+    position: static;
+    transform: none;
+    right: auto;
+    top: auto;
+    justify-self: center;
+    align-self: start;
+    margin-top: 8px;
+    max-width: 260px;
+  }
+}
+
+/* ── 2g. 入场 stagger 动画 ── */
+@keyframes hero-stagger-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero-inner > * {
+  animation: hero-stagger-rise .65s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-inner > :nth-child(1) { animation-delay: .05s; }  /* eyebrow */
+.hero-inner > :nth-child(2) { animation-delay: .15s; }  /* title */
+.hero-inner > :nth-child(3) { animation-delay: .25s; }  /* body */
+.hero-inner > :nth-child(4) { animation-delay: .38s; }  /* buttons */
+
+.hero-mark {
+  animation: hero-stagger-rise .65s cubic-bezier(.22,1,.36,1) both;
+  animation-delay: .42s;
+}
+
+/* ============================================================
+   23. 批次 4 · 浮动控件协调
+   统一 BackToTop / FocusToggle / ThemeColorPicker 的玻璃质感
+   选择器：三个组件的根 class，组件 <style scoped> 已用 fluent 令牌，
+   这里追加顶部高光线 + 调谐 hover 行为
+   ============================================================ */
+
+/* 顶部镜面高光线：三控件统一 */
+.back-to-top,
+.ft-btn,
+.cp-btn {
+  border-top: 1px solid var(--fluent-edge, rgba(255,255,255,.85)) !important;
+}
+
+/* 回到顶部环：hover 调谐 */
+.back-to-top {
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .3s ease !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .back-to-top:hover {
+    transform: translateY(-4px) scale(1.06) !important;
+  }
+}
+
+/* 专注按钮 + 主题色按钮 hover 协调 */
+@media (hover: hover) and (pointer: fine) {
+  .ft-btn:hover,
+  .cp-btn:hover {
+    transform: translateY(-3px) scale(1.06) !important;
+  }
+}
+
+/* 暗色模式：控件高光线减弱 */
+.dark .back-to-top,
+.dark .ft-btn,
+.dark .cp-btn {
+  border-top-color: rgba(255,255,255,.14) !important;
+}
+
+/* 主题色弹出面板：顶部高光线 */
+.cp-panel {
+  border-top: 1px solid var(--fluent-edge, rgba(255,255,255,.6)) !important;
+}
+.dark .cp-panel {
+  border-top-color: rgba(255,255,255,.12) !important;
+}
+
+/* ============================================================
+   25. 批次 4 · footer 现代化
+   About 标题 accent 条 + 链接列表交互 + 协议按钮 + footer 顶部玻璃分隔
+   ============================================================ */
+
+/* ── footer 整体顶部：极淡玻璃分隔线 ── */
+.about {
+  border-top: 1px solid var(--fluent-border, rgba(255,255,255,.5));
+  padding-top: 48px !important;
+  margin-top: 16px;
+}
+
+/* ── 栏标题：左侧 3px 主色装饰条 ── */
+.about-heading {
+  position: relative;
+  padding-left: .85rem !important;
+}
+.about-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .15em;
+  bottom: .15em;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--color-primary-400, #66CCFF);
+}
+
+/* ── "相关链接"列表：圆角行 + hover 玻璃背景 + 箭头滑入 ── */
+.about-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.about-links li {
+  border-bottom: none !important;
+  border-top: none !important;
+}
+.about-links a {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: .65rem .9rem !important;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--c-ink, #0f172a) !important;
+  font-size: .9rem !important;
+  font-weight: 500;
+  transition: background .25s ease, border-color .25s ease,
+              transform .3s cubic-bezier(.34,1.56,.64,1),
+              color .2s ease;
+}
+/* 行尾箭头 */
+.about-links a::after {
+  content: "→";
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .25s ease, transform .25s ease;
+  color: var(--color-primary-500, #29B8FF);
+  font-weight: 700;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .about-links a:hover {
+    background: var(--fluent-surface, rgba(255,255,255,.6));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-color: var(--fluent-border, rgba(255,255,255,.5));
+    transform: translateX(4px);
+    color: var(--color-primary-700, #0A85C2) !important;
+  }
+  .about-links a:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* 暗色 */
+.dark .about-links a {
+  color: #f1f5f9 !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .dark .about-links a:hover {
+    background: var(--fluent-surface, rgba(28,30,34,.58));
+    color: var(--color-primary-300, #8FDAFF) !important;
+  }
+}
+
+/* ── "阅读完整协议 →"：玻璃链接/按钮 ── */
+.license-inner a {
+  display: inline-flex;
+  align-items: center;
+  gap: .3em;
+  padding: .5em 1em;
+  border-radius: 10px;
+  background: var(--fluent-surface-soft, rgba(255,255,255,.45));
+  border: 1px solid var(--fluent-border, rgba(255,255,255,.5));
+  font-family: var(--vp-font-family-base) !important;
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+  color: var(--color-primary-700, #0A85C2) !important;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1),
+              background .25s ease, box-shadow .25s ease;
+  border-bottom: 1px solid var(--fluent-border, rgba(255,255,255,.5)) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .license-inner a:hover {
+    transform: translateY(-2px);
+    background: var(--fluent-surface, rgba(255,255,255,.6));
+    box-shadow: var(--fluent-shadow, 0 8px 24px rgba(19,82,114,.12));
+    color: var(--color-primary-800, #116B97) !important;
+  }
+}
+.dark .license-inner a {
+  color: var(--color-primary-200, #B8E7FF) !important;
+  background: var(--fluent-surface, rgba(28,30,34,.4));
+}
+@media (hover: hover) and (pointer: fine) {
+  .dark .license-inner a:hover {
+    background: var(--fluent-surface, rgba(28,30,34,.58));
+    color: var(--color-primary-100, #DCF3FE) !important;
+  }
+}
+
+/* ── footer 正文 strong 标签：深档色保证对比度 ── */
+.about-main strong,
+.license-inner strong {
+  color: var(--color-primary-800, #116B97);
+  font-weight: 700;
+}
+.dark .about-main strong,
+.dark .license-inner strong {
+  color: var(--color-primary-300, #8FDAFF);
+}
+
+/* ============================================================
+   26. 首页扁平彩色画布风格（homepage-only）
+   作用域：html.is-homepage，仅作用于首页，文档页玻璃不变
+   涵盖批次 1-4：hero 画布 + 装饰 + 按钮 + 导航 + section 色块 + 目录
+   ============================================================ */
+
+/* ═══════════════════════════════════════════════════════════
+   批次 1 · Hero 整块淡蓝渐变画布 + 装饰几何
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Hero 背景：替换玻璃为扁平渐变 ── */
+/* ── 首页全局渐变背景 ── */
+html.is-homepage {
+  background: linear-gradient(160deg,
+    var(--color-primary-50, #F0FAFE) 0%,
+    var(--color-primary-100, #DCF3FE) 35%,
+    var(--color-primary-200, #B8E7FF) 70%,
+    var(--color-primary-300, #8FDAFF) 100%);
+}
+html.is-homepage.dark {
+  background: linear-gradient(160deg,
+    #06121a 0%,
+    #0a1c2a 35%,
+    #0c2438 70%,
+    #0e2d45 100%);
+}
+
+/* ── Hero + About 公共渐变画布 ── */
+html.is-homepage .page-main,
+html.is-homepage .page-content {
+  padding-top: 0 !important;
+  padding-block-start: 0 !important;
+  margin-top: 0 !important;
+}
+
+html.is-homepage .hero-wrap {
+  margin: 0 calc(-50vw + 50%) 0;
+  width: 100vw;
+}
+
+html.is-homepage .hero {
+  background: transparent !important;
+  background-size: auto !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+}
+
+/* ── 光晕替换为装饰几何 ── */
+/* ::before → 同心圆弧 */
+html.is-homepage .hero::before {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  width: 1200px; height: 1200px; left: -360px; top: -420px;
+  background: repeating-radial-gradient(circle at 0 0,
+    transparent 0 46px, rgba(41,184,255,.15) 46px 48px);
+  -webkit-mask-image: radial-gradient(circle at 0 0, #000 55%, transparent 72%);
+          mask-image: radial-gradient(circle at 0 0, #000 55%, transparent 72%);
+  filter: none;
+  opacity: 1;
+  border-radius: 0;
+}
+/* ::after → 斜向胶囊 */
+html.is-homepage .hero::after {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  width: 360px; height: 96px; right: 6%; top: 18%;
+  border-radius: 999px; transform: rotate(-28deg);
+  background: rgba(41,184,255,.13);
+  box-shadow:
+    -180px 120px 0 -28px rgba(41,184,255,.10),
+     220px -60px 0 -40px rgba(41,184,255,.08);
+  filter: none;
+  opacity: 1;
+}
+
+/* 暗色 hero 画布 */
+html.is-homepage.dark .hero {
+  background: transparent !important;
+}
+html.is-homepage.dark .hero::before {
+  opacity: .45;
+  background: repeating-radial-gradient(circle at 0 0,
+    transparent 0 46px, rgba(102,204,255,.12) 46px 48px);
+}
+html.is-homepage.dark .hero::after {
+  background: rgba(102,204,255,.08);
+  box-shadow:
+    -180px 120px 0 -28px rgba(102,204,255,.06),
+     220px -60px 0 -40px rgba(102,204,255,.05);
+}
+
+/* ── Hero 内容在装饰之上 ── */
+html.is-homepage .hero-inner,
+html.is-homepage .hero-overline,
+html.is-homepage .hero-headline,
+html.is-homepage .hero-body,
+html.is-homepage .hero-links,
+html.is-homepage .hero-mark { position: relative; z-index: 1; }
+
+/* ── 去玻璃：hero 内各元素 ── */
+html.is-homepage .hero-overline {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: rgba(255,255,255,.55) !important;
+  border: 1px solid rgba(255,255,255,.6) !important;
+  box-shadow: 0 2px 8px rgba(19,82,114,.08) !important;
+}
+html.is-homepage.dark .hero-overline {
+  background: rgba(11,20,27,.65) !important;
+  border-color: rgba(255,255,255,.12) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2) !important;
+}
+html.is-homepage .hero-mark {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   批次 2 · 渐变标题 .accent + 扁平按钮
+   ═══════════════════════════════════════════════════════════ */
+
+/* .accent 异色字（"前置"两字用 solid primary-400，其余字保持渐变） */
+html.is-homepage .hero-headline .accent {
+  -webkit-text-fill-color: var(--color-primary-400, #66CCFF) !important;
+  background: none !important;
+}
+
+/* ── 按钮去玻璃改扁平 ── */
+:root { --home-btn-radius: 12px; }
+
+/* 主按钮：实心 primary-500，白字 */
+html.is-homepage .hero-links .link-arrow:first-of-type {
+  background: var(--color-primary-500, #29B8FF) !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--home-btn-radius) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 6px 18px rgba(41,184,255,.35) !important;
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .3s ease, background .2s ease !important;
+}
+/* 次按钮：白底 + primary-200 描边 + primary-700 字 */
+html.is-homepage .hero-links .link-arrow:last-of-type {
+  background: #fff !important;
+  color: var(--color-primary-700, #0A85C2) !important;
+  border: 1px solid var(--color-primary-200, #B8E7FF) !important;
+  border-radius: var(--home-btn-radius) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 4px 14px rgba(19,82,114,.10) !important;
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .3s ease, background .2s ease, color .2s ease !important;
+}
+/* 分隔符 */
+html.is-homepage .hero-links .link-sep {
+  color: var(--color-primary-300, #8FDAFF);
+}
+
+/* hover */
+@media (hover:hover) and (pointer:fine) {
+  html.is-homepage .hero-links .link-arrow:first-of-type:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: var(--color-primary-600, #06A1EF) !important;
+    box-shadow: 0 12px 28px rgba(41,184,255,.45) !important;
+    color: #fff !important;
+  }
+  html.is-homepage .hero-links .link-arrow:last-of-type:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: var(--color-primary-50, #F0FAFE) !important;
+    color: var(--color-primary-800, #116B97) !important;
+    border-color: var(--color-primary-300, #8FDAFF) !important;
+  }
+  html.is-homepage .hero-links .link-arrow:active {
+    transform: translateY(-1px) scale(.99); transition-duration: .12s;
+  }
+}
+/* 暗色次按钮 */
+html.is-homepage.dark .hero-links .link-arrow:last-of-type,
+html.is-homepage.dark .hero-links .link-arrow:last-of-type {
+  background: rgba(255,255,255,.06) !important;
+  color: var(--color-primary-200, #B8E7FF) !important;
+  border-color: rgba(102,204,255,.30) !important;
+}
+@media (hover:hover) and (pointer:fine) {
+  html.is-homepage.dark .hero-links .link-arrow:last-of-type:hover,
+  html.is-homepage.dark .hero-links .link-arrow:last-of-type:hover {
+    background: rgba(102,204,255,.12) !important;
+    color: var(--color-primary-100, #DCF3FE) !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   批次 3 · 首页导航透明融入 hero → 滚动实白
+   ═══════════════════════════════════════════════════════════ */
+
+html.is-homepage header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.35) 0%, rgba(255,255,255,.12) 30%, rgba(255,255,255,.08) 100%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(41,184,255,.08) 0%, transparent 100%),
+    rgba(255,255,255,.65) !important;
+  backdrop-filter: blur(20px) saturate(180%) brightness(1.05);
+  -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(1.05);
+  border-bottom: 1px solid rgba(255,255,255,.2) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.15) inset,
+    0 -1px 0 rgba(255,255,255,.05) inset,
+    0 4px 20px rgba(19,82,114,.06) !important;
+  transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+html.is-homepage.dark header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 30%, transparent 100%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(41,184,255,.06) 0%, transparent 100%),
+    rgba(11,20,27,.82) !important;
+  border-bottom-color: rgba(255,255,255,.08) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.04) inset,
+    0 4px 20px rgba(0,0,0,.15) !important;
+}
+/* 首页导航文字深色（适配淡蓝 hero） */
+html.is-homepage header a,
+html.is-homepage header .nav-dropdown-button {
+  color: #1e293b !important;
+}
+html.is-homepage.dark header a,
+html.is-homepage.dark header a {
+  color: #e2e8f0 !important;
+}
+
+/* 滚动后：实白底 + 轻阴影，保留微反射 */
+html.is-homepage.is-scrolled header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.25) 0%, rgba(255,255,255,.08) 30%, rgba(255,255,255,.02) 100%),
+    #fff !important;
+  border-bottom: 1px solid var(--color-primary-100, #DCF3FE) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.1) inset,
+    0 4px 20px rgba(19,82,114,.08) !important;
+}
+html.is-homepage.is-scrolled.dark header,
+ html.is-homepage.dark.is-scrolled header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04) 0%, transparent 100%),
+    #0b141b !important;
+  border-bottom-color: rgba(102,204,255,.14) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.03) inset,
+    0 4px 20px rgba(0,0,0,.2) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   批次 4 · section 色块节奏 + 目录区扁平化
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 目录区：白底 + 弧形顶部分隔 ── */
+html.is-homepage .toc {
+  position: relative;
+  background: #fff;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 48px 24px 56px !important;
+}
+/* 弧形承接 hero */
+html.is-homepage .toc::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -36px; height: 36px;
+  background: inherit; border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+html.is-homepage.dark .toc { background: #0b141b; }
+
+/* 目录标题 — 胶囊式 */
+html.is-homepage .toc-header {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+html.is-homepage .toc-header h2 {
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-700, #0A85C2);
+  margin: 0 0 32px;
+}
+html.is-homepage.dark .toc-header h2 { color: var(--color-primary-200, #B8E7FF); }
+
+@media (max-width: 1023px) {
+  html.is-homepage .toc-header { max-width: 720px; }
+}
+@media (max-width: 639px) {
+  html.is-homepage .toc-header { max-width: 480px; }
+}
+
+/* 目录列表 - 卡片网格 */
+html.is-homepage .toc-list {
+  list-style: none; padding: 0; margin: 0;
+  max-width: 960px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Tablet: 2 列 */
+@media (max-width: 1023px) {
+  html.is-homepage .toc-list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+}
+
+/* Mobile: 1 列 */
+@media (max-width: 639px) {
+  html.is-homepage .toc-list {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+html.is-homepage .toc-item {
+  border: none !important;
+}
+html.is-homepage.dark .toc-item { border: none !important; }
+html.is-homepage .toc-item:first-child {
+  border: none !important;
+}
+html.is-homepage.dark .toc-item:first-child { border: none !important; }
+
+/* 目录链接行 — 卡片式 */
+html.is-homepage .toc-item a {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  padding: 24px 20px !important;
+  text-decoration: none; color: inherit;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  border-radius: 12px;
+  background: #fff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  border: 1px solid #e8ecf0 !important;
+  height: 100%; box-sizing: border-box;
+}
+html.is-homepage .toc-item a::after { display: none !important; }
+html.is-homepage.dark .toc-item a {
+  background: #111d27 !important;
+  border-color: #1e293b !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.15);
+}
+@media (hover:hover) and (pointer:fine) {
+  html.is-homepage .toc-item a:hover {
+    background: #fff !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
+    transform: translateY(-3px);
+    border-color: var(--color-primary-200, #B8E7FF) !important;
+  }
+  html.is-homepage.dark .toc-item a:hover {
+    background: #152637 !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.25);
+    border-color: var(--color-primary-700, #0A85C2) !important;
+  }
+}
+
+/* 目录编号徽章：扁平实底 primary */
+html.is-homepage .toc-num {
+  display: inline-grid; place-items: center;
+  min-width: 2.4em; height: 2.4em;
+  border-radius: 8px;
+  font-family: var(--vp-font-family-mono);
+  font-size: .82rem; font-weight: 700;
+  color: #fff !important;
+  background: var(--color-primary-500, #29B8FF) !important;
+  border: none !important;
+  box-shadow: none !important;
+  flex-shrink: 0;
+}
+/* 编号阶梯 */
+html.is-homepage .toc-item:nth-child(1) .toc-num { background: var(--color-primary-400, #66CCFF) !important; }
+html.is-homepage .toc-item:nth-child(2) .toc-num { background: var(--color-primary-500, #29B8FF) !important; }
+html.is-homepage .toc-item:nth-child(3) .toc-num { background: var(--color-primary-600, #06A1EF) !important; }
+html.is-homepage .toc-item:nth-child(4) .toc-num { background: var(--color-primary-700, #0A85C2) !important; }
+html.is-homepage .toc-item:nth-child(5) .toc-num { background: var(--color-primary-800, #116B97) !important; }
+/* 暗色编号保持亮色 */
+html.is-homepage.dark .toc-num,
+html.is-homepage.dark .toc-num { color: #fff !important; }
+
+/* 目录正文 */
+html.is-homepage .toc-body { flex: 1; min-width: 0; }
+html.is-homepage .toc-body h3 {
+  font-family: var(--font-family-display);
+  font-size: 1.05rem; font-weight: 700;
+  color: #0f172a; margin: 0 0 4px;
+}
+html.is-homepage.dark .toc-body h3,
+html.is-homepage.dark .toc-body h3 { color: #f1f5f9; }
+html.is-homepage .toc-body p {
+  font-size: .88rem; color: #475569;
+  line-height: 1.7; margin: 0 0 4px;
+}
+html.is-homepage.dark .toc-body p,
+html.is-homepage.dark .toc-body p { color: #94a3b8; }
+
+/* 目录 meta pill */
+html.is-homepage .toc-meta {
+  display: inline-block;
+  padding: .15em .6em;
+  border-radius: 999px;
+  font-family: var(--vp-font-family-mono);
+  font-size: .7rem; font-weight: 600;
+  background: var(--color-primary-50, #F0FAFE);
+  color: var(--color-primary-600, #06A1EF);
+}
+html.is-homepage.dark .toc-meta,
+html.is-homepage.dark .toc-meta {
+  background: rgba(102,204,255,.10);
+  color: var(--color-primary-300, #8FDAFF);
+}
+
+/* ── 资料下载独立入口 ── */
+html.is-homepage .toc-extra {
+  max-width: 960px; margin: 32px auto 0; padding: 0;
+}
+html.is-homepage .toc-extra a {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px;
+  border-radius: 10px;
+  background: var(--color-primary-50, #F0FAFE);
+  color: var(--color-primary-700, #0A85C2);
+  text-decoration: none;
+  font-family: var(--font-family-display);
+  font-size: .95rem; font-weight: 600;
+  transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
+  border: 1px solid var(--color-primary-100, #D1F0FE);
+}
+html.is-homepage .toc-extra a:hover {
+  background: var(--color-primary-100, #D1F0FE);
+  box-shadow: 0 2px 8px rgba(6,161,239,.12);
+  transform: translateX(4px);
+}
+html.is-homepage .toc-extra-icon {
+  display: flex; align-items: center; color: var(--color-primary-500, #29B8FF);
+}
+html.is-homepage .toc-extra-arrow {
+  font-size: 1.1rem; opacity: .6; transition: transform .2s ease;
+}
+html.is-homepage .toc-extra a:hover .toc-extra-arrow {
+  transform: translateX(3px);
+}
+html.is-homepage.dark .toc-extra a {
+  background: rgba(102,204,255,.06);
+  color: var(--color-primary-300, #8FDAFF);
+  border-color: rgba(102,204,255,.12);
+}
+html.is-homepage.dark .toc-extra a:hover {
+  background: rgba(102,204,255,.10);
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+html.is-homepage.dark .toc-extra-icon {
+  color: var(--color-primary-400, #66CCFF);
+}
+
+@media (max-width: 1023px) {
+  html.is-homepage .toc-extra { max-width: 720px; }
+}
+@media (max-width: 639px) {
+  html.is-homepage .toc-extra { max-width: 480px; }
+}
+
+/* ── About 区：primary-50 淡蓝底 ── */
+html.is-homepage .about {
+  position: relative;
+  background: transparent;
+  max-width: none; margin: 0;
+  padding: 48px 24px 56px !important;
+  border-top: none !important;
+}
+html.is-homepage.dark .about { background: transparent; }
+html.is-homepage .about-grid { max-width: 960px; margin: 0 auto; }
+
+/* ── License + Footer：白色底 ── */
+html.is-homepage .license {
+  background: transparent;
+  max-width: none; margin: 0;
+  padding: 24px 24px 36px !important;
+}
+html.is-homepage .license-inner {
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 24px !important;
+  border-top: none !important;
+  max-width: 960px; margin: 0 auto;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.2) inset,
+    0 0 40px rgba(41,184,255,.08),
+    0 0 80px rgba(41,184,255,.04);
+  border: 1px solid rgba(255,255,255,.3);
+}
+html.is-homepage.dark .license { background: transparent; }
+html.is-homepage.dark .license-inner {
+  background: rgba(11,20,27,.55);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.06) inset,
+    0 0 40px rgba(41,184,255,.06),
+    0 0 80px rgba(41,184,255,.03);
+  border-color: rgba(255,255,255,.08);
+}
+
+html.is-homepage .pg-footer {
+  background: #fff;
+  max-width: none; margin: 0;
+  padding: 16px 24px 40px !important;
+}
+html.is-homepage.dark .pg-footer { background: #0b141b; }
+html.is-homepage .pg-footer p { max-width: 960px; margin: 0 auto; }
+
+/* ── 首页隐藏专注模式按钮 ── */
+html.is-homepage #ft-container { display: none !important; }
+
+/* ═══ 27 桌面：与布局模型无关的垂直居中（核选项）═══ */
+@media (min-width: 768px) {
+  /* 确保 .hero 是绝对定位的参照系 */
+  html.is-homepage .hero {
+    position: relative !important;
+  }
+  html.is-homepage .hero-inner {
+    padding-top: 0;
+  }
+
+  /* 右栏：absolute + top:50% + translateY(-50%) 强制垂直居中
+     故意不写 left / right —— 锁住现有水平位置，只改垂直 */
+  html.is-homepage .hero-mark {
+    position: absolute !important;
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    align-self: auto !important;
+    justify-self: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    /* 不声明 left / right */
+  }
+}
+
+/* ═══ 27 移动：取消 absolute，回归文档流堆叠 ═══ */
+@media (max-width: 767px) {
+  html.is-homepage .hero {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    position: relative !important;
+  }
+  html.is-homepage .hero-mark {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    order: 2;
+    margin-top: 1.5rem !important;
+  }
+}
+
+/* ── Logo 放大 2.5×（仅首页）── */
+html.is-homepage .hero-mark img {
+  width: 420px !important;
+  height: 420px !important;
+}
+html.is-homepage .hero-mark {
+  max-width: 460px !important;
+}
+/* 暗色模式：提亮 + 背光 + 强投影 */
+html.is-homepage.dark .hero-mark {
+  opacity: .95 !important;
+}
+html.is-homepage.dark .hero-mark::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(41,184,255,.12) 0%, transparent 70%);
+  z-index: -1;
+}
+html.is-homepage.dark .hero-mark img {
+  filter: brightness(2.5) drop-shadow(0 0 20px rgba(41,184,255,.25)) drop-shadow(0 4px 12px rgba(255,255,255,.12)) !important;
+}
+html.is-homepage .hero-mark {
+  max-width: 380px !important;
+}
