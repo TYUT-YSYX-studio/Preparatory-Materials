@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitepress'
+import { withDuxTheme } from '@duxweb/vitepress-theme/config'
 
-export default defineConfig({
+export default withDuxTheme({
   base: '/Pre-docs/',
   title: '先研实验室前置学习讲义',
   description: '太原理工大学"一生一芯"工作室前置讲义',

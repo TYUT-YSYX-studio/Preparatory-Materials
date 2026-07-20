@@ -1,4 +1,7 @@
-import DefaultTheme from 'vitepress/theme'
+import Theme from '@duxweb/vitepress-theme'
+import '@duxweb/vitepress-theme/dist/index.css'
 import './style.css'
 
-export default DefaultTheme
+export default {
+  extends: Theme,
+}

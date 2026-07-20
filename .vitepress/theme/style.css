@@ -1,29 +1,30 @@
-/* Global style overrides can go here */
+/* ── 标题排版 ── */
 
 /* h1: 桌面端不换行，移动端用 pretty 防孤字 */
-.vp-doc h1 {
+.prose-content h1 {
   white-space: nowrap;
 }
 
 @media (max-width: 768px) {
-  .vp-doc h1 {
+  .prose-content h1 {
     white-space: normal;
     text-wrap: pretty;
   }
 }
 
 /* h2/h3 较短，用 balance：多行时均衡分布更美观 */
-.vp-doc h2,
-.vp-doc h3 {
+.prose-content h2,
+.prose-content h3 {
   text-wrap: balance;
 }
 
 /* ── 侧边栏标题同样防止孤字 ── */
-.VPSidebarItem .text {
+.docs-nav-link,
+.docs-nav-category {
   text-wrap: pretty;
 }
 
-/* 修复 callout 块内标题过大问题 */
+/* ── 修复 callout 块内标题过大问题 ── */
 .custom-block h1 {
   font-size: 1.30em;
   margin: 0 0 0.4em;
@@ -40,4 +41,3 @@
   border: none;
   padding-top: 0;
 }
-
