@@ -1,4 +1,5 @@
 import { createApp, h } from 'vue'
+import { useRouter } from 'vitepress'
 import Theme from '@duxweb/vitepress-theme'
 import '@duxweb/vitepress-theme/dist/index.css'
 import './custom.css'
@@ -36,6 +37,44 @@ export default {
 
   setup() {
     if (typeof document === 'undefined') return
+
+    const router = useRouter()
+
+    // ── 首页标记：SPA 路由切换时动态更新 is-homepage class ──
+    const BASE = '/Pre-docs/'
+    function isHomepage() {
+      const p = router.route.path
+      return p === BASE || p === BASE + 'index.html' || p === '/'
+    }
+    function syncHomeClass() {
+      document.documentElement.classList.toggle('is-homepage', isHomepage())
+    }
+    // 初始同步
+    syncHomeClass()
+    // 路由切换时同步
+    const origOnAfter = router.onAfterRouteChange
+    router.onAfterRouteChange = (to) => {
+      if (origOnAfter) origOnAfter.call(router, to)
+      syncHomeClass()
+    }
+
+    // ── 首页导航滚动切换：超过 hero 高度后加 is-scrolled ──
+    const SCROLL_THRESHOLD = 80
+    let scrollTicking = false
+    const onHomeScroll = () => {
+      if (scrollTicking) return
+      scrollTicking = true
+      requestAnimationFrame(() => {
+        const onHome = document.documentElement.classList.contains('is-homepage')
+        document.documentElement.classList.toggle(
+          'is-scrolled',
+          onHome && window.scrollY > SCROLL_THRESHOLD
+        )
+        scrollTicking = false
+      })
+    }
+    window.addEventListener('scroll', onHomeScroll, { passive: true })
+    onHomeScroll()
 
     document.addEventListener('click', (e) => {
       const toggle = e.target.closest('.theme-toggle')
