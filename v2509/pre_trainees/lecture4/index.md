@@ -32,7 +32,7 @@ The mechine is always right
 
 学习记录表是大家接下来的好帮手，能很好地帮助大家复盘每一天遇到的问题，用处非常大，这里给大家提供一份学长的学习记录表：（可以看到的是随意发癫，问题不大，没必要非常严肃地写相关内容）
 
-https://docs\.qq\.com/sheet/DWk9BdXVrRXdvcHJl?tab=ss\_znqexa\&\_t=1717317532016\&viewId=vnucy5\&u=e4d0bfda3a4240a0862539da66b63ff7
+https://docs.qq.com/sheet/DWk9BdXVrRXdvcHJl?tab=ss_znqexa&_t=1717317532016&viewId=vnucy5&u=e4d0bfda3a4240a0862539da66b63ff7
 
 在大家进入“一生一芯”学习时，学习记录也是一份凭证，从预学习答辩开始，会跟着你走完整个“一生一芯”学习阶段；之后我们进入实验室见习学员学习和寒假阶段的面试这也是参考内容；同时在之后大家写简历时，学习记录表是可以写到简历上的，含金量很高，用处很大。
 
@@ -82,9 +82,9 @@ https://docs\.qq\.com/sheet/DWk9BdXVrRXdvcHJl?tab=ss\_znqexa\&\_t=1717317532016\
 >
 > - git merge
 >
-> 推荐的学习网站：https://www\.liaoxuefeng\.com/wiki/896043488029600（到“删除文件”一节即可——完成第五部分）。
+> 推荐的学习网站：https://www.liaoxuefeng.com/wiki/896043488029600（到“删除文件”一节即可——完成第五部分）。
 >
-> 必做任务：https://learngitbranching\.js\.org/?locale=zh\_CN   完成基础篇即可。
+> 必做任务：https://learngitbranching.js.org/?locale=zh_CN   完成基础篇即可。
 >
 > 完成后**将你的完成截图重命名为**`git_game`并放入`姓名-专业班级-Great``-4`文件夹等待作业提交。
 
@@ -449,4 +449,3 @@ int main(){
 > [!NOTE]
 > # 温馨提示
 > 第四次学习路线到此结束，准备好迎接适应期最后的考核了吗
->

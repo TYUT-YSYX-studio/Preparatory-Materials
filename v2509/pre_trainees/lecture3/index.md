@@ -25,7 +25,7 @@ Brain Crisis\!\!
 >
 > 如果同学们对于Linux的命令行操作还不是很熟悉，可以通过以下2种途径来复习一下linux终端的基本操作。
 >
-> - 网站：https://missing\-semester\-cn\.github\.io/2020/course\-shell/ （**不用完成课后题，完成我们要求的题目即可**）
+> - 网站：https://missing-semester-cn.github.io/2020/course-shell/ （**不用完成课后题，完成我们要求的题目即可**）
 >
 > - 视频：[常用的Linux命令介绍：13个基本命令和Shell脚本编程\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1Uv4y127tU)
 >
@@ -39,9 +39,9 @@ Brain Crisis\!\!
 >
 > - **全部使用终端完成，不要使用图形界面**
 >
-> - **明确：**什么是文件，什么是目录
+> - **明确**：什么是文件，什么是目录
 >
-> - **遇到问题：**STFW，以及提问群内的学长们
+> - **遇到问题**：STFW，以及提问群内的学长们
 >
 > 请根据如下的步骤完成作业：
 >
@@ -404,4 +404,3 @@ $ source ~/.bashrc
 > [!NOTE]
 > # 温馨提示
 > 第三次学习路线到此结束，加油
->
