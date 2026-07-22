@@ -4,41 +4,38 @@
 
 如标题所说，我们可以用这两个函数直接地写入二进制数据到文件中。先介绍两个函数的使用，以下是它们的函数简易声明：
 
-```C
+```c
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
 ```
 
-```C
-size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
+```c
+ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
 ```
 
 它们的参数含义也是相似的，只是二进制数据流动的方向相反。
 
 - 第一个参数：ptr指向需要向stream中读取/写入的内存数据起始地址
-
 - 第二个参数：指示单次读取/写入的内存大小，单位：字节
-
 - 第三个参数：指示需要读取/写入的次数
-
 - 第四个参数：stream指向一个由fopen获取的文件指针，表示从文件此处读取/写入
 
-# **将一个int类型的数据写入文件**
+> [!TIP]
+> # <strong>将一个int类型的数据写入文件</strong>
+>
+> 利用fwrite向一个文件写入一个int类型变量的二进制数据。
+>
+> 其中size应该是sizeof(int)，nmemb应该为1
 
-利用fwrite向一个文件写入一个int类型变量的二进制数据。
+> [!TIP]
+> # <strong>将刚刚产生的文件进行读取</strong>
+>
+> 利用fread进行读取，但不将它读取到int类型的变量，而是以下类型的结构体变量中。
+>
+> 其中ptr应该是指向那个结构体变量的结构体指针。
+>
+> 完成后尝试输出这个结构体变量的成员的值，检查程序运行是否符合预期。
 
-其中size应该是sizeof\(int\)，nmemb应该为1
-
-
-
-# **将刚刚产生的文件进行读取**
-
-利用fread进行读取，但不将它读取到int类型的变量，而是[以下类型的结构体变量](https://xcnlirxdrdxr.feishu.cn/wiki/Z7k5wJesvirGjsk6LUacPj4LnNf#share-UUb4dU9ejovG5Nx0FA3cpScLnFR)中。
-
-其中ptr应该是指向那个结构体变量的结构体指针。
-
-完成后尝试输出这个结构体变量的成员的值，检查程序运行是否符合预期。
-
-```C
+```c
 struct bytes_4{
     int a;
 };
@@ -48,7 +45,4 @@ struct bytes_4{
 
 像刚刚这样读取虽然方便，但需要我们已经知道这个二进制文件中存储的东西才行。但要是我们事先并不知道呢？或者存入的顺序其实不是固定的呢？
 
-有种方案就要程序员为在每个类型变量存入前后加入能唯一确定其身份的一段数据，不过这叒超出了讲义需要你掌握的知识范围，所以叒只能让你自己去探索了^\_^
-
-
-
+有种方案就要程序员为在每个类型变量存入前后加入能唯一确定其身份的一段数据，不过这叒超出了讲义需要你掌握的知识范围，所以叒只能让你自己去探索了^_^
