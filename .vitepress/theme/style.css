@@ -41,3 +41,23 @@
   border: none;
   padding-top: 0;
 }
+
+/* ── MathJax 数学公式样式修复 ── */
+/* 行内公式垂直居中对齐 */
+mjx-container[jax="SVG"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 块级公式居中显示 */
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* 确保 SVG 数学公式正确缩放 */
+mjx-container svg {
+  max-width: 100%;
+  height: auto;
+}
