@@ -1,12 +1,106 @@
 import { withDuxTheme } from '@duxweb/vitepress-theme/config'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
+import mathjax3 from 'markdown-it-mathjax3'
+
+// MathJax custom elements that need to be recognized by Vue
+const mathJaxCustomElements = [
+  'mjx-container',
+  'mjx-assistive-mml',
+  'math',
+  'maction',
+  'maligngroup',
+  'malignmark',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mi',
+  'mlongdiv',
+  'mmultiscripts',
+  'mn',
+  'mo',
+  'mover',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'ms',
+  'mscarries',
+  'mscarry',
+  'mscarries',
+  'msgroup',
+  'mstack',
+  'mlongdiv',
+  'msline',
+  'mstack',
+  'mspace',
+  'msqrt',
+  'msrow',
+  'mstack',
+  'mstack',
+  'mstyle',
+  'msub',
+  'msup',
+  'msubsup',
+  'mtable',
+  'mtd',
+  'mtext',
+  'mtr',
+  'munder',
+  'munderover',
+  'semantics',
+  'math',
+  'mi',
+  'mn',
+  'mo',
+  'ms',
+  'mspace',
+  'mtext',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'msqrt',
+  'mstyle',
+  'mmultiscripts',
+  'mover',
+  'mprescripts',
+  'msub',
+  'msubsup',
+  'msup',
+  'munder',
+  'munderover',
+  'none',
+  'maligngroup',
+  'malignmark',
+  'mtable',
+  'mtd',
+  'mtr',
+  'mlongdiv',
+  'mscarries',
+  'mscarry',
+  'msgroup',
+  'msline',
+  'msrow',
+  'mstack',
+  'maction',
+  'semantics',
+  'annotation',
+  'annotation-xml',
+]
 
 export default withDuxTheme({
   base: '/Pre-docs/',
 
   markdown: {
+    math: true,
     config(md) {
       md.use(tabsMarkdownPlugin)
+      md.use(mathjax3)
     }
   },
   title: '先研实验室前置学习讲义',
@@ -17,7 +111,7 @@ export default withDuxTheme({
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => tag.includes('_')
+        isCustomElement: (tag) => tag.includes('_') || mathJaxCustomElements.includes(tag)
       }
     }
   },
