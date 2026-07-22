@@ -67,20 +67,43 @@ header {
 }
 
 /* ============================================================
-   4. 侧边栏 Sidebar：半透明材质
+   4. 侧边栏 Sidebar：Fluent 亚克力毛玻璃（与 Header 统一令牌）
    选择器: aside（Sidebar.vue.js 中的 <aside> 元素）
-   桌面端 md:bg-transparent → 改为玻璃；移动端已有 bg-white 底色
+   背景/模糊/饱和度与 Header 使用相同 --fluent-* 变量，保持视觉一致性
+   移动端抽屉由 @media (max-width: 767px) 覆写更高 alpha
    ============================================================ */
 aside {
-  background: var(--fluent-surface-soft) !important;
-  backdrop-filter: blur(calc(var(--fluent-blur) * 0.6)) saturate(150%);
-  -webkit-backdrop-filter: blur(calc(var(--fluent-blur) * 0.6)) saturate(150%);
+  background: var(--fluent-surface) !important;
+  backdrop-filter: blur(var(--fluent-blur)) saturate(var(--fluent-saturate));
+  -webkit-backdrop-filter: blur(var(--fluent-blur)) saturate(var(--fluent-saturate));
 }
-/* 桌面端侧边栏右边线 */
+
+/* 浅色模式侧边栏：默认不透明白底（移动端 blur 会模糊遮罩导致偏灰） */
+html:not(.dark) aside,
+html:not(.dark) aside > div:not([class*="bg-black"]),
+html:not(.dark) .overflow-y-auto {
+  background-color: #fff !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* 桌面端侧边栏右边线 + 亚克力毛玻璃 */
 @media (min-width: 768px) {
   aside {
     border-right: 1px solid var(--fluent-border);
   }
+  /* 桌面端无黑色遮罩，可安全启用半透明 + blur */
+  html:not(.dark) aside {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(20px) saturate(125%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(125%) !important;
+  }
+}
+
+/* 深色模式侧边栏：全透明 + 保留 blur */
+.dark aside {
+  background: rgba(28, 30, 34, 0) !important;
 }
 
 /* ============================================================
@@ -581,11 +604,20 @@ aside .overflow-y-auto::-webkit-scrollbar-thumb:hover {
   font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-gray-500) !important;
+  color: var(--color-gray-800) !important;
 }
 .dark .sidebar-group-title {
   color: var(--color-gray-400) !important;
 }
+
+/* 浅色模式侧边栏链接：提升对比度至 WCAG AA（≥4.5:1） */
+html:not(.dark) .docs-nav-link {
+  color: var(--color-gray-700) !important;
+}
+html:not(.dark) .docs-nav-category {
+  color: var(--color-gray-700) !important;
+}
+
 .sidebar-group-title::before {
   content: '';
   position: absolute;
@@ -672,6 +704,12 @@ aside .overflow-y-auto::-webkit-scrollbar-thumb:hover {
 .dark .sidebar-group-items a:hover,
 .dark .sidebar-nav > div > a:hover {
   background: rgba(255,255,255,0.06) !important;
+}
+
+/* 浅色模式侧边栏链接文字对比度增强 */
+html:not(.dark) .sidebar-group-items a,
+html:not(.dark) .sidebar-nav > div > a {
+  color: var(--color-gray-700) !important;
 }
 
 /* ============================================================
