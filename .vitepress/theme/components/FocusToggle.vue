@@ -33,28 +33,35 @@ onMounted(() => {
   position: fixed;
   left: 16px;
   bottom: 80px;
-  z-index: 50;
+  z-index: 30;
   display: flex;
   align-items: center;
-  gap: 8px;
-  height: 36px;
-  padding: 0 10px 0 8px;
-  border-radius: 20px;
+  justify-content: center;
+  gap: 0;
+  width: 36px; height: 36px;
+  padding: 0;
+  border-radius: 50%;
   cursor: pointer;
   background: var(--fluent-surface, rgba(255,255,255,.7));
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid var(--fluent-border, rgba(255,255,255,.5));
   box-shadow: var(--fluent-shadow, 0 8px 24px rgba(0,0,0,.12));
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-  overflow: hidden;
+  transition: width .25s ease, padding .25s ease, border-radius .25s ease, gap .25s ease, transform .25s ease;
   white-space: nowrap;
 }
+
 .ft-btn:hover { transform: scale(1.05); }
+
+.ft-btn:hover,
 .ft-btn.active {
-  border-color: var(--color-primary-400);
-  box-shadow: 0 0 16px rgba(102,204,255,.35);
+  width: 85px;
+  padding: 0 12px 0 8px;
+  border-radius: 20px;
+  gap: 8px;
 }
+
+.ft-btn.active { box-shadow: 0 0 14px 3px color-mix(in srgb, var(--color-primary-400) 33%, transparent); }
 
 .ft-icon {
   width: 18px; height: 18px; display: block; flex-shrink: 0;
@@ -66,7 +73,6 @@ onMounted(() => {
   mask-position: center; -webkit-mask-position: center;
   color: var(--color-gray-500);
 }
-.ft-btn.active .ft-icon { color: var(--color-primary-400); }
 
 .ft-label {
   font-size: 12px; font-weight: 600;
@@ -76,7 +82,5 @@ onMounted(() => {
 }
 .ft-btn:hover .ft-label,
 .ft-btn.active .ft-label { max-width: 60px; }
-.ft-btn.active .ft-label { color: var(--color-primary-600); }
 .dark .ft-label { color: var(--color-gray-400); }
-.dark .ft-btn.active .ft-label { color: var(--color-primary-400); }
 </style>

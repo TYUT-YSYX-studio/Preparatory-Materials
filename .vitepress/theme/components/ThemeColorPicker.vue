@@ -56,23 +56,25 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.cp-root { position: fixed; left: 16px; bottom: 32px; z-index: 50; }
+.cp-root { position: fixed; left: 16px; bottom: 32px; z-index: 30; }
 .cp-btn {
-  display: flex; align-items: center; gap: 8px;
-  height: 36px; padding: 0 10px 0 8px;
-  border-radius: 20px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 0;
+  width: 36px; height: 36px; padding: 0;
+  border-radius: 50%; cursor: pointer;
   background: var(--fluent-surface, rgba(255,255,255,.7));
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid var(--fluent-border, rgba(255,255,255,.5));
   box-shadow: var(--fluent-shadow, 0 8px 24px rgba(0,0,0,.12));
-  transition: transform .25s ease, box-shadow .25s ease;
-  overflow: hidden;
+  transition: width .25s ease, padding .25s ease, border-radius .25s ease, gap .25s ease, transform .25s ease, box-shadow .25s ease;
   white-space: nowrap;
+}
+.cp-btn:hover, .cp-root.open .cp-btn {
+  width: 85px; padding: 0 12px 0 8px; border-radius: 20px; gap: 8px;
 }
 .cp-btn:hover { transform: scale(1.05); box-shadow: var(--fluent-shadow-hover); }
 .cp-dot { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; }
-.cp-btn-label { font-size: 12px; font-weight: 600; color: var(--color-gray-600); max-width: 0; overflow: hidden; transition: max-width .25s ease, margin .25s ease; }
+.cp-btn-label { font-size: 12px; font-weight: 600; color: var(--color-gray-600); max-width: 0; overflow: hidden; white-space: nowrap; transition: max-width .25s ease; }
 .cp-btn:hover .cp-btn-label, .cp-root.open .cp-btn-label { max-width: 60px; }
 .dark .cp-btn-label { color: var(--color-gray-300); }
 
