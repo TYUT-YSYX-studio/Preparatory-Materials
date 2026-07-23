@@ -11,6 +11,7 @@ const copyTasks = [
   { src: 'v2409/resources', dest: 'v2409/resources' },
   { src: 'v2509/resourses', dest: 'v2509/resourses' },
   { src: 'v2509/intern_trainees/resources', dest: 'v2509/intern_trainees/resources' },
+  { src: 'v2509/pre_trainees/resources', dest: 'v2509/pre_trainees/resources' },
 ]
 
 for (const { src, dest } of copyTasks) {
