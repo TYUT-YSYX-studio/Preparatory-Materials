@@ -29,7 +29,7 @@ size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
 > [!TIP]
 > # <strong>将刚刚产生的文件进行读取</strong>
 >
-> 利用fread进行读取，但不将它读取到int类型的变量，而是以下类型的结构体变量中。
+> 利用fread进行读取，但不将它读取到int类型的变量，而是[以下类型的结构体变量](/pre_trainees/lecture4/C语言文件操作——二进制操作教程.md)中。
 >
 > 其中ptr应该是指向那个结构体变量的结构体指针。
 >

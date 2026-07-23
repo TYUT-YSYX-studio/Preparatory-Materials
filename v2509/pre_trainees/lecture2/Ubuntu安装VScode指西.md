@@ -15,10 +15,7 @@
     a. 普通用户选择这个：
 
     b. mac用户选这个：
-
-
-
-![](../static/TstRbhimHoEIPIxPPKVcxZm7n6b.png)
+  ![](../static/TstRbhimHoEIPIxPPKVcxZm7n6b.png)
 
 2. 在虚拟机完成deb包的下载
 

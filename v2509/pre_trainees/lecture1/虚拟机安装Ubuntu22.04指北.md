@@ -12,9 +12,7 @@
 2. 随后找到安装包双击打开。
 
 3. 正确打开后应该显示如下图样：
-
-
-![](../static/JcERbao8noADc4xilyQcZTvInDc.png)
+  ![](../static/JcERbao8noADc4xilyQcZTvInDc.png)
 
 4. 等待一会儿后在下一步选择安装装路径时将路径改为C盘以外的盘<strong>（如果电脑只有C盘，装在C盘即可）</strong>
 
@@ -23,15 +21,10 @@
     b. 装错了盘也不用担心，win10/win11已经预留了一定的系统占用空间，这部分只要你没乱动过就几乎不会有系统运行的问题。未来逐渐学会使用电脑后，你也就能自己解决这些问题了。
 
     c. 只会打游戏不算
-
-
-
-![](../static/OvRpb13eEosG21xcJX8cdQ2dnSh.png)
+  ![](../static/OvRpb13eEosG21xcJX8cdQ2dnSh.png)
 
 5. 取消勾选更新检查及体验提升计划（可选）
-
-
-![](../static/GoWYb2AeHosfOHxgMB2crjMnnjd.png)
+  ![](../static/GoWYb2AeHosfOHxgMB2crjMnnjd.png)
 
 6. 然后一直下一步就可以了，直到安装完成。
 
@@ -64,64 +57,40 @@
 3. 如果下载到了C盘，移至D盘（可选）
 
 4. 打开VMware，看到如下界面。选择创建新的虚拟机。（特别操作会用红色标识）
-
-
-![](../static/Uhq1bQj3wo6V8ixXRdpcwqWcnAg.png)
+  ![](../static/Uhq1bQj3wo6V8ixXRdpcwqWcnAg.png)
 
 5. 选中典型，然后下一步
-
-
-![](../static/AgxYbbHTdoZADKxeKpXcz45vn4g.png)
+  ![](../static/AgxYbbHTdoZADKxeKpXcz45vn4g.png)
 
 6. 随后选择稍后安装操作系统（此时选择中间的安装选项会导致进行简易安装，不方便我们进行详细配置）
-
-
-![](../static/Fmijb7JRAo2PAixPeUMcF8rxn4f.png)
+  ![](../static/Fmijb7JRAo2PAixPeUMcF8rxn4f.png)
 
 7. 选择Linux Ubuntu64位 下一步
-
-
-![](../static/M6thbAuQToiccBxxjevcObzMnBe.png)
+  ![](../static/M6thbAuQToiccBxxjevcObzMnBe.png)
 
 8. 取一个喜欢的名字或者保持默认名字，并选择合适的路径，避免安装在C盘
-
-
-![](../static/EA1sbVSlcokKoCx030JcuV4WnOg.png)
+  ![](../static/EA1sbVSlcokKoCx030JcuV4WnOg.png)
 
 9. 将最大磁盘大小调整至30G以上，尽可能大些。把虚拟磁盘存为单文件。
-
-
-![](../static/KZxXbRUUComaaAxgL1McQB6UnZf.png)
+  ![](../static/KZxXbRUUComaaAxgL1McQB6UnZf.png)
 
 10. 选择自定义硬件
-
-
-![](../static/COqLb9atooCYwExFl6fcfqCJnVe.png)
+  ![](../static/COqLb9atooCYwExFl6fcfqCJnVe.png)
 
 11. 内存设置至少4G
-
-
-![](../static/ZWLLbyQpRoV69vxeRKvcMjPlnLd.png)
+  ![](../static/ZWLLbyQpRoV69vxeRKvcMjPlnLd.png)
 
 12. 处理器数量选择1-2个，4-12核即可（如果2处理器12核（如果支持的话）正常使用下依然卡顿，尝试增加内存到6G，仍无法解决则联系助教 ）
-
-
-![](../static/AcoYbsvlwoWToixBGAHcJeRcnLh.png)
+  ![](../static/AcoYbsvlwoWToixBGAHcJeRcnLh.png)
 
 13. 在CD/DVD（SATA）处使用`浏览`选择ISO文件为刚刚下载的镜像
-
-
-![](../static/HNbHbWjUtogbJSxiL0ycxt04nKf.png)
+  ![](../static/HNbHbWjUtogbJSxiL0ycxt04nKf.png)
 
 14. 检查
-
-
-![](../static/CW63bz1H9ogFKUxQCjBcdu6WnSf.png)
+  ![](../static/CW63bz1H9ogFKUxQCjBcdu6WnSf.png)
 
 15. 点击左上角打开虚拟机
-
-
-![](../static/Ii7fbvgHBo90Fwxcei8cNyNKnAe.png)
+  ![](../static/Ii7fbvgHBo90Fwxcei8cNyNKnAe.png)
 
 16. 期间可能让你选择一个选项，选择默认的第一个install选项并Enter即可
 
@@ -129,24 +98,16 @@
 
 
 17. 进入成功后，选择English，并点击install（选择非English可能会导致Ubuntu运行问题，为了锻炼程序员必须的英语素养，也为了避免潜在的问题，请不要选择Chinese）
-
-
-![](../static/SU0Tbl5fRoAa4BxNXUhcZ97VnXc.png)
+  ![](../static/SU0Tbl5fRoAa4BxNXUhcZ97VnXc.png)
 
 18. 考虑到大家键盘大部分都是QWERTY布局，接下来直接确定即可。你也可以用下方的`Detect`以防万一。如果你用的是mac，请先尝试STFW，无果则向群内询问。
-
-
-![](../static/BU2zbLxxlo9J8Ixg1IrcgFnCnqb.png)
+  ![](../static/BU2zbLxxlo9J8Ixg1IrcgFnCnqb.png)
 
 19. 随后一直continue然后选择install now，出现以下界面并确认（continue）
-
-
-![](../static/AYykbH8N2ozVZXxRemFcJGEUnsc.png)
+  ![](../static/AYykbH8N2ozVZXxRemFcJGEUnsc.png)
 
 20. 时区选择 shanghai
-
-
-![](../static/Vz7Zb15Knoiyfox0QlNcsctHnub.png)
+  ![](../static/Vz7Zb15Knoiyfox0QlNcsctHnub.png)
 
 21. 重要步骤！
 
@@ -155,29 +116,19 @@
     b. 设置一个密码，保证自己能记得。
 
     c. continue后等待完成并restart。
-
-
-
-![](../static/K9cpbe2GvoZj16x4JMUcDHPHnNg.png)
+  ![](../static/K9cpbe2GvoZj16x4JMUcDHPHnNg.png)
 
 22. 之后可能提示你按ENTER，按下Enter即可。
 
 23. 选择账号登录，或者可以直接跳过
-
-
-![](../static/Iv1Bb6QIXofhYNxvt3XcKQNNnTc.png)
+  ![](../static/Iv1Bb6QIXofhYNxvt3XcKQNNnTc.png)
 
 24. 在下一个界面不要选择Ubuntu pro，因为我们用不上
-
-
-![](../static/ZAVqbauIKoV1HYxEwRvcmOsInYd.png)
+  ![](../static/ZAVqbauIKoV1HYxEwRvcmOsInYd.png)
 
 25. 然后拒绝发送信息，也不提供位置
-
-
-![](../static/P1yXbWOkNoDkKPxX9sBcx6ZWnHg.png)
-
-![](../static/ZXOCbqq0joDfrtx28h4cRyHgnzc.png)
+  ![](../static/P1yXbWOkNoDkKPxX9sBcx6ZWnHg.png)
+  ![](../static/ZXOCbqq0joDfrtx28h4cRyHgnzc.png)
 
 26. 然后点击Done即可完成Ubuntu的安装
 
@@ -259,20 +210,14 @@ $ sudo apt install open-vm-tools-desktop -y    # sudo需要你再输入你刚刚
 这其实是Ubuntu的锅，它的默认命令行主题真的很瞎眼。不仅如此，命令行的大小也对眼睛很不友好。所以这里来简单配置一下终端。
 
 1. 在终端右上角找到`三`这样的图标，点开后打开preference并完成左栏最下方选项卡中的以下更改：
-
-
-![](../static/U1oKbS51zoEEIpxO7NtcJ3IenrT.png)
+  ![](../static/U1oKbS51zoEEIpxO7NtcJ3IenrT.png)
 
 2. 上侧导航栏中的colors选项中找到built-in schemes并选择为Tango这样比较养眼的主题配色，或者自己调整
-
-
-![](../static/NHvQbIzTVoz14uxx395cq6Osnuh.png)
+  ![](../static/NHvQbIzTVoz14uxx395cq6Osnuh.png)
 
 3. 你也可以更改上方的背景选项，需要先关闭Use colors from system theme选项
 
 4. 最终配置好后，你的终端默认打开就可以变成这样：
-
-
-![](../static/C0jbbejmDo6mXgxeDutcCx29nLh.png)
+  ![](../static/C0jbbejmDo6mXgxeDutcCx29nLh.png)
 
 5. 最后别忘了保存快照

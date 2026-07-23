@@ -19,14 +19,10 @@ The mechine is always right
 学习记录副本：[xxx-太原理工大学-学习记录](https://docs.qq.com/sheet/DV09xaUNRcm5QWGpQ?newPad=1&newPadType=clone&tab=ss_znqexa&viewId=vnucy5&u=e4d0bfda3a4240a0862539da66b63ff7)
 
 1. 以上是记录表的副本，点开链接后如下操作：
-
-
-![](../static/WFAZbu3bEonzckxbshccRtUEnhb.png)
+  ![](../static/WFAZbu3bEonzckxbshccRtUEnhb.png)
 
 2. 创建一个自己的副本，其中表格内容自己可以更改，随后切换权限到所有人可查看
-
-
-![](../static/GW7NbWfhMoXp2yxvflncbu9Lnjo.png)
+  ![](../static/GW7NbWfhMoXp2yxvflncbu9Lnjo.png)
 
 3. 随后将你的表格放入这里：[先进计算机系统研究实验室学习记录表](https://docs.qq.com/sheet/DTm9XVFRidkpvTkpW?tab=BB08J2) （大家只需要填写姓名、学习链接和当前进度，其他不填）
 
