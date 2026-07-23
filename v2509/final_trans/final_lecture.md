@@ -1,11 +1,6 @@
-<div align="center">
+# 太原理工大学先进计算机系统实验室（ACSL）正式学员第四次学习路线
 
-# 太理先研实验室（ACSL）过渡讲义
-
->
 # 并轨
-
-</div>
 
 自寒假结束，我们的讲义越来越靠近一生一芯的官方讲义，有不少地方也需要大家直接跳转进行学习。现在也终于到了正式宣布“并轨”消息的时候了。
 
@@ -28,80 +23,71 @@
 > # RTFM or STFW
 >
 > 阅读C99标准中`6.3.2.1 Lvalues, arrays, and function designators`部分，并尝试自行`STFW`，然后尝试从C语言标准的角度解释为什么以下代码都是正确的。完成后你还可以思考为什么我们在此时`STFW`要远远优于`RTFM`。
->
-> ```C
-> #include <stdio.h>
->
-> void f(char* str){
->     printf("%s\n", str);
-> }
->
-> typedef void (F)(char*);
-> F *func = &f;
->
-> int main(){
->     (&f)("first");                // 
->     func("second");
->     (*func)("third");
->     (*f)("fourth");
->     (**********func)("fifth");
->
->     return 0;
-> }
-> ```
->
-> ## 支持GUI输入输出的程序
->
+
+```c
+#include <stdio.h>
+
+void f(char* str){
+    printf("%s\n", str);
+}
+
+typedef void (F)(char*);
+F *func = &f;
+
+int main(){
+    (&f)("first");                // 
+    func("second");
+    (*func)("third");
+    (*f)("fourth");
+    (**********func)("fifth");
+
+    return 0;
+}
+```
+
+## 支持GUI输入输出的程序
+
+> [!WARNING]
 > 在`支持GUI输入输出的程序`之前，请先完成PA0并获取一生一芯的框架代码，[PA0链接](https://ysyx.oscc.cc/docs/ics-pa/PA0.html)。
 
 > [!TIP]
 > # minirvEMU运行EMU
 >
 > 阅读[支持GUI输入输出的程序](https://ysyx.oscc.cc/docs/2407/e/4.html#%E6%94%AF%E6%8C%81gui%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%9A%84%E7%A8%8B%E5%BA%8F)，为minirvEMU添加图形显示功能
->
+
+> [!WARNING]
 > 至此，E4阶段结束
+
+# E5——STFW + RTFM搭建Verilator仿真环境
+
+> [!TIP]
+> ## RTL仿真
 >
-# E5——STFW \+ RTFM搭建Verilator仿真环境
-
-## RTL仿真
-
-阅读[RTL仿真\(Simulation\) \- 功能验证](https://ysyx.oscc.cc/docs/2407/e/5.html#e5-%E4%BB%8Ertl%E4%BB%A3%E7%A0%81%E5%88%B0%E5%8F%AF%E6%B5%81%E7%89%87%E7%89%88%E5%9B%BE)，完成至`打印并查看波形`。
+> 阅读[RTL仿真(Simulation) - 功能验证](https://ysyx.oscc.cc/docs/2407/e/5.html#e5-%E4%BB%8Ertl%E4%BB%A3%E7%A0%81%E5%88%B0%E5%8F%AF%E6%B5%81%E7%89%87%E7%89%88%E5%9B%BE)，完成至`打印并查看波形`。
 
 # TimeLine
 
 既然后续我们不再提供“特供”讲义，那么我们就有必要给出一些进度参考：
 
 - 第四周（本周）：本讲义内容。
-
 - 第五周：
-
-    - 完成E5 [RTL仿真\(Simulation\) \- 功能验证](https://ysyx.oscc.cc/docs/2407/e/5.html#rtl%E4%BB%BF%E7%9C%9F-simulation-%E5%8A%9F%E8%83%BD%E9%AA%8C%E8%AF%81)部分全部内容。
-
+    - 完成E5 [RTL仿真(Simulation) - 功能验证](https://ysyx.oscc.cc/docs/2407/e/5.html#rtl%E4%BB%BF%E7%9C%9F-simulation-%E5%8A%9F%E8%83%BD%E9%AA%8C%E8%AF%81)部分全部内容。
     - 中间部分涉及数字后端知识，可以作为拓展知识了解，暂时无需深究，赶进度可跳转至[若干代码风格和规范](https://ysyx.oscc.cc/docs/2407/e/5.html#%E8%8B%A5%E5%B9%B2%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E5%92%8C%E8%A7%84%E8%8C%83)继续学习。
-
     - 完成E5 NJU数电实验的实验二、实验三和实验六。
-
 - 第六周：
-
     - 完成全部E5内容。
-
 - 第七、八周：
-
     - 完成PA1。
-
     - 报名入学答辩。
-
     - 预计四月下旬会有第一批同学报名入学答辩。
 
 # 入学答辩
 
-## 答辩
+> [!NOTE]
+> ## 答辩
+>
+> 如果你完成了上述的所有内容，你就可以去申请一生一芯官方的入学答辩了，通过答辩的可以拥有以下，这也是很多人目标的流片的第一步。
+>
+> <strong>报名之前请先联系你的负责人</strong>。
 
-如果你完成了上述的所有内容，你就可以去申请一生一芯官方的入学答辩了，通过答辩的可以拥有以下，这也是很多人目标的流片的第一步。
-
-**报名之前请先联系你的负责人**。
-
-![image\.png](static/image.png)
-
-
-
+![图片展示了通过一生一芯官方入学答辩后，进入正式学员群可获得的权益。包括成为正式学员，可参加入学仪式并获得入学大礼包；加入“](./static/SguYbIzNtomiQCxTruLcTiMKnxb.png)
