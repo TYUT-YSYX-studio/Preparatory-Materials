@@ -324,11 +324,11 @@
 >
 > 1、b站视频学习
 >
-> https://www\.bilibili\.com/video/BV1tNpbekEht/?spm\_id\_from=333\.337\.search\-card\.all\.click\&vd\_source=0ec8697614b7c28a28c8b55a23639096
+> https://www.bilibili.com/video/BV1tNpbekEht/?spm_id_from=333.337.search-card.all.click&vd_source=0ec8697614b7c28a28c8b55a23639096
 >
 > 2、可视化网站
 >
-> https://www\.hello\-algo\.com/chapter\_array\_and\_linkedlist/linked\_list/
+> https://www.hello-algo.com/chapter_array_and_linkedlist/linked_list/
 >
 > 3、书籍
 >
@@ -352,7 +352,7 @@
 >
 > 其中的**26、37\-41、43、45\-47不需要学习**，性价比比较低，不推荐学习，**其他内容我们都很推荐学习**，想要技术很强的话，都可以试着去学习，并在其中锻炼自己gdb等debug工具使用和相关能力思维。
 >
-> 【Learn C the hard way】：https://wizardforcel\.gitbooks\.io/lcthw/content/preface\.html
+> 【Learn C the hard way】：https://wizardforcel.gitbooks.io/lcthw/content/preface.html
 >
 > 将你完成的所有练习放入一个名为`lcthw`的文件夹，并将该文件夹放入作业提交文件夹中。
 
@@ -365,9 +365,9 @@
 >
 > 记得随手typora记录笔记和继续自己的学习记录哦！（所有指令是不需要大家记忆的，需要用到的时候查手册即可），我们提供了2门视频课程，请同学们结合自己的实际选择。
 >
-> [计算机组成原理/计算机组成与设计](https://www.bilibili.com/video/BV1Ba4y1V7GD/?vd_source=4ec31615294fd2510d5fd40f0183648f)（**CH1\-CH2的内容学习，**该课程体系完善，效果好，但理解起来较为困难）
+> [计算机组成原理/计算机组成与设计](https://www.bilibili.com/video/BV1Ba4y1V7GD/?vd_source=4ec31615294fd2510d5fd40f0183648f)（**CH1\-CH2的内容学习**，该课程体系完善，效果好，但理解起来较为困难）
 >
-> [王道计算机考研 计算机组成原理](https://www.bilibili.com/video/BV1ps4y1d73V?p=45&vd_source=a0f18116091f002e00fcf6cb57719ced)（**第一章，第二章的内容学习，其中2\.1\.1\~2\.2\.3涉及到数字电路部分可以选择跳过，**该课程更为通俗易懂，对于0基础学生更为友好）
+> [王道计算机考研 计算机组成原理](https://www.bilibili.com/video/BV1ps4y1d73V?p=45&vd_source=a0f18116091f002e00fcf6cb57719ced)（**第一章，第二章的内容学习，其中2\.1\.1\~2\.2\.3涉及到数字电路部分可以选择跳过**，该课程更为通俗易懂，对于0基础学生更为友好）
 >
 > 两门课程的知识学习顺序不一样，但最终学习到的知识是一样的，依旧是提交你的**Markdown**笔记。
 >

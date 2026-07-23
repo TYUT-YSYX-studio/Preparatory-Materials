@@ -1,10 +1,10 @@
-# 太原理工大学先进计算机系统实验室（ACSL）适应期学员第三次学习路线 定稿
+# 太理先研实验室（ACSL）适应期学员第三次学习路线
 
-Brain Crisis!!
+<center>Brain Crisis!!</center>
 
-难度指数：024
+<center>难度指数：024</center>
 
-报酬：专业程序员基础（2）
+<center>报酬：专业程序员基础（2）</center>
 
 ---
 

@@ -1,4 +1,4 @@
-# 太原理工大学先进计算机系统实验室（ACSL）寒假研学第三次学习路线
+# 太理先研实验室（ACSL）寒假研学第三次学习路线
 
 <strong>学习情况</strong>：根据所查的RISC-V的手册完成一个基于riscv32e指令集的带有图片展示效果的处理器。并且已经通过见习学员考核，成为了正式学员。
 
@@ -47,7 +47,7 @@
 >
 > 我们推荐下列方式进行Verilog的学习，可以选择适合自己的方式：
 >
-> 1. b站视频学习：https://www.bilibili.com/video/BV1cZ4y157XS?（第一次学习建议先看这个，细节更多）https://b23.tv/9vrb7DV （全是语法知识，非常简短）
+> 1. b站视频学习：https://www.bilibili.com/video/BV1cZ4y157XS （第一次学习建议先看这个，细节更多）https://b23.tv/9vrb7DV （全是语法知识，非常简短）
 > 
 > 2. 书籍：Verilog HDL数字设计与综合（飞书<strong>群文件中有电子版</strong>）<strong>第2~7章（所有延迟相关的知识都可以不用看，比如forever循环，并行块，命名块等等)。</strong>
 > 
@@ -85,9 +85,9 @@
 
 | 类型 | 特点 |
 | --- | --- |
-| <strong>行为级建模</strong> |  |
-| <strong>数据流建模</strong> |  |
-| <strong>结构级建模</strong> |  |
+| <strong>行为级建模</strong> | 最接近高级语言的写法，语法最灵活。<br />大量使用 always、for 循环、if-else、case-endcase、等高级结构。<br />写起来最快、最接近软件思维，但很多写法不可综合或综合结果不可控。 |
+| <strong>数据流建模</strong> | 主要使用连续赋值语句 assign。<br />描述的是**组合逻辑**的数据流和功能关系。<br />介于行为级和结构级之间，比较清晰。 |
+| <strong>结构级建模</strong> | 通过实例化已有模块（module instantiation）来搭建电路。<br />或者直接使用基本的门级原语（and、or、nand、nor、not 等）。<br />最接近最终硬件的实现结构。 |
 
 原语（Primitive）:是计算机科学中由若干机器指令构成的、用于完成特定功能的不可分割的程序段。门级原语：门级原语就是在硬件设计中不可分割的Verilog内置了一些逻辑门的模型，可以通过实例化引用这些模型，从而对模块进行门级的描述。
 
@@ -99,7 +99,7 @@
 
 而行为级建模在以上几乎所有关键指标上都表现最差，因此在<strong>可综合的 RTL 设计</strong>中，业界普遍的做法是：
 
-- 能用** assign** 就尽量用 <strong>assign</strong>。
+- 能用 `assign` 就尽量用 <strong>assign</strong>。
 - 如果是<strong>时序逻辑</strong>（带时钟的寄存器、状态机)，就用清晰的 <strong>always @(posedge clk)</strong> 写法，并且用 <strong>非阻塞赋值</strong>（<=）。
 - <strong>严格限制或明确禁止</strong>在 RTL 代码中使用 initial、wait、fork-join、disable、while、#延时等典型行为级特性。
 

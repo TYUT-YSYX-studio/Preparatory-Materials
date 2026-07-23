@@ -6,7 +6,7 @@
 
 # 数字设计
 
-我们在寒假的时候就学习过状态机的概念，无非就是电路在不同的状态转移罢了，本周我们需要通过Verilog完成状态机的设计。这是数字设计相当困难的一章，思路理不清楚很有可能坐一天也想不出来，这时候就可以试着**画图，**理清楚思路再写这部分代码效果会好很多！并且这一部分是有固定套路的，大家在做了很多道相关题之后，**做笔记归纳总结**，就可以悟出状态机的构建流程了。
+我们在寒假的时候就学习过状态机的概念，无非就是电路在不同的状态转移罢了，本周我们需要通过Verilog完成状态机的设计。这是数字设计相当困难的一章，思路理不清楚很有可能坐一天也想不出来，这时候就可以试着**画图**，理清楚思路再写这部分代码效果会好很多！并且这一部分是有固定套路的，大家在做了很多道相关题之后，**做笔记归纳总结**，就可以悟出状态机的构建流程了。
 
 同时有的题目网站给出的示例代码并不是特别好，有的时候**完全推翻重新写**会比按照网站给出的示例写快不少，且思路更加清晰。
 
@@ -24,7 +24,7 @@
 > # Learn C the hard way
 >本周完成其中的第**19，21\~22，24\~25，27**章（其中遇到卡了很久的题目可以先跳过）。
 >
->【Learn C the hard way】：https://wizardforcel\.gitbooks\.io/lcthw/content/preface\.html
+>【Learn C the hard way】：https://wizardforcel.gitbooks.io/lcthw/content/preface.html
 >
 >将你完成的所有练习放入一个名为`lcthw`的文件夹，并将该文件夹放入作业提交文件夹中。
 >
@@ -142,7 +142,7 @@
 >
 > 其中的**26、37\-41、43、45\-47不需要学习**，性价比比较低，不推荐学习，**其他内容我们都很推荐学习**，想要技术很强的话，都可以试着去学习，并在其中锻炼自己gdb等debug工具使用和相关能力思维。
 >
-> 【Learn C the hard way】：https://wizardforcel\.gitbooks\.io/lcthw/content/preface\.html
+> 【Learn C the hard way】：https://wizardforcel.gitbooks.io/lcthw/content/preface.html
 >
 > 将你完成的所有练习放入一个名为`lcthw`的文件夹，并将该文件夹放入作业提交文件夹中。
 
@@ -158,8 +158,8 @@ PA是我们后续学习中非常重要的一部分内容，目前我们已经把
 
 > [!TIP]
 ># PA0
->https://ysyx\.oscc\.cc/docs/ics\-pa/PA0\.html
->当你发现如下提醒时，阅读该讲义:https://ysyx\.oscc\.cc/docs/2407/e/3\.html获取属于一生一芯的代码框架
+>https://ysyx.oscc.cc/docs/ics-pa/PA0.html
+>当你发现如下提醒时，阅读该讲义:https://ysyx.oscc.cc/docs/2407/e/3.html 获取属于一生一芯的代码框架
 
 ![image\.png](static/image21.png)
 
