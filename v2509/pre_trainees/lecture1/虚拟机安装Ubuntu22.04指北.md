@@ -3,10 +3,9 @@
 ## VMware安装
 
 1. 如果还没有下载VM安装包的话，[点击链接下载VMware](https://release-assets.githubusercontent.com/github-production-release-asset/225538126/59adf681-3562-4b76-952f-cae2ba7a93c8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-07-25T12%3A56%3A33Z&rscd=attachment%3B+filename%3DVMware-workstation-full-17.6.3-24583834.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-07-25T11%3A55%3A58Z&ske=2025-07-25T12%3A56%3A33Z&sks=b&skv=2018-11-09&sig=SqipfzDIAhFvKNkfpuvesfNU4jmgSVhCPfMKQUweCGY%3D&jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc1MzQ0NTI5MSwibmJmIjoxNzUzNDQ0OTkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.8lFGJ-YyWZtm12OD4lXDSnt64gVfWU7h5Vqbrgm_kCY&response-content-disposition=attachment%3B%20filename%3DVMware-workstation-full-17.6.3-24583834.exe&response-content-type=application%2Foctet-stream)。（<strong>如果链接点不开，可以在群文件中找到安装包</strong>）
+    1. 官网下载需要登录，所以直接下载github上的安装包最佳。
 
-    a. 官网下载需要登录，所以直接下载github上的安装包最佳。
-
-    b. 安装前检查一遍文件名是否带有"full"关键字，文件后缀是否为exe
+    2. 安装前检查一遍文件名是否带有"full"关键字，文件后缀是否为exe
 
 
 2. 随后找到安装包双击打开。
@@ -15,22 +14,20 @@
   ![](../static/JcERbao8noADc4xilyQcZTvInDc.png)
 
 4. 等待一会儿后在下一步选择安装装路径时将路径改为C盘以外的盘<strong>（如果电脑只有C盘，装在C盘即可）</strong>
+    1. 这样可以避免C盘空间不足，Windows系统文件几乎都在C盘。
 
-    a. 这样可以避免C盘空间不足，Windows系统文件几乎都在C盘。
+    2. 装错了盘也不用担心，win10/win11已经预留了一定的系统占用空间，这部分只要你没乱动过就几乎不会有系统运行的问题。未来逐渐学会使用电脑后，你也就能自己解决这些问题了。
 
-    b. 装错了盘也不用担心，win10/win11已经预留了一定的系统占用空间，这部分只要你没乱动过就几乎不会有系统运行的问题。未来逐渐学会使用电脑后，你也就能自己解决这些问题了。
-
-    c. 只会打游戏不算
+    3. 只会打游戏不算
   ![](../static/OvRpb13eEosG21xcJX8cdQ2dnSh.png)
 
 5. 取消勾选更新检查及体验提升计划（可选）
   ![](../static/GoWYb2AeHosfOHxgMB2crjMnnjd.png)
 
 6. 然后一直下一步就可以了，直到安装完成。
+    1. 如果VMware报告有兼容问题，则勾选自动安装WHP
 
-    a. 如果VMware报告有兼容问题，则勾选自动安装WHP
-
-    b. 已经选择下一步的同学也可以继续操作，若遇到问题可直接在群内询问
+    2. 已经选择下一步的同学也可以继续操作，若遇到问题可直接在群内询问
 
 
 
@@ -44,14 +41,13 @@
 1. 访问[中国科学院软件研究所开源镜像站-Ubuntu22.04](https://mirror.iscas.ac.cn/ubuntu-releases/22.04/)或[清华大学开源软件镜像站-Ubuntu22.04](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/22.04/)
 
 2. 找到ubuntu-22.04.5-desktop-amd64.iso文件，点击下载
+    1. 注意是desktop，不是live
 
-    a. 注意是desktop，不是live
+    2. 等待时间久的话，就先泡杯茶喝吧就先看看后面的步骤吧，不过不要记错了
 
-    b. 等待时间久的话，就先泡杯茶喝吧就先看看后面的步骤吧，不过不要记错了
+    3. 最慢下载速度应该也能达到4MB/s左右，整体时间应该不会多于20min，如果传输太慢请检查自己的网络
 
-    c. 最慢下载速度应该也能达到4MB/s左右，整体时间应该不会多于20min，如果传输太慢请检查自己的网络
-
-    d. 如果还是觉得太慢了，尝试使用IDM这类下载工具（可能收费）
+    4. 如果还是觉得太慢了，尝试使用IDM这类下载工具（可能收费）
 
 
 3. 如果下载到了C盘，移至D盘（可选）
@@ -93,8 +89,7 @@
   ![](../static/Ii7fbvgHBo90Fwxcei8cNyNKnAe.png)
 
 16. 期间可能让你选择一个选项，选择默认的第一个install选项并Enter即可
-
-    a. 如果无效，先使用`Ctrl + G`快捷键进入虚拟机控制再操作
+    1. 如果无效，先使用`Ctrl + G`快捷键进入虚拟机控制再操作
 
 
 17. 进入成功后，选择English，并点击install（选择非English可能会导致Ubuntu运行问题，为了锻炼程序员必须的英语素养，也为了避免潜在的问题，请不要选择Chinese）
@@ -110,12 +105,11 @@
   ![](../static/Vz7Zb15Knoiyfox0QlNcsctHnub.png)
 
 21. 重要步骤！
+    1. 设置Your name为你的名字首字母+学号后两位。
 
-    a. 设置Your name为你的名字首字母+学号后两位。
+    2. 设置一个密码，保证自己能记得。
 
-    b. 设置一个密码，保证自己能记得。
-
-    c. continue后等待完成并restart。
+    3. continue后等待完成并restart。
   ![](../static/K9cpbe2GvoZj16x4JMUcDHPHnNg.png)
 
 22. 之后可能提示你按ENTER，按下Enter即可。
@@ -135,12 +129,11 @@
 27. 进入桌面后用`Ctrl + Alt + T`快捷键打开终端
 
 28. 在终端输入你的名字首字母 + 你的学号
+    1. 期间不要让虚拟机全屏，方便截图
 
-    a. 期间不要让虚拟机全屏，方便截图
+    2. 用`Ctrl + Alt`快捷键退出虚拟机控制后点击`PrtSc`键即可截图
 
-    b. 用`Ctrl + Alt`快捷键退出虚拟机控制后点击`PrtSc`键即可截图
-
-    c. 其他截图方式见本周讲义-计算机基操，均需要退出虚拟机控制
+    3. 其他截图方式见本周讲义-计算机基操，均需要退出虚拟机控制
 
 
 

@@ -42,6 +42,52 @@
   padding-top: 0;
 }
 
+/* ── Markdown 列表：GitHub 风格嵌套编号 + 间距修复 ── */
+
+/* 有序列表：去 duxweb 无效 counter，用 native list-style-type 配合嵌套层级 */
+.prose-content ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+}
+.prose-content ol ol {
+  list-style-type: lower-alpha;
+}
+.prose-content ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* 无序列表：保留 duxweb 自定义圆点，但调整左边距对齐 GitHub 风格 */
+.prose-content ul {
+  padding-left: 2em;
+}
+
+/* 列表项间距：GitHub 用 margin-top: 4px 控制呼吸感 */
+.prose-content li {
+  margin-top: 0.25em;
+}
+
+/* 嵌套列表容器顶部不额外加距 */
+.prose-content ul ul,
+.prose-content ul ol,
+.prose-content ol ul,
+.prose-content ol ol {
+  margin-top: 0;
+  margin-block: 0;
+}
+
+/* 列表 marker 颜色：GitHub 风格灰色 */
+.prose-content li::marker {
+  color: var(--color-gray-500);
+}
+.dark .prose-content li::marker {
+  color: var(--color-gray-400);
+}
+
+/* ul 自定义圆点对齐微调（duxweb 默认 top: --spacing*3.5 即 0.875rem，偏下） */
+.prose-content ul > li::before {
+  top: 0.625rem !important;
+}
+
 /* ── MathJax 数学公式样式修复 ── */
 /* 行内公式垂直居中对齐 */
 mjx-container[jax="SVG"] {
